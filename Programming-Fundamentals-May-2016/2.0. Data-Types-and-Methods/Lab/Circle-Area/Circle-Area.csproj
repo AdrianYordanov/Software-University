@@ -7,7 +7,7 @@
     <ProjectGuid>{AC46764D-4A3B-4623-9E12-56DE04B9D25B}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CircleArea</RootNamespace>
+    <RootNamespace>Circle_Area</RootNamespace>
     <AssemblyName>Circle-Area</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
