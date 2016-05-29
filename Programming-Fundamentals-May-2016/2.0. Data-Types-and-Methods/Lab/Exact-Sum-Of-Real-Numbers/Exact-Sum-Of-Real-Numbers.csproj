@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AC46764D-4A3B-4623-9E12-56DE04B9D25B}</ProjectGuid>
+    <ProjectGuid>{70B4C145-1FBC-41A4-9FCF-C697F50B4FA3}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CircleArea</RootNamespace>
-    <AssemblyName>Circle-Area</AssemblyName>
+    <RootNamespace>ExactSumOfRealNumbers</RootNamespace>
+    <AssemblyName>Exact-Sum-Of-Real-Numbers</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -41,7 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CircleArea.cs" />
+    <Compile Include="ExactSumOfRealNumbers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
