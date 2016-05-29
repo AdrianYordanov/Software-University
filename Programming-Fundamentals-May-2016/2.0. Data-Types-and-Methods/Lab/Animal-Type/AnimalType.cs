@@ -15,5 +15,7 @@ class AnimalType
             case "snake": message = "reptile"; break;
             default: message = "unknown"; break;
         }
+
+        Console.WriteLine(message);
     }
 }
