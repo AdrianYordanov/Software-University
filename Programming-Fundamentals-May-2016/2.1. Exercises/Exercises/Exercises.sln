@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Integer-To-Hex-And-Binary",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Comparing-Floats", "Comparing-Floats\Comparing-Floats.csproj", "{899D3112-D577-43D9-BD48-50EC1382A626}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Print-Part-Of-Ascii", "Print-Part-Of-Ascii\Print-Part-Of-Ascii.csproj", "{8E867B77-E9FB-4A63-9C10-785CA4C525BB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,10 @@ Global
 		{899D3112-D577-43D9-BD48-50EC1382A626}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{899D3112-D577-43D9-BD48-50EC1382A626}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{899D3112-D577-43D9-BD48-50EC1382A626}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E867B77-E9FB-4A63-9C10-785CA4C525BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E867B77-E9FB-4A63-9C10-785CA4C525BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E867B77-E9FB-4A63-9C10-785CA4C525BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E867B77-E9FB-4A63-9C10-785CA4C525BB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
