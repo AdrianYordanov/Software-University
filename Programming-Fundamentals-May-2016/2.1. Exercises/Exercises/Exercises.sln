@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boolean-Variable", "Boolean
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Strings-And-Objects", "Strings-And-Objects\Strings-And-Objects.csproj", "{0FE43896-15F0-4992-943A-616BFFC60AC4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exchange-Variable-Values", "Exchange-Variable-Values\Exchange-Variable-Values.csproj", "{33727726-B98B-47A9-88E4-80FDBF9597F6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{0FE43896-15F0-4992-943A-616BFFC60AC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0FE43896-15F0-4992-943A-616BFFC60AC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0FE43896-15F0-4992-943A-616BFFC60AC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33727726-B98B-47A9-88E4-80FDBF9597F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33727726-B98B-47A9-88E4-80FDBF9597F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33727726-B98B-47A9-88E4-80FDBF9597F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33727726-B98B-47A9-88E4-80FDBF9597F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
