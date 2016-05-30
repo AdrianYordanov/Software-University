@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Employee-Data", "Employee-D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reverse-Characters", "Reverse-Characters\Reverse-Characters.csproj", "{2E61F157-80CC-4880-9841-A520F0DC78BA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Centuries-To-Nanoseconds", "Centuries-To-Nanoseconds\Centuries-To-Nanoseconds.csproj", "{387EFAB3-9A37-411E-9AD3-716FFAC5E611}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{2E61F157-80CC-4880-9841-A520F0DC78BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E61F157-80CC-4880-9841-A520F0DC78BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E61F157-80CC-4880-9841-A520F0DC78BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{387EFAB3-9A37-411E-9AD3-716FFAC5E611}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{387EFAB3-9A37-411E-9AD3-716FFAC5E611}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{387EFAB3-9A37-411E-9AD3-716FFAC5E611}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{387EFAB3-9A37-411E-9AD3-716FFAC5E611}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
