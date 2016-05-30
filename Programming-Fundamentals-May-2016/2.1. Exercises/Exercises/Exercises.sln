@@ -39,6 +39,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Different-Integers-Sizes", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hello-Name", "Hello-Name\Hello-Name.csproj", "{7AF17BD7-E1F9-442B-ACA2-F6D53A01A1D3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Max-Method", "Max-Method\Max-Method.csproj", "{3BDD4EE0-29CE-4087-B9E1-A1F5759C686D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -117,6 +119,10 @@ Global
 		{7AF17BD7-E1F9-442B-ACA2-F6D53A01A1D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7AF17BD7-E1F9-442B-ACA2-F6D53A01A1D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7AF17BD7-E1F9-442B-ACA2-F6D53A01A1D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BDD4EE0-29CE-4087-B9E1-A1F5759C686D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BDD4EE0-29CE-4087-B9E1-A1F5759C686D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BDD4EE0-29CE-4087-B9E1-A1F5759C686D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BDD4EE0-29CE-4087-B9E1-A1F5759C686D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
