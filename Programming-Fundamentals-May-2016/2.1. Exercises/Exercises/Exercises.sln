@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rectangle-Properties", "Rec
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vowel-Or-Digit", "Vowel-Or-Digit\Vowel-Or-Digit.csproj", "{0E08EE5F-4D51-4133-9A13-A6B9D221D706}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Integer-To-Hex-And-Binary", "Integer-To-Hex-And-Binary\Integer-To-Hex-And-Binary.csproj", "{19571E2B-45E7-4E6E-8591-103EC47DCAE8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{0E08EE5F-4D51-4133-9A13-A6B9D221D706}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E08EE5F-4D51-4133-9A13-A6B9D221D706}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E08EE5F-4D51-4133-9A13-A6B9D221D706}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19571E2B-45E7-4E6E-8591-103EC47DCAE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19571E2B-45E7-4E6E-8591-103EC47DCAE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19571E2B-45E7-4E6E-8591-103EC47DCAE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19571E2B-45E7-4E6E-8591-103EC47DCAE8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
