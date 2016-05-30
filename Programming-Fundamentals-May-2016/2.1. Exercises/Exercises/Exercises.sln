@@ -41,6 +41,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hello-Name", "Hello-Name\He
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Max-Method", "Max-Method\Max-Method.csproj", "{3BDD4EE0-29CE-4087-B9E1-A1F5759C686D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "English-Name-Of-The-Last-Digit", "English-Name-Of-The-Last-Digit\English-Name-Of-The-Last-Digit.csproj", "{AF9888B1-76F2-4A87-A9D6-141B3F2CA411}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -123,6 +125,10 @@ Global
 		{3BDD4EE0-29CE-4087-B9E1-A1F5759C686D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3BDD4EE0-29CE-4087-B9E1-A1F5759C686D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3BDD4EE0-29CE-4087-B9E1-A1F5759C686D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF9888B1-76F2-4A87-A9D6-141B3F2CA411}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF9888B1-76F2-4A87-A9D6-141B3F2CA411}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF9888B1-76F2-4A87-A9D6-141B3F2CA411}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF9888B1-76F2-4A87-A9D6-141B3F2CA411}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
