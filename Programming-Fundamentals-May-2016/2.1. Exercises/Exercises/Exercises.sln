@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Centuries-To-Nanoseconds", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Convert-Speed-Units", "Convert-Speed-Units\Convert-Speed-Units.csproj", "{CBD0DF88-DC4E-4EB6-BAE8-ED3DBEAF11B7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rectangle-Properties", "Rectangle-Properties\Rectangle-Properties.csproj", "{7CA0A6EB-2DCA-4732-B555-989E6329487F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{CBD0DF88-DC4E-4EB6-BAE8-ED3DBEAF11B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CBD0DF88-DC4E-4EB6-BAE8-ED3DBEAF11B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CBD0DF88-DC4E-4EB6-BAE8-ED3DBEAF11B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CA0A6EB-2DCA-4732-B555-989E6329487F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CA0A6EB-2DCA-4732-B555-989E6329487F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CA0A6EB-2DCA-4732-B555-989E6329487F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CA0A6EB-2DCA-4732-B555-989E6329487F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
