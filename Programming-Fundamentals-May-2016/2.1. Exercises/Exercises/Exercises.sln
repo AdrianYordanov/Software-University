@@ -45,6 +45,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "English-Name-Of-The-Last-Di
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Numbers-In-Reversed-Order", "Numbers-In-Reversed-Order\Numbers-In-Reversed-Order.csproj", "{245658DB-BC63-4C67-A307-00CAF89E3156}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fibonacci-Numbers", "Fibonacci-Numbers\Fibonacci-Numbers.csproj", "{640CD178-4A32-4549-B30B-D5FC2380BA42}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -135,6 +137,10 @@ Global
 		{245658DB-BC63-4C67-A307-00CAF89E3156}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{245658DB-BC63-4C67-A307-00CAF89E3156}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{245658DB-BC63-4C67-A307-00CAF89E3156}.Release|Any CPU.Build.0 = Release|Any CPU
+		{640CD178-4A32-4549-B30B-D5FC2380BA42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{640CD178-4A32-4549-B30B-D5FC2380BA42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{640CD178-4A32-4549-B30B-D5FC2380BA42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{640CD178-4A32-4549-B30B-D5FC2380BA42}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
