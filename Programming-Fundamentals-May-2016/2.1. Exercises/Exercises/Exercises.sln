@@ -37,6 +37,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Print-Part-Of-Ascii", "Prin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Different-Integers-Sizes", "Different-Integers-Sizes\Different-Integers-Sizes.csproj", "{AF5A926C-5C4F-42BA-B573-CA1658D6DAD3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hello-Name", "Hello-Name\Hello-Name.csproj", "{7AF17BD7-E1F9-442B-ACA2-F6D53A01A1D3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -111,6 +113,10 @@ Global
 		{AF5A926C-5C4F-42BA-B573-CA1658D6DAD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF5A926C-5C4F-42BA-B573-CA1658D6DAD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AF5A926C-5C4F-42BA-B573-CA1658D6DAD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AF17BD7-E1F9-442B-ACA2-F6D53A01A1D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AF17BD7-E1F9-442B-ACA2-F6D53A01A1D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AF17BD7-E1F9-442B-ACA2-F6D53A01A1D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AF17BD7-E1F9-442B-ACA2-F6D53A01A1D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
