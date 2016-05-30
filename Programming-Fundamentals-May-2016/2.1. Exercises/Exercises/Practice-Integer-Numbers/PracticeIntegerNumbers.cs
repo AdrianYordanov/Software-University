@@ -12,6 +12,7 @@ class PracticeIntegerNumbers
         int num6 = -1141583228;
         long num7 = -1223372036854775808;
 
+        Console.WriteLine(num1);
         Console.WriteLine(num2);
         Console.WriteLine(num3);
         Console.WriteLine(num4);
