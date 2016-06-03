@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sum-Array", "Sum-Array\Sum-
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Condense-Array-To-Number", "Condense-Array-To-Number\Condense-Array-To-Number.csproj", "{B943E3D7-E2FF-4852-8CE8-024FC16B2F37}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extract-Middle-Element", "Extract-Middle-Element\Extract-Middle-Element.csproj", "{50D5244E-20F3-4D3E-AFE2-1DFAF561DF9A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{B943E3D7-E2FF-4852-8CE8-024FC16B2F37}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B943E3D7-E2FF-4852-8CE8-024FC16B2F37}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B943E3D7-E2FF-4852-8CE8-024FC16B2F37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50D5244E-20F3-4D3E-AFE2-1DFAF561DF9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50D5244E-20F3-4D3E-AFE2-1DFAF561DF9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50D5244E-20F3-4D3E-AFE2-1DFAF561DF9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50D5244E-20F3-4D3E-AFE2-1DFAF561DF9A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
