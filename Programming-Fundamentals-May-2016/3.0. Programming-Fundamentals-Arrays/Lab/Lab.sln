@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reverse-Array-Of-Strings", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sum-Array", "Sum-Array\Sum-Array.csproj", "{1E1CCD8F-5C3D-4FB8-BE2E-9A2B0FFA25E7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Condense-Array-To-Number", "Condense-Array-To-Number\Condense-Array-To-Number.csproj", "{B943E3D7-E2FF-4852-8CE8-024FC16B2F37}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{1E1CCD8F-5C3D-4FB8-BE2E-9A2B0FFA25E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E1CCD8F-5C3D-4FB8-BE2E-9A2B0FFA25E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E1CCD8F-5C3D-4FB8-BE2E-9A2B0FFA25E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B943E3D7-E2FF-4852-8CE8-024FC16B2F37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B943E3D7-E2FF-4852-8CE8-024FC16B2F37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B943E3D7-E2FF-4852-8CE8-024FC16B2F37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B943E3D7-E2FF-4852-8CE8-024FC16B2F37}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
