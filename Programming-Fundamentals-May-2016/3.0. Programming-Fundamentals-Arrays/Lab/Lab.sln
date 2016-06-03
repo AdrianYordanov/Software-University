@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sum-Min-Max-First-Last-Aver
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Last-K-Numbers-Sums-Sequence", "Last-K-Numbers-Sums-Sequence\Last-K-Numbers-Sums-Sequence.csproj", "{EE0AEDFE-3D79-4459-A619-CC14AF2333A8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Triple-Sum", "Triple-Sum\Triple-Sum.csproj", "{08B95B2F-F902-4F53-9524-F656B5091276}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{EE0AEDFE-3D79-4459-A619-CC14AF2333A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE0AEDFE-3D79-4459-A619-CC14AF2333A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE0AEDFE-3D79-4459-A619-CC14AF2333A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08B95B2F-F902-4F53-9524-F656B5091276}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08B95B2F-F902-4F53-9524-F656B5091276}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08B95B2F-F902-4F53-9524-F656B5091276}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08B95B2F-F902-4F53-9524-F656B5091276}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
