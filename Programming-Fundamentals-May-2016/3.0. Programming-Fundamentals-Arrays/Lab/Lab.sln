@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Last-K-Numbers-Sums-Sequenc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Triple-Sum", "Triple-Sum\Triple-Sum.csproj", "{08B95B2F-F902-4F53-9524-F656B5091276}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rounding-Away-From-Zero", "Rounding-Away-From-Zero\Rounding-Away-From-Zero.csproj", "{5A468A06-4A12-4C7E-81DA-BC351118EE20}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{08B95B2F-F902-4F53-9524-F656B5091276}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08B95B2F-F902-4F53-9524-F656B5091276}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08B95B2F-F902-4F53-9524-F656B5091276}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A468A06-4A12-4C7E-81DA-BC351118EE20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A468A06-4A12-4C7E-81DA-BC351118EE20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A468A06-4A12-4C7E-81DA-BC351118EE20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A468A06-4A12-4C7E-81DA-BC351118EE20}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
