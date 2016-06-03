@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day-Of-Week", "Day-Of-Week\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reverse-An-Array-Of-Integers", "Reverse-An-Array-Of-Integers\Reverse-An-Array-Of-Integers.csproj", "{56C515A6-ECFD-4C74-9216-02794CAE339B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sum-Min-Max-First-Last-Average", "Sum-Min-Max-First-Last-Average\Sum-Min-Max-First-Last-Average.csproj", "{30A7F459-850B-4CAB-84CE-04B66EC648D7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{56C515A6-ECFD-4C74-9216-02794CAE339B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56C515A6-ECFD-4C74-9216-02794CAE339B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56C515A6-ECFD-4C74-9216-02794CAE339B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30A7F459-850B-4CAB-84CE-04B66EC648D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30A7F459-850B-4CAB-84CE-04B66EC648D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30A7F459-850B-4CAB-84CE-04B66EC648D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30A7F459-850B-4CAB-84CE-04B66EC648D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
