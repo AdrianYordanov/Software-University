@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Index-Of-Letters", "Index-O
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pairs-By-Difference", "Pairs-By-Difference\Pairs-By-Difference.csproj", "{7C151324-409D-4D7C-A426-3328AB13319C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Equal-Sum", "Equal-Sum\Equal-Sum.csproj", "{1F91028A-88EB-4EFB-A1C1-32C661A61AC0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{7C151324-409D-4D7C-A426-3328AB13319C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C151324-409D-4D7C-A426-3328AB13319C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C151324-409D-4D7C-A426-3328AB13319C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F91028A-88EB-4EFB-A1C1-32C661A61AC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F91028A-88EB-4EFB-A1C1-32C661A61AC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F91028A-88EB-4EFB-A1C1-32C661A61AC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F91028A-88EB-4EFB-A1C1-32C661A61AC0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
