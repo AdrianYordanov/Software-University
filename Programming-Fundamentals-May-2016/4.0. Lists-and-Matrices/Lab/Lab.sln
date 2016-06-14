@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Count-Numbers", "Count-Numb
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Build-A-Matrix-Of-Letters", "Build-A-Matrix-Of-Letters\Build-A-Matrix-Of-Letters.csproj", "{7CA18BAD-661A-4FD8-802E-19EE7C72E742}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rotate-Matrix", "Rotate-Matrix\Rotate-Matrix.csproj", "{221F8F2F-EFE2-4238-AB80-3D6EAB5B7393}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{7CA18BAD-661A-4FD8-802E-19EE7C72E742}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7CA18BAD-661A-4FD8-802E-19EE7C72E742}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7CA18BAD-661A-4FD8-802E-19EE7C72E742}.Release|Any CPU.Build.0 = Release|Any CPU
+		{221F8F2F-EFE2-4238-AB80-3D6EAB5B7393}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{221F8F2F-EFE2-4238-AB80-3D6EAB5B7393}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{221F8F2F-EFE2-4238-AB80-3D6EAB5B7393}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{221F8F2F-EFE2-4238-AB80-3D6EAB5B7393}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
