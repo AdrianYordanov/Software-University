@@ -34,6 +34,8 @@
       <list>
         <option value="$PROJECT_DIR$/Welcome-To-HTML/welcome.html" />
         <option value="$PROJECT_DIR$/Hello-To-HTML/hello.html" />
+        <option value="$PROJECT_DIR$/My-TODO-List.html" />
+        <option value="$PROJECT_DIR$/My-TODO-List/todo.html" />
       </list>
     </option>
   </component>
@@ -104,11 +106,14 @@
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
-  <component name="RunManager" selected="JavaScript Debug.hello.html">
+  <component name="RunManager" selected="JavaScript Debug.todo.html">
     <configuration default="false" name="welcome.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Lab/Welcome-To-HTML/welcome.html">
       <method />
     </configuration>
     <configuration default="false" name="hello.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Lab/Hello-To-HTML/hello.html">
+      <method />
+    </configuration>
+    <configuration default="false" name="todo.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Lab/My-TODO-List/todo.html">
       <method />
     </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
@@ -158,14 +163,16 @@
       <recursive>false</recursive>
       <method />
     </configuration>
-    <list size="2">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.welcome.html" />
       <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.hello.html" />
+      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.todo.html" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.hello.html" />
-        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.welcome.html" />
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.todo.html" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.hello.html" />
+        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.welcome.html" />
       </list>
     </recent_temporary>
   </component>
@@ -179,15 +186,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1466947854812</updated>
-      <workItem from="1466947856668" duration="1149000" />
+      <workItem from="1466947856668" duration="1884000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1149000" />
+    <option name="totallyTimeSpent" value="1884000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15446559" sideWeight="0.5" order="-1" side_tool="false" content_ui="combo" />
@@ -221,6 +228,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="67" selection-start-line="7" selection-start-column="67" selection-end-line="7" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/My-TODO-List.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/My-TODO-List/todo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="42" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
           <folding />
         </state>
       </provider>
