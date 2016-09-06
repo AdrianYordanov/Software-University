@@ -159,18 +159,66 @@ function listBooks() {
             $('#books').text('No books in the library.');
         } else {
             let bookTable = $('<table>')
-                .append($('<tr>').append(
-                    '<th>Title</th>',
-                    '<th>Author</th>',
-                    '<th>Description</th>')
+                .append($('<tr>')
+                    .append(
+                        $('<th>Title</th>'),
+                        $('<th>Author</th>'),
+                        $('<th>Description</th>')
+                    )
                 );
+
             for(let book of books) {
-                bookTable.append($('<tr>').append(
-                    $('<td>').text(book['title']),
-                    $('<td>').text(book['author']),
-                    $('<td>').text(book['description']))
+                bookTable.append(
+                    $('<tr>').append(
+                        $('<td>').text(book['title']),
+                        $('<td>').text(book['author']),
+                        $('<td>').text(book['description'])
+                    )
                 );
+
+                let commentsTableData = $('<td colspan="3">');
+                if(book['comments'] && book['comments'].length > 0) {
+                    for(let comment of book['comments']) {
+                        commentsTableData.append(
+                            $('<div>')
+                                .text(comment['text']),
+                            $('<div>')
+                                .text('-- ' + comment['author'])
+                                .css({'margin-left': '20px', 'font-style': 'italic'})
+                        )
+                    }
+                }
+                commentsTableData.append(
+                    $('<div>').append(
+                        $('<a href="#">').text('[Add comment]').click(function () {
+                            $(this).next().show();
+                            $(this).hide();
+                        }),
+                        $('<form>').append(
+                            $('<label>').text('Comment:'),
+                            $('<input name="comment" type="text">').prop('required', true),
+                            $('<label>').text('Author:'),
+                            $('<input name="author" type="text">').prop('required', true),
+                            $('<button type="submit">').text('Add Comment'),
+                            $('<button type="button">').text('Cancel')
+                                .click(function () {
+                                    $(this).parent().prev().show();
+                                    $(this).parent().hide();
+                                })
+                        )
+                            .submit(function (event) {
+                                let comment = $(this).find('input[name=comment]').val();
+                                let author = $(this).find('input[name=author]').val();
+                                addBookComment(book, comment, author);
+                                event.preventDefault();
+                            })
+                            .hide()
+                    )
+                );
+
+                bookTable.append($('<tr>').append(commentsTableData));
             }
+
             $('#books').append(bookTable);
         }
     }
@@ -201,6 +249,29 @@ function createBook() {
     function createBookSuccess(response) {
         listBooks();
         showInfo('Book created.');
+    }
+}
+
+function addBookComment(bookData, commentText, commentAuthor) {
+    const kinveyBooksUrl = kinveyBaseUrl + 'appdata/' + kinveyAppKey + '/books';
+    const kinveyHeaders = {
+        'Authorization': 'Kinvey ' + sessionStorage.getItem('authToken'),
+        'Content-type': 'application/json'
+    };
+    bookData['comments'] = bookData['comments'] || [];
+    bookData['comments'].push({text: commentText, author: commentAuthor});
+    $.ajax({
+        method: 'PUT',
+        url: kinveyBooksUrl + '/' + bookData['_id'],
+        headers: kinveyHeaders,
+        data: JSON.stringify(bookData),
+        success: addBookCommentSuccess,
+        error: handleAjaxError
+    });
+
+    function addBookCommentSuccess(response) {
+        listBooks();
+        showInfo('Book comment added.');
     }
 }
 
