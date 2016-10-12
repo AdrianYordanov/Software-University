@@ -1,4 +1,4 @@
-"use sctrict";
+"use strict";
 
 function dayOfWeek([day]) {
     console.log(checkDay(day));
