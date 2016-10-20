@@ -23,8 +23,8 @@
             document.getElementById('items').appendChild(listItem);
 
             function deleteItem() {
-                let currentListItem = this.parentElement.parentElement;
-                let list = currentListItem.parentElement;
+                let currentListItem = this.parentNode.parentNode;
+                let list = currentListItem.parentNode;
                 list.removeChild(currentListItem);
             }
         }
