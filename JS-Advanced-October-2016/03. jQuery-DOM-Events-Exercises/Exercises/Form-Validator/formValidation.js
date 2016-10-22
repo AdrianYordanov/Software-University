@@ -1,3 +1,5 @@
+"use strict"
+
 function validate() {
     $('#submit').on('click', submitData);
     $('#company').on('change', showHideCompanyField);
