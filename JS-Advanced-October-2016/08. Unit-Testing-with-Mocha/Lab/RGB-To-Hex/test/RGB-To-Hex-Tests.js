@@ -5,7 +5,7 @@ let expect = require("chai").expect;
 
 describe("Function rgbToHexColor(red, green, blue) tests.", function () {
     describe("Tests with correct result.", function () {
-        it("should return #069A3A for (6, 154, 58) (the highest case)", function () {
+        it("should return #069A3A for (6, 154, 58) (random case)", function () {
             let result = rgbToHexColor(6, 154, 58);
             expect(result).equals("#069A3A");
         });
