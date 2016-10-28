@@ -122,7 +122,7 @@ describe("Function createCalculator() tests.", function () {
             expect(calculator.get()).to.be.NaN;
         });
     });
-    describe("Functions add(num) and subtract(num) combinated tests.", function () {
+    describe("Functions add(num) and subtract(num) combined tests.", function () {
         it("should return 0 for add 10 subtract 10", function () {
             calculator.add(10);
             calculator.subtract(10);
