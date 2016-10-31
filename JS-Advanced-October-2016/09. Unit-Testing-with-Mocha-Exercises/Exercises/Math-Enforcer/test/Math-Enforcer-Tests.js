@@ -5,7 +5,7 @@ let expect = require("chai").expect;
 
 describe("Test the object mathEnforcer.", function () {
     describe("Test the addFive property.", function () {
-        it("should return -1 for (-5)", function () {
+        it("should return -1 for (-6)", function () {
             let result = mathEnforcer.addFive(-6);
             expect(result).equal(-1);
         });
@@ -25,7 +25,7 @@ describe("Test the object mathEnforcer.", function () {
     describe("Test the subtractTen property.", function () {
         it("should return -15 for (-5)", function () {
             let result = mathEnforcer.subtractTen(-5);
-            expect(result).equal(-5 - 10);
+            expect(result).equal(-15);
         });
         it("should be close to -9.95 for (0.05)", function () {
             let result = mathEnforcer.subtractTen(0.05);
