@@ -91,14 +91,14 @@ describe("Function createCalculator() tests.", function () {
             calculator.subtract(40);
             expect(calculator.get()).equal(-100);
         });
-        it("should return -100 for (-10)(-20)(-30)(-40) (only negatives)", function () {
+        it("should return 100 for (-10)(-20)(-30)(-40) (only negatives)", function () {
             calculator.subtract(-10);
             calculator.subtract(-20);
             calculator.subtract(-30);
             calculator.subtract(-40);
             expect(calculator.get()).equal(100);
         });
-        it("should return -25 for (10)(-16)(-19) (positives and negatives)", function () {
+        it("should return 25 for (10)(-16)(-19) (positives and negatives)", function () {
             calculator.subtract(10);
             calculator.subtract(-16);
             calculator.subtract(-19);
@@ -133,7 +133,7 @@ describe("Function createCalculator() tests.", function () {
             calculator.add(10);
             expect(calculator.get()).equal(0);
         });
-        it("should return 5.6 for add 100 subtract 4.4 add 20 subtract 0.54", function () {
+        it("should return 5.6 for add 10 subtract 4.4 add 20 subtract 0.54", function () {
             calculator.add(10);
             calculator.subtract(4.4);
             calculator.add(20);
