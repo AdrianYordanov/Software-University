@@ -23,7 +23,7 @@ describe("Function lookupChar(string, index) tests.", function () {
             let result = lookupChar(50003, 6);
             expect(result).equal(undefined);
         });
-        it("should return undefined for ('hello world', 2.3)", function () {
+        it("should return undefined for (50003, 2.3)", function () {
             let result = lookupChar(50003, 2.3);
             expect(result).equal(undefined);
         });
