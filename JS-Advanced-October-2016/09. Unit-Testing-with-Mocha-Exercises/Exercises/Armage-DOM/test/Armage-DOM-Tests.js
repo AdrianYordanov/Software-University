@@ -22,12 +22,12 @@ describe("Test the function nuke(selector1, selector2)", function () {
 </div>`;
     });
 
-    it("should delete all 'div.nested' for ('div', '.nested')", function () {
+    it("should delete all 'div.nested'", function () {
         nuke('div', '.nested');
         let count = $("div.nested").length;
         expect(count).equal(0);
     });
-    it("should delete all 'div.nested' for ('span', '.target')", function () {
+    it("should delete all 'span.target'", function () {
         nuke('span', '.target');
         let count = $("span.target").length;
         expect(count).equal(0);
