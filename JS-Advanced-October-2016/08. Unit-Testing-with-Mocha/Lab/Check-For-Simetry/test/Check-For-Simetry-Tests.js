@@ -29,10 +29,6 @@ describe("Function isSymmetric(arr) tests.", function () {
             let result = isSymmetric([]);
             expect(result).equal(true);
         });
-        it("should return true for [] (with empty array)", function () {
-            let result = isSymmetric([]);
-            expect(result).equal(true);
-        });
     });
     describe("Expected false cases.", function () {
         it("should return false for [1, 7, 3, 4, 3, 5, 1] (with odd numbers length)", function () {
