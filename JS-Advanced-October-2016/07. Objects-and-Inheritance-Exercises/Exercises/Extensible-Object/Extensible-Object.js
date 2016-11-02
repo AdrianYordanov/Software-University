@@ -11,7 +11,7 @@ function extensibleObject() {
                 let parent = Object.getPrototypeOf(currentObj);
                 parent[prop] = template[prop];
             } else {
-                currentObj[prop] = 'da';
+                currentObj[prop] = template[prop];
             }
         }
     }
