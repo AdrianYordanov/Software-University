@@ -44,7 +44,7 @@ function initializeTable() {
 
         row.fadeOut(function () {
             rowBeforeThePrevious.after(row);
-            row.css('display', 'inline');
+            row.css('display', 'table-row');
             correctLinks();
         });
     }
@@ -55,7 +55,7 @@ function initializeTable() {
 
         row.fadeOut(function () {
             nextRow.after(row);
-            row.css('display', 'inline');
+            row.css('display', 'table-row');
             correctLinks();
         });
     }
