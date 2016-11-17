@@ -17,7 +17,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rounding-Away-From-Zero", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reverse-Array-Of-Strings", "Reverse-Array-Of-Strings\Reverse-Array-Of-Strings.csproj", "{36F80194-E817-464E-AAF9-6847EDBF3956}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sum-Array", "Sum-Array\Sum-Array.csproj", "{1E1CCD8F-5C3D-4FB8-BE2E-9A2B0FFA25E7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sum-Arrays", "Sum-Array\Sum-Arrays.csproj", "{1E1CCD8F-5C3D-4FB8-BE2E-9A2B0FFA25E7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Condense-Array-To-Number", "Condense-Array-To-Number\Condense-Array-To-Number.csproj", "{B943E3D7-E2FF-4852-8CE8-024FC16B2F37}"
 EndProject

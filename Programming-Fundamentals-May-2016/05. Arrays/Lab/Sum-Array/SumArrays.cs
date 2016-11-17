@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-class SumArray
+class SumArrays
 {
     static void Main()
     {

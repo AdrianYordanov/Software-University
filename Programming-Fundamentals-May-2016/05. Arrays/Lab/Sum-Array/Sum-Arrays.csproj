@@ -7,8 +7,8 @@
     <ProjectGuid>{1E1CCD8F-5C3D-4FB8-BE2E-9A2B0FFA25E7}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Sum_Array</RootNamespace>
-    <AssemblyName>Sum-Array</AssemblyName>
+    <RootNamespace>Sum_Arrays</RootNamespace>
+    <AssemblyName>Sum-Arrays</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -41,7 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SumArray.cs" />
+    <Compile Include="SumArrays.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
