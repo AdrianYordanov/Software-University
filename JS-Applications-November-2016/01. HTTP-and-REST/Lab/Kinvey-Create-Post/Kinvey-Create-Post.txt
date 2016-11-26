@@ -1,0 +1,12 @@
+{
+  "title": "Postman post",
+  "body": "This is post created with Postman.",
+  "_acl": {
+    "creator": "583973661217fb99553090c6"
+  },
+  "_kmd": {
+    "lmt": "2016-11-26T11:46:33.283Z",
+    "ect": "2016-11-26T11:46:33.283Z"
+  },
+  "_id": "583976198ea148fe4a6e9bba"
+}
