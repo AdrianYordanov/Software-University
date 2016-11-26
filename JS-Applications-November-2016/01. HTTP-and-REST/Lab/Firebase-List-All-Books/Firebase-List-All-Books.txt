@@ -1,0 +1,56 @@
+{
+  "1": {
+    "-KX7bHmyc6DDyNkgGBdB": {
+      "body": "New author",
+      "title": "New title"
+    }
+  },
+  "7": {
+    "-KXCXhPNuKOOkuZh5x2F": {
+      "author": "Author Changed",
+      "year": 1981
+    },
+    "ISBN": "9999",
+    "author": "New author was assigned",
+    "title": "New title",
+    "year": 1981
+  },
+  "-KX7Any5kBtRCQdsQh0V": {
+    "body": "Some text with no sence.",
+    "title": "Create by me!!!"
+  },
+  "-KX7bAvKmW-zDzRJ6UVC": {
+    "body": "New author",
+    "title": "New title"
+  },
+  "-KXBwDHUa3A2XX0g66MT": {
+    "author": "George RR Martin",
+    "title": "Game of thrones"
+  },
+  "-KXCIxPswiS3TJNm2EeK": {
+    "author": "Kiro",
+    "title": "taital"
+  },
+  "-KXCXUvIPxD6qkP1iRfk": {
+    "author": "New author",
+    "title": "New title"
+  },
+  "-KXCgF7fCm5w0RCSOvBd": {
+    "author": "New author",
+    "title": "New title"
+  },
+  "-KXCn82rbx6NlgffZxR7": {
+    "author": "New author",
+    "title": "New title"
+  },
+  "-KXCxro_q5DGHD48c2M0": {
+    "author": "New author",
+    "title": "New title"
+  },
+  "-KXD1XyDQQX0XEPRRNzV": {
+    "body": "I'm having a problem with this.",
+    "title": "Found a bug"
+  },
+  "body": "I'm having a problem with this.",
+  "title": "Found a bug"
+}
