@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Countries and Towns</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+    <style>
+        button { display: inline-table; width: 90%; margin: 2px; }
+        fieldset, ul {float: left;  }
+        div {  float:left; margin-right: 2%; padding:2%; }
+        a {font-size:10pt;}
+        li {font-size: 17pt; padding:10px; border-radius: 10px;}
+        li:hover { background: yellow;  }
+    </style>
+</head>
+<body>
+    <div>
+        <fieldset id="countryForm">
+            <legend>Country Panel</legend>
+            <label>Country</label>
+            <input type="text" id="country"/>
+            <br>
+            <button id="addCountry">Add</button>
+        </fieldset>
+    </div>
+
+    <div>
+        <h1>Countries</h1>
+        <ul id="countries">
+        </ul>
+    </div>
+
+    <div>
+        <h1>Towns</h1>
+        <ul id="towns">
+        </ul>
+    </div>
+
+    <script>loadApp()</script>
+</body>
+</html>
