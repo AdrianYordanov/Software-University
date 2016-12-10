@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello Message</title>
+    <script src="https://unpkg.com/react/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom/dist/react-dom.js"></script>
+    <script src="https://unpkg.com/babel-standalone"></script>
+</head>
+<body>
+    <div id="container"></div>
+    <script type="text/babel">
+        class HelloMessage extends React.Component {
+            render() {
+                return <div>Hello {this.props.name}!</div>
+            }
+        }
+
+        ReactDOM.render(<HelloMessage name="Adrian"/>, document.getElementById("container"));
+    </script>
+</body>
+</html>
