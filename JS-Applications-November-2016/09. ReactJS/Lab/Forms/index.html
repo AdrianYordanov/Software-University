@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forms</title>
+    <script src="https://unpkg.com/react/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom/dist/react-dom.js"></script>
+    <script src="https://unpkg.com/babel-standalone"></script>
+    <script type="text/babel" src="form.js"></script>
+</head>
+<body>
+    <div id="app"></div>
+    <script type="text/babel">
+        ReactDOM.render(
+                <div>
+                    <PersonForm />
+                    <PersonForm onsubmit={editPerson} />
+                    <PersonForm name="Nakov" age="20" onsubmit={editPerson} />
+                </div>,
+            document.getElementById('app'));
+
+        function editPerson(personFormData) {
+            alert(JSON.stringify(personFormData));
+        }
+    </script>
+</body>
+</html>
