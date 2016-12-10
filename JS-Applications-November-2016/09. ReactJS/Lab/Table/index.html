@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Table</title>
+    <script src="https://unpkg.com/react/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom/dist/react-dom.js"></script>
+    <script src="https://unpkg.com/babel-standalone"></script>
+    <script type="text/babel" src="table.js"></script>
+</head>
+<body>
+<div id="app"></div>
+<script type="text/babel">
+    let books = [
+        ["JS Programming Basics","Bay Ivan"],
+        ["PHP","Dedo Mraz"], ["React.js","Kaka Mara"]
+    ];
+    ReactDOM.render(
+        <Table columns={["Title", "Author"]} rows={books} />,
+        document.getElementById('app'));
+</script>
+</body>
+</html>
