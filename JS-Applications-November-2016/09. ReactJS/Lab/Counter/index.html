@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Counter</title>
+    <script src="https://unpkg.com/react/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom/dist/react-dom.js"></script>
+    <script src="https://unpkg.com/babel-standalone"></script>
+    <script type="text/babel" src="counter.js"></script>
+</head>
+<body>
+    <div id="app"></div>
+    <script type="text/babel">
+        ReactDOM.render(
+                <Counter start="5" />,
+            document.getElementById('app'));
+
+    </script>
+</body>
+</html>
