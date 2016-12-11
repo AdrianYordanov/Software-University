@@ -1,0 +1,23 @@
+<section id="viewMyMessages">
+    <h1>My Messages</h1>
+    <div class="messages" id="myMessages">
+        <table>
+            <thead>
+            <tr>
+                <th>From</th>
+                <th>Message</th>
+                <th>Date Received</th>
+            </tr>
+            </thead>
+            <tbody>
+                {{#messages}}
+                    <tr>
+                        <td>{{formattedName}}</td>
+                        <td>{{text}}</td>
+                        <td>{{date}}</td>
+                    </tr>
+                {{/messages}}
+            </tbody>
+        </table>
+    </div>
+</section>
