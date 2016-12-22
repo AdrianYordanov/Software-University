@@ -1,0 +1,25 @@
+<section id="viewShop">
+    <h1>Products</h1>
+    <div class="products" id="shopProducts">
+        <table>
+            <thead>
+            <tr>
+                <th>Product</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+                {{#shopItems}}
+                <tr id={{_id}}>
+                    <td>{{name}}</td>
+                    <td>{{description}}</td>
+                    <td>{{price}}</td>
+                    <td><button>Purchase</button></td>
+                </tr>
+                {{/shopItems}}
+            </tbody>
+        </table>
+    </div>
+</section>

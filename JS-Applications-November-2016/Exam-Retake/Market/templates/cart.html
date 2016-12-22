@@ -1,0 +1,27 @@
+<section id="viewCart">
+    <h1>My Cart</h1>
+    <div class="products" id="cartProducts">
+        <table>
+            <thead>
+            <tr>
+                <th>Product</th>
+                <th>Description</th>
+                <th>Quantity</th>
+                <th>Total Price</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+                {{#cart}}
+                <tr id={{_id}}>
+                    <td>{{name}}</td>
+                    <td>{{description}}</td>
+                    <td>{{quantity}}</td>
+                    <td>{{price}}</td>
+                    <td><button>Discard</button></td>
+                </tr>
+                {{/cart}}
+            </tbody>
+        </table>
+    </div>
+</section>
