@@ -20,8 +20,6 @@ class MessageView {
                 let row = $(this).parent().parent();
                 let id = row.attr('id');
 
-                debugger;
-
                 Sammy(function () {
                     this.trigger('onDeleteMessage', {messageId: id});
                 })
