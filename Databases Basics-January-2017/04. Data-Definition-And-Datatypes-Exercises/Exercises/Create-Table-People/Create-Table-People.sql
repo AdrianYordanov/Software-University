@@ -14,7 +14,7 @@ CREATE TABLE People(
 ALTER TABLE People 
 ADD CONSTRAINT PK_People PRIMARY KEY(Id)
 ALTER TABLE People
-ADD CONSTRAINT CH_Picture_People CHECK(DATALENGTH(Picture) < 2 * 1024 * 1024)
+ADD CONSTRAINT CK_Picture_People CHECK(DATALENGTH(Picture) < 2 * 1024 * 1024)
 
 INSERT INTO People(Name, Picture, Height, Weight, Gender, Birthday, Biography)
 VALUES

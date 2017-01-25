@@ -12,7 +12,7 @@ CREATE TABLE Users(
 ALTER TABLE Users 
 ADD CONSTRAINT PK_Users PRIMARY KEY(Id)
 ALTER TABLE Users
-ADD CONSTRAINT CH_ProfilePicture_Users CHECK(DATALENGTH(ProfilePicture) < 900 * 1024)
+ADD CONSTRAINT CK_ProfilePicture_Users CHECK(DATALENGTH(ProfilePicture) < 900 * 1024)
 
 DECLARE @C varchar(max) = '|'
 -- If we set bigger or equal length than 900 * 1024, it will throw an error.
