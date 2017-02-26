@@ -35,7 +35,7 @@ INSERT INTO Towns VALUES
 ('Plovdiv', 'Bulgaria'),
 ('Rome', 'Italy'),
 ('Gabrovo', 'Bulgaria'),
-('France', 'Paris')
+('Paris', 'France')
 
 INSERT INTO Minions VALUES
 ('Ivan', 15, 1),
