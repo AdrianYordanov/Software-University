@@ -58,12 +58,12 @@ namespace Softuni_Database
 
             modelBuilder.Entity<Employee>()
                 .HasMany(e => e.Departments)
-                .WithRequired(e => e.Employee)
+                .WithRequired(e => e.Manager)
                 .HasForeignKey(e => e.ManagerID)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Employee>()
-                .HasMany(e => e.Employees1)
+                .HasMany(e => e.Employees)
                 .WithOptional(e => e.Manager)
                 .HasForeignKey(e => e.ManagerID);
 

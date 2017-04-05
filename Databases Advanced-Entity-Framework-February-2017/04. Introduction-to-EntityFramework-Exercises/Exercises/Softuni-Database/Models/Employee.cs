@@ -12,7 +12,7 @@ namespace Softuni_Database.Models
         public Employee()
         {
             Departments = new HashSet<Department>();
-            Employees1 = new HashSet<Employee>();
+            Employees = new HashSet<Employee>();
             Projects = new HashSet<Project>();
         }
 
@@ -53,7 +53,7 @@ namespace Softuni_Database.Models
         public virtual Department Department { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Employee> Employees1 { get; set; }
+        public virtual ICollection<Employee> Employees { get; set; }
 
         public virtual Employee Manager { get; set; }
 
