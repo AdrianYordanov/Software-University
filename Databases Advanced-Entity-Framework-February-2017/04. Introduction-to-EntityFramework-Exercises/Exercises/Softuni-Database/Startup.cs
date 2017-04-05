@@ -11,8 +11,6 @@
                 (System.Globalization.CultureInfo)System.Threading.Thread.CurrentThread.CurrentCulture.Clone();
             customCulture.NumberFormat.NumberDecimalSeparator = ".";
             System.Threading.Thread.CurrentThread.CurrentCulture = customCulture;
-            
-            EmployeesFullInformation.Execute();
         }
     }
 }
