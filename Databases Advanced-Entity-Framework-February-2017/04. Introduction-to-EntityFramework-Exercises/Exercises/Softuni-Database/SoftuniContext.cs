@@ -5,6 +5,8 @@ namespace Softuni_Database
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
 
+    using Softuni_Database.Models;
+
     public partial class SoftuniContext : DbContext
     {
         public SoftuniContext()

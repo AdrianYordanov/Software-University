@@ -1,4 +1,4 @@
-namespace Softuni_Database
+namespace Softuni_Database.Models
 {
     using System;
     using System.Collections.Generic;
