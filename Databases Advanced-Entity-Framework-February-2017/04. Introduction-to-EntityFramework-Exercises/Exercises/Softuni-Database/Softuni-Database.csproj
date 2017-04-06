@@ -67,6 +67,7 @@
     <Compile Include="Tasks\EmployeesFromSeattle.cs" />
     <Compile Include="Tasks\EmployeesFullInformation.cs" />
     <Compile Include="Tasks\EmployeesWithSalaryOver50000.cs" />
+    <Compile Include="Tasks\EmployeeWithId147.cs" />
     <Compile Include="Tasks\FindEmployeesInPeriod.cs" />
   </ItemGroup>
   <ItemGroup>
