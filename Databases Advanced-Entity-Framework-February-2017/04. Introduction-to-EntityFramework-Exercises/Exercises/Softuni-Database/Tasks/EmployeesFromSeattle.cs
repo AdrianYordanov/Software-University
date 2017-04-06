@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Softuni_Database.Tasks
+﻿namespace Softuni_Database.Tasks
 {
+    using System;
+    using System.Linq;
     class EmployeesFromSeattle
     {
         public static void Execute()
