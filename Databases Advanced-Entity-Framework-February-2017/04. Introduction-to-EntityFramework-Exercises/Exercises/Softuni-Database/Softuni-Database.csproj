@@ -64,6 +64,7 @@
     <Compile Include="Models\Town.cs" />
     <Compile Include="Tasks\AddingNewAddressAndUpdatingEmployee.cs" />
     <Compile Include="Tasks\AdressesByTownName.cs" />
+    <Compile Include="Tasks\DepartmentsWithMoreThanFiveEmployees.cs" />
     <Compile Include="Tasks\EmployeesFromSeattle.cs" />
     <Compile Include="Tasks\EmployeesFullInformation.cs" />
     <Compile Include="Tasks\EmployeesWithSalaryOver50000.cs" />
