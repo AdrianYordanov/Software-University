@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recursive-Fibonacci", "Recu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stack-Fibonacci", "Stack-Fibonacci\Stack-Fibonacci.csproj", "{F83388E5-6A48-46CD-9D2E-A39C9D69D907}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simple-Text-Editor", "Simple-Text-Editor\Simple-Text-Editor.csproj", "{2238F844-5949-496A-9FF6-13A80A34B800}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{F83388E5-6A48-46CD-9D2E-A39C9D69D907}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F83388E5-6A48-46CD-9D2E-A39C9D69D907}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F83388E5-6A48-46CD-9D2E-A39C9D69D907}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2238F844-5949-496A-9FF6-13A80A34B800}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2238F844-5949-496A-9FF6-13A80A34B800}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2238F844-5949-496A-9FF6-13A80A34B800}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2238F844-5949-496A-9FF6-13A80A34B800}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
