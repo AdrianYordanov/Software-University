@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftUni-Party", "SoftUni-Pa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Count-Same-Values-In-Array", "Count-Same-Values-In-Array\Count-Same-Values-In-Array.csproj", "{168DE500-3BF5-4B7C-B3C5-0F601E213804}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Academy-Graduation", "Academy-Graduation\Academy-Graduation.csproj", "{3B1801EA-7B6F-4D3E-98E3-BCD5C3A0D9DD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{168DE500-3BF5-4B7C-B3C5-0F601E213804}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{168DE500-3BF5-4B7C-B3C5-0F601E213804}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{168DE500-3BF5-4B7C-B3C5-0F601E213804}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B1801EA-7B6F-4D3E-98E3-BCD5C3A0D9DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B1801EA-7B6F-4D3E-98E3-BCD5C3A0D9DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B1801EA-7B6F-4D3E-98E3-BCD5C3A0D9DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B1801EA-7B6F-4D3E-98E3-BCD5C3A0D9DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
