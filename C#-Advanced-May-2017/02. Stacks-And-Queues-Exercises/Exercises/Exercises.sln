@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stack-Fibonacci", "Stack-Fi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simple-Text-Editor", "Simple-Text-Editor\Simple-Text-Editor.csproj", "{2238F844-5949-496A-9FF6-13A80A34B800}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Poisonous-Plants", "Poisonous-Plants\Poisonous-Plants.csproj", "{9F2E8A5E-D6AB-45D0-BFA2-F6BD6E5F4FA6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{2238F844-5949-496A-9FF6-13A80A34B800}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2238F844-5949-496A-9FF6-13A80A34B800}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2238F844-5949-496A-9FF6-13A80A34B800}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F2E8A5E-D6AB-45D0-BFA2-F6BD6E5F4FA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F2E8A5E-D6AB-45D0-BFA2-F6BD6E5F4FA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F2E8A5E-D6AB-45D0-BFA2-F6BD6E5F4FA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F2E8A5E-D6AB-45D0-BFA2-F6BD6E5F4FA6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
