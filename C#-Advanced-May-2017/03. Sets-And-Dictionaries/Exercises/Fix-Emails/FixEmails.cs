@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 class FixEmails
 {
@@ -14,12 +11,6 @@ class FixEmails
         while ((input = Console.ReadLine()) != "stop")
         {
             var email = Console.ReadLine();
-            var domain = email.Substring(email.Length - 2);
-
-            if (domain.ToLower() == "us" || domain.ToLower() == "uk")
-            {
-                continue;
-            }
 
             if (dictionary.ContainsKey(input))
             {
@@ -33,7 +24,16 @@ class FixEmails
 
         foreach (var name in dictionary.Keys)
         {
-            Console.WriteLine($"{name} –> {dictionary[name]}");
+            var email = dictionary[name];
+            var domain = email.Substring(email.Length - 2);
+
+            if (domain.ToLower() == "us" || domain.ToLower() == "uk")
+            {
+                dictionary.Remove(name);
+                continue;
+            }
+
+            Console.WriteLine($"{name} -> {dictionary[name]}");
         }
     }
 }
