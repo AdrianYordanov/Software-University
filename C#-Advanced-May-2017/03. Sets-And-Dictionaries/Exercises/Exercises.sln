@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Count-Symbols", "Count-Symb
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phonebook", "Phonebook\Phonebook.csproj", "{1CA9EF68-DA6E-493E-B81F-DDB684058DFD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Miners-Task", "Miners-Task\Miners-Task.csproj", "{50289C49-75DA-4451-9448-77A40050A3C2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{1CA9EF68-DA6E-493E-B81F-DDB684058DFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1CA9EF68-DA6E-493E-B81F-DDB684058DFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1CA9EF68-DA6E-493E-B81F-DDB684058DFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50289C49-75DA-4451-9448-77A40050A3C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50289C49-75DA-4451-9448-77A40050A3C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50289C49-75DA-4451-9448-77A40050A3C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50289C49-75DA-4451-9448-77A40050A3C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
