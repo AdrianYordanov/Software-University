@@ -1,7 +1,0 @@
-li a {
-    display: none;
-}
-
-li:hover a {
-    display: inline;
-}
