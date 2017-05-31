@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Matrix-Of-Palindromes", "Ma
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diagonal-Difference", "Diagonal-Difference\Diagonal-Difference.csproj", "{BA612E91-E8A3-4D80-AB54-A1954CEEB1C3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Squares-In-Matrix", "Squares-In-Matrix\Squares-In-Matrix.csproj", "{AB9490FF-96A7-4575-9E69-13E3E583D6CB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{BA612E91-E8A3-4D80-AB54-A1954CEEB1C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA612E91-E8A3-4D80-AB54-A1954CEEB1C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA612E91-E8A3-4D80-AB54-A1954CEEB1C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB9490FF-96A7-4575-9E69-13E3E583D6CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB9490FF-96A7-4575-9E69-13E3E583D6CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB9490FF-96A7-4575-9E69-13E3E583D6CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB9490FF-96A7-4575-9E69-13E3E583D6CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
