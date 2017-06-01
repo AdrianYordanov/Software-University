@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26430.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stream-Reader", "Stream-Reader\Stream-Reader.csproj", "{58D74074-8132-4D07-9128-029C284901DB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stream-Writer", "Stream-Writer\Stream-Writer.csproj", "{66BB1794-F953-4579-B40E-39CF2A3437AE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{58D74074-8132-4D07-9128-029C284901DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58D74074-8132-4D07-9128-029C284901DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{58D74074-8132-4D07-9128-029C284901DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66BB1794-F953-4579-B40E-39CF2A3437AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66BB1794-F953-4579-B40E-39CF2A3437AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66BB1794-F953-4579-B40E-39CF2A3437AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66BB1794-F953-4579-B40E-39CF2A3437AE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
