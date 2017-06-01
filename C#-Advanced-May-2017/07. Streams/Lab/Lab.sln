@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crypto-Stream", "Crypto-Str
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gzip-Stream", "Gzip-Stream\Gzip-Stream.csproj", "{E4B8D4EF-C1AB-406E-9BEF-0B4033CAD7C4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fixing-Movie-Subtitles", "Fixing-Movie-Subtitles\Fixing-Movie-Subtitles.csproj", "{324A9487-E522-4130-B715-943F69AC66C4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{E4B8D4EF-C1AB-406E-9BEF-0B4033CAD7C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E4B8D4EF-C1AB-406E-9BEF-0B4033CAD7C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E4B8D4EF-C1AB-406E-9BEF-0B4033CAD7C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{324A9487-E522-4130-B715-943F69AC66C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{324A9487-E522-4130-B715-943F69AC66C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{324A9487-E522-4130-B715-943F69AC66C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{324A9487-E522-4130-B715-943F69AC66C4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
