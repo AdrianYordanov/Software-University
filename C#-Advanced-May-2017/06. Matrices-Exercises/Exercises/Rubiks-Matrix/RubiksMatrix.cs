@@ -31,7 +31,6 @@ class RubiksMatrix
             var command = inputTokens[1];
             var rollTimes = int.Parse(inputTokens[2]);
 
-
             switch (command)
             {
                 case "up":
@@ -80,39 +79,22 @@ class RubiksMatrix
                     }
                 case "left":
                     {
-                        var queue = new Queue<int>(matrix[selectedIndex]);
-
                         for (int i = 0; i < rollTimes % matrix[selectedIndex].Length; i++)
                         {
-                            var number = queue.Dequeue();
-                            queue.Enqueue(number);
-                        }
-
-                        for (int colIndex = 0; colIndex < matrix[selectedIndex].Length; colIndex++)
-                        {
-                            matrix[selectedIndex][colIndex] = queue.Dequeue();
+                            var first = matrix[selectedIndex][0];
+                            Array.Copy(matrix[selectedIndex], 1, matrix[selectedIndex], 0, matrix[selectedIndex].Length - 1);
+                            matrix[selectedIndex][matrix[selectedIndex].Length - 1] = first;
                         }
 
                         break;
                     }
                 case "right":
                     {
-                        var queue = new Queue<int>();
-
-                        for (int colIndex = matrix[selectedIndex].Length - 1; colIndex >= 0; colIndex--)
-                        {
-                            queue.Enqueue(matrix[selectedIndex][colIndex]);
-                        }
-
                         for (int i = 0; i < rollTimes % matrix[selectedIndex].Length; i++)
                         {
-                            var number = queue.Dequeue();
-                            queue.Enqueue(number);
-                        }
-
-                        for (int colIndex = matrix[selectedIndex].Length - 1; colIndex >= 0; colIndex--)
-                        {
-                            matrix[selectedIndex][colIndex] = queue.Dequeue();
+                            var last = matrix[selectedIndex][matrix[selectedIndex].Length - 1];
+                            Array.Copy(matrix[selectedIndex], 0, matrix[selectedIndex], 1, matrix[selectedIndex].Length - 1);
+                            matrix[selectedIndex][0] = last;
                         }
 
                         break;
