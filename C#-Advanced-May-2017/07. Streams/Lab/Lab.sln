@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Network-Stream", "Network-S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Memory-Stream", "Memory-Stream\Memory-Stream.csproj", "{8D1BFE93-D38C-486D-8A88-A33C6AC25367}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Buffered-Writer", "Buffered-Writer\Buffered-Writer.csproj", "{3BDEAF7E-5300-48F7-91A4-18D808590800}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{8D1BFE93-D38C-486D-8A88-A33C6AC25367}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D1BFE93-D38C-486D-8A88-A33C6AC25367}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D1BFE93-D38C-486D-8A88-A33C6AC25367}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BDEAF7E-5300-48F7-91A4-18D808590800}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BDEAF7E-5300-48F7-91A4-18D808590800}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BDEAF7E-5300-48F7-91A4-18D808590800}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BDEAF7E-5300-48F7-91A4-18D808590800}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
