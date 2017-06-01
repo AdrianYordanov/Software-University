@@ -9,6 +9,7 @@ class StreamReaderExample
         {
             int lineNumber = 0;
             string line = reader.ReadLine();
+
             while (line != null)
             {
                 lineNumber++;

@@ -9,6 +9,7 @@ class StreamWriterExample
             using (var writer = new StreamWriter("../../reversed.txt"))
             {
                 string line = reader.ReadLine();
+
                 while (line != null)
                 {
                     for (int i = line.Length - 1; i >= 0; i--)
