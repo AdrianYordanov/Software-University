@@ -5,7 +5,7 @@ class StreamReaderExample
 {
     static void Main()
     {
-        using (StreamReader reader = new StreamReader("../../somefile.txt"))
+        using (var reader = new StreamReader("../../somefile.txt"))
         {
             int lineNumber = 0;
             string line = reader.ReadLine();
