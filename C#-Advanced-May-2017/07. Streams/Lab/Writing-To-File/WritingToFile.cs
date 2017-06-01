@@ -11,7 +11,7 @@ class WritingToFile
         try
         {
             byte[] bytes = Encoding.UTF8.GetBytes(text);
-            fileStream.Write(bytes, 2, bytes.Length - 2);
+            fileStream.Write(bytes, 0, bytes.Length);
         }
         finally
         {
