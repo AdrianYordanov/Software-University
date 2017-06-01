@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stream-Writer", "Stream-Wri
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Writing-To-File", "Writing-To-File\Writing-To-File.csproj", "{23E3C66D-FDA2-4448-BD83-347400CEF14C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "File-Copy", "File-Copy\File-Copy.csproj", "{838B2C63-F147-4C88-90A6-6719F74F833C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{23E3C66D-FDA2-4448-BD83-347400CEF14C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23E3C66D-FDA2-4448-BD83-347400CEF14C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23E3C66D-FDA2-4448-BD83-347400CEF14C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{838B2C63-F147-4C88-90A6-6719F74F833C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{838B2C63-F147-4C88-90A6-6719F74F833C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{838B2C63-F147-4C88-90A6-6719F74F833C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{838B2C63-F147-4C88-90A6-6719F74F833C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
