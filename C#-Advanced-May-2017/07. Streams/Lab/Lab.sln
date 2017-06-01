@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Memory-Stream", "Memory-Str
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Buffered-Writer", "Buffered-Writer\Buffered-Writer.csproj", "{3BDEAF7E-5300-48F7-91A4-18D808590800}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crypto-Stream", "Crypto-Stream\Crypto-Stream.csproj", "{6DFF20A2-DEE2-4C89-9AE4-D2466495219D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{3BDEAF7E-5300-48F7-91A4-18D808590800}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3BDEAF7E-5300-48F7-91A4-18D808590800}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3BDEAF7E-5300-48F7-91A4-18D808590800}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DFF20A2-DEE2-4C89-9AE4-D2466495219D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DFF20A2-DEE2-4C89-9AE4-D2466495219D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DFF20A2-DEE2-4C89-9AE4-D2466495219D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DFF20A2-DEE2-4C89-9AE4-D2466495219D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
