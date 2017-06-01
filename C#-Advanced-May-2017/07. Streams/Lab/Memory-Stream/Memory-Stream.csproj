@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{988D7228-5D2B-4AD1-9B17-A900DF676C03}</ProjectGuid>
+    <ProjectGuid>{8D1BFE93-D38C-486D-8A88-A33C6AC25367}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Network_Stream</RootNamespace>
-    <AssemblyName>Network-Stream</AssemblyName>
+    <RootNamespace>Memory_Stream</RootNamespace>
+    <AssemblyName>Memory-Stream</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="NetworkStreamExample.cs" />
+    <Compile Include="MemoryStreamExample.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

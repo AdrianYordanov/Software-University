@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Writing-To-File", "Writing-
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "File-Copy", "File-Copy\File-Copy.csproj", "{838B2C63-F147-4C88-90A6-6719F74F833C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Network-Stream", "Network-Stream\Network-Stream.csproj", "{988D7228-5D2B-4AD1-9B17-A900DF676C03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Memory-Stream", "Memory-Stream\Memory-Stream.csproj", "{8D1BFE93-D38C-486D-8A88-A33C6AC25367}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{838B2C63-F147-4C88-90A6-6719F74F833C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{838B2C63-F147-4C88-90A6-6719F74F833C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{838B2C63-F147-4C88-90A6-6719F74F833C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{988D7228-5D2B-4AD1-9B17-A900DF676C03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{988D7228-5D2B-4AD1-9B17-A900DF676C03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{988D7228-5D2B-4AD1-9B17-A900DF676C03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{988D7228-5D2B-4AD1-9B17-A900DF676C03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D1BFE93-D38C-486D-8A88-A33C6AC25367}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D1BFE93-D38C-486D-8A88-A33C6AC25367}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D1BFE93-D38C-486D-8A88-A33C6AC25367}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D1BFE93-D38C-486D-8A88-A33C6AC25367}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
