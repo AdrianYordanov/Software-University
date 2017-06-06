@@ -39,7 +39,6 @@ class TargetPractice
                         stringIndex = 0;
                     }
 
-
                     matrix[i, j] = line[stringIndex];
                 }
             }
