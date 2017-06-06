@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parse-Url", "Parse-Url\Pars
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parse-Tags", "Parse-Tags\Parse-Tags.csproj", "{06461281-CEC6-40EF-8C68-7799C41D9ADB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Special-Words", "Special-Words\Special-Words.csproj", "{72E61982-C9F2-4BC7-A305-095D96A47767}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{06461281-CEC6-40EF-8C68-7799C41D9ADB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06461281-CEC6-40EF-8C68-7799C41D9ADB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06461281-CEC6-40EF-8C68-7799C41D9ADB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72E61982-C9F2-4BC7-A305-095D96A47767}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72E61982-C9F2-4BC7-A305-095D96A47767}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72E61982-C9F2-4BC7-A305-095D96A47767}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72E61982-C9F2-4BC7-A305-095D96A47767}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
