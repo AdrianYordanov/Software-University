@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26430.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Students-Results", "Students-Results\Students-Results.csproj", "{FE5ECDC0-017E-43DA-A771-1E59AE19E773}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parse-Url", "Parse-Url\Parse-Url.csproj", "{8B7CA211-F36E-4648-B76B-D882F42451EB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{FE5ECDC0-017E-43DA-A771-1E59AE19E773}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE5ECDC0-017E-43DA-A771-1E59AE19E773}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE5ECDC0-017E-43DA-A771-1E59AE19E773}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B7CA211-F36E-4648-B76B-D882F42451EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B7CA211-F36E-4648-B76B-D882F42451EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B7CA211-F36E-4648-B76B-D882F42451EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B7CA211-F36E-4648-B76B-D882F42451EB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
