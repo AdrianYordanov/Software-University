@@ -34,8 +34,6 @@ class WordCount
                     var wordTokens = Regex
                         .Split(line.ToLower(), @"\W+");
 
-
-
                     foreach (var word in wordTokens)
                     {
                         if (words.ContainsKey(word))
