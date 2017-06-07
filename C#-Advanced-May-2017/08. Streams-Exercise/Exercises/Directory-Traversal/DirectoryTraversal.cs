@@ -15,7 +15,7 @@ class DirectoryTraversal
         foreach (var file in foundFiles)
         {
             var fileName = Path.GetFileName(file);
-            var extension = fileName.Substring(fileName.IndexOf('.'));
+            var extension = fileName.Substring(fileName.LastIndexOf('.'));
 
             if (extensions.ContainsKey(extension))
             {
