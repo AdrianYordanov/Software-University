@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Radioactive-Mutant-Vampire-
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crossfire", "Crossfire\Crossfire.csproj", "{3746BA57-E0DC-4BF2-953D-9CD9473ADBD7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "The-Heigan-Dance", "The-Heigan-Dance\The-Heigan-Dance.csproj", "{418A7DC9-ACD1-4F11-B0C1-9ED21536FC9E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{3746BA57-E0DC-4BF2-953D-9CD9473ADBD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3746BA57-E0DC-4BF2-953D-9CD9473ADBD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3746BA57-E0DC-4BF2-953D-9CD9473ADBD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{418A7DC9-ACD1-4F11-B0C1-9ED21536FC9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{418A7DC9-ACD1-4F11-B0C1-9ED21536FC9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{418A7DC9-ACD1-4F11-B0C1-9ED21536FC9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{418A7DC9-ACD1-4F11-B0C1-9ED21536FC9E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
