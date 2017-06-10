@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reverse-String", "Reverse-S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "String-Length", "String-Length\String-Length.csproj", "{28824BF8-82BC-427D-9952-DD8D28E10920}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Formatting-Numbers", "Formatting-Numbers\Formatting-Numbers.csproj", "{4B220D51-8973-41B8-A3D2-265F134ABD20}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{28824BF8-82BC-427D-9952-DD8D28E10920}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28824BF8-82BC-427D-9952-DD8D28E10920}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{28824BF8-82BC-427D-9952-DD8D28E10920}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B220D51-8973-41B8-A3D2-265F134ABD20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B220D51-8973-41B8-A3D2-265F134ABD20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B220D51-8973-41B8-A3D2-265F134ABD20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B220D51-8973-41B8-A3D2-265F134ABD20}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
