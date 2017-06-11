@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Convert-From-Base-Decimal-T
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Convert-From-Base-N-To-Base-Decimal", "Convert-From-Base-N-To-Base-Decimal\Convert-From-Base-N-To-Base-Decimal.csproj", "{4DFD881F-31A5-4DC4-B2C0-3BC8D3B9A9CC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Count-Substring-Occurrences", "Count-Substring-Occurrences\Count-Substring-Occurrences.csproj", "{80FA97DE-EA7E-4F44-A567-443393665893}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{4DFD881F-31A5-4DC4-B2C0-3BC8D3B9A9CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4DFD881F-31A5-4DC4-B2C0-3BC8D3B9A9CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4DFD881F-31A5-4DC4-B2C0-3BC8D3B9A9CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80FA97DE-EA7E-4F44-A567-443393665893}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80FA97DE-EA7E-4F44-A567-443393665893}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80FA97DE-EA7E-4F44-A567-443393665893}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80FA97DE-EA7E-4F44-A567-443393665893}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
