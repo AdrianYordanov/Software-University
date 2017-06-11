@@ -6,27 +6,61 @@ class MagicExchangeableWords
     static void Main()
     {
         var input = Console.ReadLine().Split(' ');
-        var firstUnique = new HashSet<char>();
-        var secondUnique = new HashSet<char>();
+        var firstString = input[0];
+        var secondString = input[1];
+        var areExchangeable = true;
+        var shorter = string.Empty;
+        var longer = string.Empty;
+        var dictionary = new Dictionary<char, char>();
 
-        foreach (char character in input[0])
+        if (firstString.Length <= secondString.Length)
         {
-            firstUnique.Add(character);
-        }
-
-        foreach (char character in input[1])
-        {
-            secondUnique.Add(character);
-        }
-
-        if (firstUnique.Count == secondUnique.Count)
-        {
-
-            Console.WriteLine("true");
+            shorter = firstString;
+            longer = secondString;
         }
         else
         {
-            Console.WriteLine("false");
+            shorter = secondString;
+            longer = firstString;
         }
+
+        var remainingString = longer.Substring(shorter.Length);
+
+        for (int i = 0; i < shorter.Length; i++)
+        {
+            if (dictionary.ContainsKey(firstString[i]))
+            {
+                var value = dictionary[firstString[i]];
+
+                if (value != secondString[i])
+                {
+                    areExchangeable = false;
+                    break;
+                }
+            }
+            else
+            {
+                if (dictionary.ContainsValue(secondString[i]))
+                {
+                    areExchangeable = false;
+                    break;
+                }
+                else
+                {
+                    dictionary.Add(firstString[i], secondString[i]);
+                }
+            }
+        }
+
+        foreach (var letter in remainingString)
+        {
+            if (!dictionary.ContainsKey(letter) && !dictionary.ContainsValue(letter))
+            {
+                areExchangeable = false;
+                break;
+            }
+        }
+
+        Console.WriteLine(areExchangeable ? "true" : "false");
     }
 }
