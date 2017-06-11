@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Character-Multiplier", "Cha
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Magic-Exchangeable-Words", "Magic-Exchangeable-Words\Magic-Exchangeable-Words.csproj", "{46B07B0E-68EA-4B16-88ED-9F0652FB695A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Letters-Change-Numbers", "Letters-Change-Numbers\Letters-Change-Numbers.csproj", "{BAFF8183-28E5-4247-9022-A7B88869714D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{46B07B0E-68EA-4B16-88ED-9F0652FB695A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{46B07B0E-68EA-4B16-88ED-9F0652FB695A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{46B07B0E-68EA-4B16-88ED-9F0652FB695A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAFF8183-28E5-4247-9022-A7B88869714D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAFF8183-28E5-4247-9022-A7B88869714D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAFF8183-28E5-4247-9022-A7B88869714D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAFF8183-28E5-4247-9022-A7B88869714D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
