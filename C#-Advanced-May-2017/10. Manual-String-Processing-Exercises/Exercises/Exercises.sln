@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Letters-Change-Numbers", "L
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extract-Hyperlinks", "Extract-Hyperlinks\Extract-Hyperlinks.csproj", "{690E7BC0-9595-4816-9EE6-5D0AFF629462}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Melrah-Shake", "Melrah-Shake\Melrah-Shake.csproj", "{D17D0554-0631-4190-8245-248388600BB8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,10 @@ Global
 		{690E7BC0-9595-4816-9EE6-5D0AFF629462}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{690E7BC0-9595-4816-9EE6-5D0AFF629462}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{690E7BC0-9595-4816-9EE6-5D0AFF629462}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D17D0554-0631-4190-8245-248388600BB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D17D0554-0631-4190-8245-248388600BB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D17D0554-0631-4190-8245-248388600BB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D17D0554-0631-4190-8245-248388600BB8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
