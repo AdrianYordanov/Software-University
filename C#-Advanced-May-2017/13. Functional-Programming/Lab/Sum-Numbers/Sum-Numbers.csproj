@@ -7,7 +7,7 @@
     <ProjectGuid>{B7756DA6-A074-4321-9C95-BECB8BE77DEB}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>Sum_Numbers</RootNamespace>
-    <AssemblyName>Sum_Numbers</AssemblyName>
+    <AssemblyName>Sum-Numbers</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="SumNumbers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
