@@ -9,15 +9,7 @@ class MatchCount
         var pattern = Console.ReadLine();
         var text = Console.ReadLine();
         var regex = new Regex(pattern);
-        var match = regex.Match(text);
-        var counter = 0;
-
-        while (match.Success)
-        {
-            ++counter;
-            match = match.NextMatch();
-        }
-
-        Console.WriteLine(counter);
+        var count = regex.Matches(text).Count;
+        Console.WriteLine(count);
     }
 }
