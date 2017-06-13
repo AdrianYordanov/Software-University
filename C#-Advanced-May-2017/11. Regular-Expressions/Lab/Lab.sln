@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26430.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Match-Count", "Match-Count\Match-Count.csproj", "{FBCBC345-92CE-45C8-BD1D-8CE49116FDC9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vowel-Count", "Vowel-Count\Vowel-Count.csproj", "{7331CB22-CB62-4315-8A2D-8E50D262D224}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{FBCBC345-92CE-45C8-BD1D-8CE49116FDC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FBCBC345-92CE-45C8-BD1D-8CE49116FDC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FBCBC345-92CE-45C8-BD1D-8CE49116FDC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7331CB22-CB62-4315-8A2D-8E50D262D224}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7331CB22-CB62-4315-8A2D-8E50D262D224}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7331CB22-CB62-4315-8A2D-8E50D262D224}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7331CB22-CB62-4315-8A2D-8E50D262D224}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
