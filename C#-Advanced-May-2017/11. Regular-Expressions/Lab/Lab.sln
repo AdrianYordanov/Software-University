@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extract-Tags", "Extract-Tag
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Valid-Usernames", "Valid-Usernames\Valid-Usernames.csproj", "{1F8AD1B0-6192-427D-BB8D-814723B5EE54}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Valid-Time", "Valid-Time\Valid-Time.csproj", "{0E303E5A-2688-4E74-853B-7F1BF18C6933}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{1F8AD1B0-6192-427D-BB8D-814723B5EE54}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F8AD1B0-6192-427D-BB8D-814723B5EE54}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F8AD1B0-6192-427D-BB8D-814723B5EE54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E303E5A-2688-4E74-853B-7F1BF18C6933}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E303E5A-2688-4E74-853B-7F1BF18C6933}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E303E5A-2688-4E74-853B-7F1BF18C6933}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E303E5A-2688-4E74-853B-7F1BF18C6933}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
