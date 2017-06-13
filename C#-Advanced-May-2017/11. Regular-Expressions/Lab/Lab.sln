@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Valid-Usernames", "Valid-Us
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Valid-Time", "Valid-Time\Valid-Time.csproj", "{0E303E5A-2688-4E74-853B-7F1BF18C6933}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extract-Quotations", "Extract-Quotations\Extract-Quotations.csproj", "{9E01EA2B-4DE9-4DF9-B015-273E16CFF668}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{0E303E5A-2688-4E74-853B-7F1BF18C6933}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E303E5A-2688-4E74-853B-7F1BF18C6933}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E303E5A-2688-4E74-853B-7F1BF18C6933}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E01EA2B-4DE9-4DF9-B015-273E16CFF668}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E01EA2B-4DE9-4DF9-B015-273E16CFF668}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E01EA2B-4DE9-4DF9-B015-273E16CFF668}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E01EA2B-4DE9-4DF9-B015-273E16CFF668}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
