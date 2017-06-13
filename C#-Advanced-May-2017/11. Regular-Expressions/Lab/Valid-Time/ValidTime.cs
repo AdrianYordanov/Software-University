@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 class ValidTime
 {
@@ -21,6 +17,6 @@ class ValidTime
     private static bool IsValidHour(string hourToString)
     {
         var hour = int.Parse(hourToString);
-        return hour < 12;
+        return hour <= 12;
     }
 }
