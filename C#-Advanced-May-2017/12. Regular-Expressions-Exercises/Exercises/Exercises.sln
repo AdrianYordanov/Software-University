@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sentence-Extractor", "Sente
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Valid-Usernames", "Valid-Usernames\Valid-Usernames.csproj", "{C2F94907-254D-4F2A-B41D-DD5D34C17752}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extract-Hyperlinks", "Extract-Hyperlinks\Extract-Hyperlinks.csproj", "{BA2DEFE2-50A6-4048-BEA1-69F9EA0F5DEF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{C2F94907-254D-4F2A-B41D-DD5D34C17752}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2F94907-254D-4F2A-B41D-DD5D34C17752}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C2F94907-254D-4F2A-B41D-DD5D34C17752}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA2DEFE2-50A6-4048-BEA1-69F9EA0F5DEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA2DEFE2-50A6-4048-BEA1-69F9EA0F5DEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA2DEFE2-50A6-4048-BEA1-69F9EA0F5DEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA2DEFE2-50A6-4048-BEA1-69F9EA0F5DEF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
