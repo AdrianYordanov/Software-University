@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extract-Emails", "Extract-E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Match-Full-Name", "Match-Full-Name\Match-Full-Name.csproj", "{08A3E8BD-6258-4E38-844C-ED4FE070EE96}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Match-Phone-Number", "Match-Phone-Number\Match-Phone-Number.csproj", "{D106D575-0E68-4853-ABE2-94AE8A189AD1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{08A3E8BD-6258-4E38-844C-ED4FE070EE96}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08A3E8BD-6258-4E38-844C-ED4FE070EE96}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08A3E8BD-6258-4E38-844C-ED4FE070EE96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D106D575-0E68-4853-ABE2-94AE8A189AD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D106D575-0E68-4853-ABE2-94AE8A189AD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D106D575-0E68-4853-ABE2-94AE8A189AD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D106D575-0E68-4853-ABE2-94AE8A189AD1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
