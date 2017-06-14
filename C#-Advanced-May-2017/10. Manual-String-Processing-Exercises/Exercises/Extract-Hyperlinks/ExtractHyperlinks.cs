@@ -6,21 +6,29 @@ class ExtractHyperlinks
 {
     static void Main()
     {
-        string line;
+        string line = string.Empty;
         StringBuilder html = new StringBuilder();
+
         while ((line = Console.ReadLine()) != "END")
-            html.Append(line);
-        string htmlStr = html.ToString();
-
-        Regex aPattern = new Regex(@"<\s*a\s+[^>]+?>", RegexOptions.IgnoreCase);
-
-        Regex hrefVal = new Regex(@"href\s*=\s*([\u0022'])(.+?)\1");
-        foreach (Match anchor in aPattern.Matches(htmlStr))
         {
-            string anchorStr = anchor.Value;
-            Match m = hrefVal.Match(anchor.Value);
-            if (m.Success)
-                Console.WriteLine(m.Groups[2].Value);
+            html.Append(line);
+        }
+
+        Regex aPattern = new Regex(@"<a.+?>");
+        Regex hrefPattern = new Regex(@"href\s*=\s*((?<quotes>\""|')(?<res1>.+?)\k<quotes>|(?<res2>[^\""'][^\s>]+))");
+        var matchedTags = aPattern.Matches(html.ToString());
+
+        foreach (Match tag in matchedTags)
+        {
+            if (!hrefPattern.IsMatch(tag.Value))
+            {
+                continue;
+            }
+
+            var href = hrefPattern.Match(tag.Value);
+            var firstResult = href.Groups["res1"];
+            var secondResult = href.Groups["res2"];
+            Console.WriteLine(firstResult.Length == 0 ? secondResult : firstResult);
         }
     }
 }
