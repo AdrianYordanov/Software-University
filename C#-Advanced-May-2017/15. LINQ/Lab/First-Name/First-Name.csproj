@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{809A4783-C23E-4814-B1D3-21038AD19C21}</ProjectGuid>
+    <ProjectGuid>{1DB59465-31E4-4DDE-B649-AE0BA81D5573}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Upper_Strings</RootNamespace>
-    <AssemblyName>Upper-Strings</AssemblyName>
+    <RootNamespace>First_Name</RootNamespace>
+    <AssemblyName>First-Name</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UpperStrings.cs" />
+    <Compile Include="FirstName.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
