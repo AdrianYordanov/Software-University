@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "First-Name", "First-Name\Fi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Average-Of-Doubles", "Average-Of-Doubles\Average-Of-Doubles.csproj", "{6A95DC9D-347A-4D5A-957E-F23465C7496C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Min-Even-Number", "Min-Even-Number\Min-Even-Number.csproj", "{63FB45D7-2970-4010-B55F-C8AE64DFE726}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{6A95DC9D-347A-4D5A-957E-F23465C7496C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A95DC9D-347A-4D5A-957E-F23465C7496C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A95DC9D-347A-4D5A-957E-F23465C7496C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63FB45D7-2970-4010-B55F-C8AE64DFE726}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63FB45D7-2970-4010-B55F-C8AE64DFE726}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63FB45D7-2970-4010-B55F-C8AE64DFE726}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63FB45D7-2970-4010-B55F-C8AE64DFE726}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
