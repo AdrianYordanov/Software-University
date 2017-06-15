@@ -17,6 +17,6 @@ class FirstName
             .OrderBy(x => x)
             .FirstOrDefault();
 
-        Console.WriteLine(result == null ? "no match" : result);
+        Console.WriteLine(result == null ? "No match" : result);
     }
 }
