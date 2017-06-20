@@ -17,7 +17,7 @@ class PredicateParty
 
             Predicate<string> startsWith = str => str.StartsWith(parameter);
             Predicate<string> endsWith = str => str.EndsWith(parameter);
-            Predicate<string> legthIs = str => str.Length == int.Parse(parameter);
+            Predicate<string> lengthIs = str => str.Length == int.Parse(parameter);
 
             if (command == "Double")
             {
@@ -51,7 +51,7 @@ class PredicateParty
                         {
                             for (int i = 0; i < names.Count; i++)
                             {
-                                if (legthIs(names[i]))
+                                if (lengthIs(names[i]))
                                 {
                                     names.Insert(i, names[i++]);
                                 }
@@ -67,7 +67,7 @@ class PredicateParty
                 {
                     case "StartsWith": names.RemoveAll(startsWith); break;
                     case "EndsWith": names.RemoveAll(endsWith); break;
-                    case "Length": names.RemoveAll(legthIs); break;
+                    case "Length": names.RemoveAll(lengthIs); break;
                 }
             }
         }
