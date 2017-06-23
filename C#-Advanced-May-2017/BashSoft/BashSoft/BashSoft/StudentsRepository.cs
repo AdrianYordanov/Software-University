@@ -27,7 +27,7 @@ namespace BashSoft
 
         private static void ReadData()
         {
-            string input = Console.ReadLine();
+            var input = Console.ReadLine();
 
             while (!string.IsNullOrEmpty(input))
             {

@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace BashSoft
 {
-    class BashSoftProgram
+    public static class SessionData
     {
-        static void Main()
-        {
-        }
+        public static string currentPath = Directory.GetCurrentDirectory();
     }
 }
