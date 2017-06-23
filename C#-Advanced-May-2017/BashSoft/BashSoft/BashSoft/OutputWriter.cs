@@ -23,12 +23,17 @@ namespace BashSoft
             Console.WriteLine();
         }
 
-        public static void DisplayMessage(string message)
+        public static void DisplayException(string message)
         {
             var currentColor = Console.ForegroundColor;
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine(message);
             Console.ForegroundColor = currentColor;
+        }
+
+        public static void PrintStudent(KeyValuePair<string, List<int>> student)
+        {
+            OutputWriter.WriteMessageOnNewLine(string.Format($"{student.Key} - {string.Join(", ", student.Value)}"));
         }
     }
 }
