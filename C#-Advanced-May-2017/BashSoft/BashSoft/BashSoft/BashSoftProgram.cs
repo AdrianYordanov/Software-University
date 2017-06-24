@@ -10,7 +10,7 @@ namespace BashSoft
     {
         static void Main()
         {
-            Tester.CompareContent(@"..\..\actual.txt", @"..\..\expected.txt");
+            InputReader.StartReadingCommands();
         }
     }
 }
