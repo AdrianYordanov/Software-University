@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace BashSoft
@@ -32,31 +33,38 @@ namespace BashSoft
 
             if (File.Exists(path))
             {
+                var pattern = @"([A-Z][a-zA-Z#+]*_[A-Z][a-z]{2}_\d{4})\s+([A-Z][a-z]{0,3}\d{2}_\d{2,4})\s+(\d+)";
+                var rgx = new Regex(pattern);
                 var allInputLines = File.ReadAllLines(path);
 
                 for (int index = 0; index < allInputLines.Length; ++index)
                 {
-                    if (!string.IsNullOrEmpty(allInputLines[index]))
+                    if (!string.IsNullOrEmpty(allInputLines[index]) && rgx.IsMatch(allInputLines[index]))
                     {
+                        var currentMatch = rgx.Match(allInputLines[index]);
                         var tokens = allInputLines[index].Split(' ');
-                        var course = tokens[0];
-                        var student = tokens[1];
-                        var mark = int.Parse(tokens[2]);
+                        var course = currentMatch.Groups[1].Value;
+                        var student = currentMatch.Groups[2].Value;
+                        var mark = 0;
+                        var hasParsedScore = int.TryParse(currentMatch.Groups[3].Value, out mark);
 
-                        if (!studentsByCourse.ContainsKey(course))
+                        if (hasParsedScore && mark >= 0 && mark <= 100)
                         {
-                            studentsByCourse.Add(course, new Dictionary<string, List<int>>());
-                        }
+                            if (!studentsByCourse.ContainsKey(course))
+                            {
+                                studentsByCourse.Add(course, new Dictionary<string, List<int>>());
+                            }
 
-                        if (!studentsByCourse[course].ContainsKey(student))
-                        {
-                            studentsByCourse[course].Add(student, new List<int>());
-                        }
+                            if (!studentsByCourse[course].ContainsKey(student))
+                            {
+                                studentsByCourse[course].Add(student, new List<int>());
+                            }
 
-                        studentsByCourse[course][student].Add(mark);
+                            studentsByCourse[course][student].Add(mark);
+                        }
                     }
                 }
-                
+
                 isDataInitialized = true;
                 OutputWriter.WriteMessageOnNewLine("Data read!");
             }

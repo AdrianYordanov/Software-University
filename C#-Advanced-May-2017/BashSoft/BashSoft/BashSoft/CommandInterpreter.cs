@@ -19,51 +19,42 @@ namespace BashSoft
                 case "open":
                     TryOpenFile(input, data);
                     break;
-
                 case "mkdir":
                     TryCreateDirectory(input, data);
                     break;
-
                 case "ls":
                     TryTraverseFolders(input, data);
                     break;
-
                 case "cmp":
                     TryCompareFiles(input, data);
                     break;
-
                 case "cdRel":
                     TryChangePathRelatively(input, data);
                     break;
-
                 case "cdAbs":
                     TryChangePathAbsolute(input, data);
                     break;
-
                 case "readDb":
                     TryReadDatabaseFromFile(input, data);
                     break;
-
                 case "help":
                     TryGetHelp();
                     break;
-
                 case "filter":
                     //TODO: implement after functionality is implemented
                     break;
-
                 case "order":
                     //TODO: implement after functionality is implemented
                     break;
-
                 case "download":
                     //TODO: implement after functionality is implemented
                     break;
-
                 case "downloadAsynch":
                     //TODO: implement after functionality is implemented
                     break;
-
+                case "show":
+                    TryShowWantedData(input, data);
+                    break;
                 default:
                     DisplayInvalidCommandMessage(input);
                     break;
@@ -196,6 +187,25 @@ namespace BashSoft
             OutputWriter.WriteMessageOnNewLine(string.Format("|{0, -98}|", "get help – help"));
             OutputWriter.WriteMessageOnNewLine($"{new string('_', 100)}");
             OutputWriter.WriteEmptyLine();
+        }
+
+        private static void TryShowWantedData(string input, string[] data)
+        {
+            if (data.Length == 2)
+            {
+                var courseName = data[1];
+                StudentsRepository.GetAllStudentsFromCourse(courseName);
+            }
+            else if (data.Length == 3)
+            {
+                var courseName = data[1];
+                var userName = data[2];
+                StudentsRepository.GetStudentFromCourse(courseName, userName);
+            }
+            else
+            {
+                DisplayInvalidCommandMessage(input);
+            }
         }
     }
 }
