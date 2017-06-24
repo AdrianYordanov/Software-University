@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BashSoft
 {
@@ -42,7 +39,7 @@ namespace BashSoft
                         subFolders.Enqueue(directoryPath);
                     }
                 }
-                catch(UnauthorizedAccessException)
+                catch (UnauthorizedAccessException)
                 {
                     OutputWriter.DisplayException(ExceptionMessages.UnauthorizedAccessExceptionMessage);
                 }
@@ -57,7 +54,7 @@ namespace BashSoft
             {
                 Directory.CreateDirectory(path);
             }
-            catch(ArgumentException)
+            catch (ArgumentException)
             {
                 OutputWriter.DisplayException(ExceptionMessages.ForbiddenSymbolsContainedInName);
             }
@@ -74,7 +71,7 @@ namespace BashSoft
                     var newPath = currentPath.Substring(0, indexOfLastSlash);
                     SessionData.currentPath = newPath;
                 }
-                catch(ArgumentOutOfRangeException)
+                catch (ArgumentOutOfRangeException)
                 {
                     OutputWriter.DisplayException(ExceptionMessages.UnauthorizedAccessExceptionMessage);
                 }

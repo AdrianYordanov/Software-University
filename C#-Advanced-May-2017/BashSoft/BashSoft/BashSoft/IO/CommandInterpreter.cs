@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Diagnostics;
 
 namespace BashSoft
 {
@@ -70,7 +65,7 @@ namespace BashSoft
         {
             if (data.Length == 2)
             {
-                string fileName = data[1];
+                var fileName = data[1];
                 Process.Start(SessionData.currentPath + "\\" + fileName);
             }
             else
@@ -83,7 +78,7 @@ namespace BashSoft
         {
             if (data.Length == 2)
             {
-                string folderName = data[1];
+                var folderName = data[1];
                 IOManager.CreateDirectoryInCurrentFolder(folderName);
             }
             else
@@ -121,8 +116,8 @@ namespace BashSoft
         {
             if (data.Length == 3)
             {
-                string firstPath = data[1];
-                string secondPath = data[2];
+                var firstPath = data[1];
+                var secondPath = data[2];
 
                 Tester.CompareContent(firstPath, secondPath);
             }
@@ -136,7 +131,7 @@ namespace BashSoft
         {
             if (data.Length == 2)
             {
-                string relPath = data[1];
+                var relPath = data[1];
                 IOManager.ChangeCurrentDirectoryRelative(relPath);
             }
             else
@@ -149,7 +144,7 @@ namespace BashSoft
         {
             if (data.Length == 2)
             {
-                string absolutePath = data[1];
+                var absolutePath = data[1];
                 IOManager.ChangeCurrentDirectoryAbsolute(absolutePath);
             }
             else
@@ -162,7 +157,7 @@ namespace BashSoft
         {
             if (data.Length == 2)
             {
-                string fileName = data[1];
+                var fileName = data[1];
                 StudentsRepository.InitializeData(fileName);
             }
             else
@@ -280,7 +275,7 @@ namespace BashSoft
                 }
                 else
                 {
-                    int studentsToTake = 0;
+                    var studentsToTake = 0;
 
                     if (int.TryParse(takeQuantity, out studentsToTake))
                     {
