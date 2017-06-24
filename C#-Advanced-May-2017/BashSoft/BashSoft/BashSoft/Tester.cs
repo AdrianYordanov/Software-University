@@ -13,16 +13,23 @@ namespace BashSoft
         {
             OutputWriter.WriteMessageOnNewLine("Reading files...");
 
-            var mismatchPath = GetMismatchPath(expectedOutputPath);
+            try
+            {
+                var mismatchPath = GetMismatchPath(expectedOutputPath);
 
-            var actualOutputLines = File.ReadAllLines(userOutputPath);
-            var expectedOutputLines = File.ReadAllLines(expectedOutputPath);
+                var actualOutputLines = File.ReadAllLines(userOutputPath);
+                var expectedOutputLines = File.ReadAllLines(expectedOutputPath);
 
-            var hasMismatch = false;
-            var mismatches = GetLinesWithPossibleMismatches(actualOutputLines, expectedOutputLines, out hasMismatch);
+                var hasMismatch = false;
+                var mismatches = GetLinesWithPossibleMismatches(actualOutputLines, expectedOutputLines, out hasMismatch);
 
-            PrintOutput(mismatches, hasMismatch, mismatchPath);
-            OutputWriter.WriteMessageOnNewLine("File read!");
+                PrintOutput(mismatches, hasMismatch, mismatchPath);
+                OutputWriter.WriteMessageOnNewLine("File read!");
+            }
+            catch(FileNotFoundException)
+            {
+                OutputWriter.DisplayException(ExceptionMessages.InvalidPath);
+            }
         }
 
         private static string GetMismatchPath(string expectedOutputPath)
@@ -34,17 +41,26 @@ namespace BashSoft
         }
 
         private static string[] GetLinesWithPossibleMismatches(
-            string[] actualOutputString, string[] expectedOutputString, out bool hasMismatch)
+            string[] actualOutputLines, string[] expectedOutputLines, out bool hasMismatch)
         {
             hasMismatch = false;
             var output = string.Empty;
-            var mismatches = new string[actualOutputString.Length];
+            var mismatches = new string[actualOutputLines.Length];
             OutputWriter.WriteMessageOnNewLine("Comparing files...");
 
-            for (int index = 0; index < actualOutputString.Length; index++)
+            var minOutputLines = actualOutputLines.Length;
+
+            if (actualOutputLines.Length != expectedOutputLines.Length)
             {
-                var actualLine = actualOutputString[index];
-                var expectedLine = expectedOutputString[index];
+                hasMismatch = true;
+                minOutputLines = Math.Min(actualOutputLines.Length, expectedOutputLines.Length);
+                OutputWriter.DisplayException(ExceptionMessages.ComparisonOfFilesWithDifferentSizes);
+            }
+
+            for (int index = 0; index < minOutputLines; index++)
+            {
+                var actualLine = actualOutputLines[index];
+                var expectedLine = expectedOutputLines[index];
 
                 if (!actualLine.Equals(expectedLine))
                 {
@@ -73,7 +89,15 @@ namespace BashSoft
                     OutputWriter.WriteMessageOnNewLine(line);
                 }
 
-                File.WriteAllLines(mismatchPath, mismatches);
+                try
+                {
+                    File.WriteAllLines(mismatchPath, mismatches);
+                }
+                catch(DirectoryNotFoundException)
+                {
+                    OutputWriter.DisplayException(ExceptionMessages.InvalidPath);
+                }
+
                 return;
             }
 

@@ -28,16 +28,23 @@ namespace BashSoft
 
                 OutputWriter.WriteMessageOnNewLine(string.Format("{0}{1}", new string('-', identation), currentPath));
 
-                foreach (var file in Directory.GetFiles(currentPath))
+                try
                 {
-                    var indexOfLastSlash = file.LastIndexOf("\\");
-                    var fileName = file.Substring(indexOfLastSlash);
-                    OutputWriter.WriteMessageOnNewLine(new string('-', indexOfLastSlash) + fileName);
-                }
+                    foreach (var file in Directory.GetFiles(currentPath))
+                    {
+                        var indexOfLastSlash = file.LastIndexOf("\\");
+                        var fileName = file.Substring(indexOfLastSlash);
+                        OutputWriter.WriteMessageOnNewLine(new string('-', indexOfLastSlash) + fileName);
+                    }
 
-                foreach (var directoryPath in Directory.GetDirectories(currentPath))
+                    foreach (var directoryPath in Directory.GetDirectories(currentPath))
+                    {
+                        subFolders.Enqueue(directoryPath);
+                    }
+                }
+                catch(UnauthorizedAccessException)
                 {
-                    subFolders.Enqueue(directoryPath);
+                    OutputWriter.DisplayException(ExceptionMessages.UnauthorizedAccessExceptionMessage);
                 }
             }
         }
@@ -45,17 +52,32 @@ namespace BashSoft
         public static void CreateDirectoryInCurrentFolder(string name)
         {
             var path = SessionData.currentPath + "\\" + name;
-            Directory.CreateDirectory(path);
+
+            try
+            {
+                Directory.CreateDirectory(path);
+            }
+            catch(ArgumentException)
+            {
+                OutputWriter.DisplayException(ExceptionMessages.ForbiddenSymbolsContainedInName);
+            }
         }
 
         public static void ChangeCurrentDirectoryRelative(string relativePath)
         {
             if (relativePath == "..")
             {
-                var currentPath = SessionData.currentPath;
-                var indexOfLastSlash = currentPath.LastIndexOf("\\");
-                var newPath = currentPath.Substring(0, indexOfLastSlash);
-                SessionData.currentPath = newPath;
+                try
+                {
+                    var currentPath = SessionData.currentPath;
+                    var indexOfLastSlash = currentPath.LastIndexOf("\\");
+                    var newPath = currentPath.Substring(0, indexOfLastSlash);
+                    SessionData.currentPath = newPath;
+                }
+                catch(ArgumentOutOfRangeException)
+                {
+                    OutputWriter.DisplayException(ExceptionMessages.UnauthorizedAccessExceptionMessage);
+                }
             }
             else
             {

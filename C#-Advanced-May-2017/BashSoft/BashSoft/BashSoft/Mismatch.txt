@@ -1,10 +1,7 @@
-Mismatch at line 0 -- expected: "Some data not", actual: "Some data"
+aaa
 
-Some more data 
+Mismatch at line 1 -- expected: "aaa", actual: "bbb"
 
-Mismatch at line 2 -- expected: "more da 21 ta", actual: "more data"
+aaa
 
-data
-
-Mismatch at line 4 -- expected: "and againd data", actual: "and again data"
 
