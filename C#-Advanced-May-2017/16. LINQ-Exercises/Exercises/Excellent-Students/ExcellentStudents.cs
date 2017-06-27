@@ -6,8 +6,8 @@ class ExcellentStudents
 {
     static void Main()
     {
-        var input = Console.ReadLine();
         var students = new List<string[]>();
+        var input = string.Empty;
 
         while ((input = Console.ReadLine()) != "END")
         {
