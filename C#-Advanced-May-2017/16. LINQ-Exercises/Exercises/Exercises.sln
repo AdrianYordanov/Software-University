@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Students-By-Age", "Students
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortStudents", "SortStudents\SortStudents.csproj", "{073721F7-F957-4D10-887F-357D1D6E3F31}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Filter-Students-By-Email-Domain", "Filter-Students-By-Email-Domain\Filter-Students-By-Email-Domain.csproj", "{6AC89C32-D096-4F5D-AA80-2FB6AD9B8900}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{073721F7-F957-4D10-887F-357D1D6E3F31}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{073721F7-F957-4D10-887F-357D1D6E3F31}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{073721F7-F957-4D10-887F-357D1D6E3F31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AC89C32-D096-4F5D-AA80-2FB6AD9B8900}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AC89C32-D096-4F5D-AA80-2FB6AD9B8900}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AC89C32-D096-4F5D-AA80-2FB6AD9B8900}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AC89C32-D096-4F5D-AA80-2FB6AD9B8900}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
