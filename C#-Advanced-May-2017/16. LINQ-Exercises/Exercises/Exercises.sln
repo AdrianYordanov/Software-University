@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Excellent-Students", "Excel
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Weak-Students", "Weak-Students\Weak-Students.csproj", "{C950CAC3-B99B-4F22-9F07-E178C08F0613}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Students-Enrolled-In-2014-Or-2015", "Students-Enrolled-In-2014-Or-2015\Students-Enrolled-In-2014-Or-2015.csproj", "{640C1A17-FD17-44FB-B851-664EA6BA7476}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{C950CAC3-B99B-4F22-9F07-E178C08F0613}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C950CAC3-B99B-4F22-9F07-E178C08F0613}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C950CAC3-B99B-4F22-9F07-E178C08F0613}.Release|Any CPU.Build.0 = Release|Any CPU
+		{640C1A17-FD17-44FB-B851-664EA6BA7476}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{640C1A17-FD17-44FB-B851-664EA6BA7476}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{640C1A17-FD17-44FB-B851-664EA6BA7476}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{640C1A17-FD17-44FB-B851-664EA6BA7476}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
