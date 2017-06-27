@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bank-Account-Methods", "Ban
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bank-Account-Test", "Bank-Account-Test\Bank-Account-Test.csproj", "{27FBD8E0-1ED2-4A5D-89C8-48B819B57511}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Person-Class", "Person-Class\Person-Class.csproj", "{439DBE81-F25D-48B3-90EB-3CFE07076C64}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{27FBD8E0-1ED2-4A5D-89C8-48B819B57511}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27FBD8E0-1ED2-4A5D-89C8-48B819B57511}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27FBD8E0-1ED2-4A5D-89C8-48B819B57511}.Release|Any CPU.Build.0 = Release|Any CPU
+		{439DBE81-F25D-48B3-90EB-3CFE07076C64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{439DBE81-F25D-48B3-90EB-3CFE07076C64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{439DBE81-F25D-48B3-90EB-3CFE07076C64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{439DBE81-F25D-48B3-90EB-3CFE07076C64}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
