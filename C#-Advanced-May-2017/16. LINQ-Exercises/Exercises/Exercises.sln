@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Little-John", "Little-John\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Office-Stuff", "Office-Stuff\Office-Stuff.csproj", "{08E2A950-EEE8-4D64-9088-8ACE8FF332A6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Export-To-Excel", "Export-To-Excel\Export-To-Excel.csproj", "{6D0B5806-EFBD-45A6-A750-54A17FD36453}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{08E2A950-EEE8-4D64-9088-8ACE8FF332A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08E2A950-EEE8-4D64-9088-8ACE8FF332A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08E2A950-EEE8-4D64-9088-8ACE8FF332A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D0B5806-EFBD-45A6-A750-54A17FD36453}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D0B5806-EFBD-45A6-A750-54A17FD36453}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D0B5806-EFBD-45A6-A750-54A17FD36453}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D0B5806-EFBD-45A6-A750-54A17FD36453}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

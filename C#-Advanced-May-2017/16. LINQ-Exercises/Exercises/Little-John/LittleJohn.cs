@@ -49,7 +49,7 @@ class LittleJohn
 
     public static string ReverseString(string inputString)
     {
-        var outputString = "";
+        var outputString = string.Empty;
 
         for (int i = 0; i < inputString.Length; i++)
         {

@@ -6,7 +6,7 @@ class FilterStudentsByPhone
 {
     static void Main()
     {
-        var input = Console.ReadLine();
+        var input = string.Empty;
         var students = new List<string[]>();
 
         while ((input = Console.ReadLine()) != "END")
