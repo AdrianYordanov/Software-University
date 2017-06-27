@@ -1,0 +1,3 @@
+KISS (Keep It Simple Stupid)
+Golden Hammer (If all you have is a hammer, everything looks like a nail.)
+YAGNI (You Aren't Gonna Need It)
