@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Methods", "Methods\Methods.csproj", "{2499A88D-E12F-43F6-AFBC-517F88613744}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bank-Account", "Bank-Account\Bank-Account.csproj", "{64370074-745B-4DC8-83E0-D88957854469}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bank-Account-Methods", "Bank-Account-Methods\Bank-Account-Methods.csproj", "{2499A88D-E12F-43F6-AFBC-517F88613744}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,6 +13,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{64370074-745B-4DC8-83E0-D88957854469}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64370074-745B-4DC8-83E0-D88957854469}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64370074-745B-4DC8-83E0-D88957854469}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64370074-745B-4DC8-83E0-D88957854469}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2499A88D-E12F-43F6-AFBC-517F88613744}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2499A88D-E12F-43F6-AFBC-517F88613744}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2499A88D-E12F-43F6-AFBC-517F88613744}.Release|Any CPU.ActiveCfg = Release|Any CPU
