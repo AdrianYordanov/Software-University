@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Group-By-Group", "Group-By-
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Students-Joined-To-Specialties", "Students-Joined-To-Specialties\Students-Joined-To-Specialties.csproj", "{DB67E071-9157-487B-AA9C-F0446F2EC05E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Little-John", "Little-John\Little-John.csproj", "{6D8BECF9-A3F8-4A04-BD18-D9ABC796B820}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{DB67E071-9157-487B-AA9C-F0446F2EC05E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB67E071-9157-487B-AA9C-F0446F2EC05E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB67E071-9157-487B-AA9C-F0446F2EC05E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D8BECF9-A3F8-4A04-BD18-D9ABC796B820}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D8BECF9-A3F8-4A04-BD18-D9ABC796B820}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D8BECF9-A3F8-4A04-BD18-D9ABC796B820}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D8BECF9-A3F8-4A04-BD18-D9ABC796B820}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
