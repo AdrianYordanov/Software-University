@@ -1,4 +1,0 @@
-USE People
-ALTER TABLE Users
-ADD CONSTRAINT DF_LoginDate_Users
-DEFAULT GETDATE() FOR LastLoginTime
