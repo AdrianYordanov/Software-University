@@ -1,11 +1,11 @@
 ﻿class Employee
 {
-    public string name;
-    public decimal salary;
-    public string position;
-    public string department;
-    public string email;
-    public int age;
+    private string name;
+    private decimal salary;
+    private string position;
+    private string department;
+    private string email;
+    private int age;
 
     public Employee(string name, decimal salary, string position, string department, string email, int age)
     {
@@ -28,6 +28,16 @@
     public Employee(string name, decimal salary, string position, string department)
        : this(name, salary, position, department, "n/a", -1)
     { }
+
+    public decimal Salary
+    {
+        get { return this.salary; }
+    }
+    
+    public string Department
+    {
+        get { return this.department; }
+    }
 
     public override string ToString()
     {
