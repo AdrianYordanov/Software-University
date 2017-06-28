@@ -1,6 +1,6 @@
 "use strict";
 
-function vol(input) {
+function insideVolume(input) {
     function inVolume(x, y, z) {
         let x1 = 10, x2 = 50;
         let y1 = 20, y2 = 80;
@@ -30,4 +30,4 @@ function vol(input) {
     }
 }
 
-vol([13.1, 50, 31.5, 50, 80, 50, -5, 18, 43]);
+insideVolume([13.1, 50, 31.5, 50, 80, 50, -5, 18, 43]);
