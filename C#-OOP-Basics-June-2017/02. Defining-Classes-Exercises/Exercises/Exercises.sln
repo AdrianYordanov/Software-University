@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Raw-Data", "Raw-Data\Raw-Da
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rectangle-Intersection", "Rectangle-Intersection\Rectangle-Intersection.csproj", "{51D911DD-1A0F-46D6-A12B-3DE0611CF405}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Car-Salesman", "Car-Salesman\Car-Salesman.csproj", "{415B4338-771E-4080-9FE1-01ED6F75AB51}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{51D911DD-1A0F-46D6-A12B-3DE0611CF405}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{51D911DD-1A0F-46D6-A12B-3DE0611CF405}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{51D911DD-1A0F-46D6-A12B-3DE0611CF405}.Release|Any CPU.Build.0 = Release|Any CPU
+		{415B4338-771E-4080-9FE1-01ED6F75AB51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{415B4338-771E-4080-9FE1-01ED6F75AB51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{415B4338-771E-4080-9FE1-01ED6F75AB51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{415B4338-771E-4080-9FE1-01ED6F75AB51}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
