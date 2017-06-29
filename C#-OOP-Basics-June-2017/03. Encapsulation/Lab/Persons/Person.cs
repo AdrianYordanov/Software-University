@@ -8,7 +8,7 @@
     {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.Age = age;
+        this.age = age;
     }
 
     public string FirstName
@@ -32,10 +32,6 @@
         get
         {
             return this.age;
-        }
-        set
-        {
-            this.age = value;
         }
     }
 
