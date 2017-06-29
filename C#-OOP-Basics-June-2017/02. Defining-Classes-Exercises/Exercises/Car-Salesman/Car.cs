@@ -38,7 +38,7 @@
         var weightValue = this.weight == null ? "n/a" : this.weight.ToString();
         var colorValue = this.color == null ? "n/a" : this.color.ToString();
         result += $"{this.model}:\n";
-        result += $"{this.engine}";
+        result += $"{this.engine}\n";
         result += $"  Weight: {weightValue}\n";
         result += $"  Color: {colorValue}";
         return result;

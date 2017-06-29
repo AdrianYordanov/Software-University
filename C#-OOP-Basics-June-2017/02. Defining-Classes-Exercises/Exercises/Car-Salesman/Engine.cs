@@ -45,7 +45,7 @@
         result += $"  {this.model}:\n";
         result += $"    Power: {this.power}\n";
         result += $"    Displacement: {displacementValue}\n";
-        result += $"    Efficiency: {efficiencyValue}\n";
+        result += $"    Efficiency: {efficiencyValue}";
         return result;
     }
 }
