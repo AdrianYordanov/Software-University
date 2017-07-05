@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Collections.Generic;
 
-public class Pizza
+class Pizza
 {
     private const int MaxNumberOfToppings = 10;
     private string name;

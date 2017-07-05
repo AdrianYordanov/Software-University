@@ -1,6 +1,6 @@
 ﻿using System;
 
-public class Dough
+class Dough
 {
     private const int MinWeight = 1;
     private const int MaxWeight = 200;

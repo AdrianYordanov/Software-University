@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 
-public class StartUp
+class StartUp
 {
     public static void Main()
     {

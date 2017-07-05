@@ -1,6 +1,6 @@
 ﻿using System;
 
-public class Chicken
+class Chicken
 {
     private const int MinAge = 0;
     private const int MaxAge = 15;
