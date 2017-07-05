@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pokemon-Trainer", "Pokemon-
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google", "Google\Google.csproj", "{D789FBA8-EC47-4184-AF67-18DBFDE355CF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Family-Tree", "Family-Tree\Family-Tree.csproj", "{5FFF62A6-552A-43B6-ADD5-D7CB03D0A8C3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{D789FBA8-EC47-4184-AF67-18DBFDE355CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D789FBA8-EC47-4184-AF67-18DBFDE355CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D789FBA8-EC47-4184-AF67-18DBFDE355CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FFF62A6-552A-43B6-ADD5-D7CB03D0A8C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FFF62A6-552A-43B6-ADD5-D7CB03D0A8C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FFF62A6-552A-43B6-ADD5-D7CB03D0A8C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FFF62A6-552A-43B6-ADD5-D7CB03D0A8C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
