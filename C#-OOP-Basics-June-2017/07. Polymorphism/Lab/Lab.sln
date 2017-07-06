@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Math-Operations", "Math-Ope
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Animals", "Animals\Animals.csproj", "{73EFA970-9A30-4BA3-BF97-1C7F768E4F60}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shapes", "Shapes\Shapes.csproj", "{15A01E39-8F2E-4E6B-8FB6-6E90E9975910}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{73EFA970-9A30-4BA3-BF97-1C7F768E4F60}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73EFA970-9A30-4BA3-BF97-1C7F768E4F60}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73EFA970-9A30-4BA3-BF97-1C7F768E4F60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15A01E39-8F2E-4E6B-8FB6-6E90E9975910}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15A01E39-8F2E-4E6B-8FB6-6E90E9975910}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15A01E39-8F2E-4E6B-8FB6-6E90E9975910}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15A01E39-8F2E-4E6B-8FB6-6E90E9975910}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
