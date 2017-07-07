@@ -2,35 +2,50 @@
 
 class Song
 {
-    private string artist;
+    private string artistName;
     private string songName;
-    private long minutes;
-    private long seconds;
-    private TimeSpan songLength;
+    private int minutes;
+    private int seconds;
 
-    public Song(string artist, string songName, long minutes, long seconds)
+    public Song(string name, string songName, int minutes, int seconds)
     {
-        this.Artist = artist;
+        this.ArtistName = name;
         this.SongName = songName;
         this.Minutes = minutes;
         this.Seconds = seconds;
-        this.songLength = CalculateSongLength(this.Minutes, this.Seconds);
     }
 
-    public string Artist
+    public int Seconds
     {
         get
         {
-            return this.artist;
+            return this.seconds;
         }
-        private set
+        set
         {
-            if (value.Length < 3 || value.Length > 20)
+            if (value < 0 || value > 59)
             {
-                throw new ArgumentException("Artist name should be between 3 and 20 symbols.");
+                throw new InvalidSongSecondsException();
             }
 
-            this.artist = value;
+            this.seconds = value;
+        }
+    }
+
+    public int Minutes
+    {
+        get
+        {
+            return this.minutes;
+        }
+        set
+        {
+            if (value < 0 || value > 14)
+            {
+                throw new InvalidSongMinutesException();
+            }
+
+            this.minutes = value;
         }
     }
 
@@ -40,48 +55,31 @@ class Song
         {
             return this.songName;
         }
-        private set
+        set
         {
             if (value.Length < 3 || value.Length > 30)
             {
-                throw new ArgumentException("Song name should be between 3 and 30 symbols.");
+                throw new InvalidSongNameException();
             }
 
             this.songName = value;
         }
     }
 
-    public long Minutes
+    public string ArtistName
     {
         get
         {
-            return this.minutes;
+            return this.artistName;
         }
-        private set
+        set
         {
-            if (value < 0 || value > 14)
+            if (value.Length < 3 || value.Length > 20)
             {
-                throw new ArgumentException("Song minutes should be between 0 and 14.");
+                throw new InvalidArtistNameException();
             }
 
-            this.minutes = value;
-        }
-    }
-
-    public long Seconds
-    {
-        get
-        {
-            return this.seconds;
-        }
-        private set
-        {
-            if (value < 0 || value > 59)
-            {
-                throw new ArgumentException("Song seconds should be between 0 and 59.");
-            }
-
-            this.seconds = value;
+            this.artistName = value;
         }
     }
 
@@ -89,14 +87,7 @@ class Song
     {
         get
         {
-            return this.songLength;
+            return TimeSpan.FromSeconds(this.Minutes * 60 + this.Seconds);
         }
-    }
-
-    private TimeSpan CalculateSongLength(long minutes, long seconds)
-    {
-        var secs = minutes * 60 + seconds;
-        var result = TimeSpan.FromSeconds(secs);
-        return result;
     }
 }

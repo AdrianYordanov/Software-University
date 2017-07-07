@@ -42,6 +42,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Exceptions\InvalidArtistNameException.cs" />
+    <Compile Include="Exceptions\InvalidSongException.cs" />
+    <Compile Include="Exceptions\InvalidSongLengthException.cs" />
+    <Compile Include="Exceptions\InvalidSongMinutesException.cs" />
+    <Compile Include="Exceptions\InvalidSongNameException.cs" />
+    <Compile Include="Exceptions\InvalidSongSecondsException.cs" />
     <Compile Include="Song.cs" />
     <Compile Include="StartUp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
