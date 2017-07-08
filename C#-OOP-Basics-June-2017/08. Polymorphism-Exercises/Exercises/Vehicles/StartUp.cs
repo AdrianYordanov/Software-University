@@ -17,17 +17,17 @@ class StartUp
 
         for (int i = 0; i < n; i++)
         {
-            var commandTokens = Console.ReadLine().Split(' ');
+            var commandTokens = Console.ReadLine().Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
             var vehicleType = commandTokens[1];
             var command = commandTokens[0];
-            var distanceOrLiters = commandTokens[2];
+            var distanceOrLiters = double.Parse(commandTokens[2]);
             var currentVehicle = vehicles.First(vehicle => vehicle.GetType().ToString() == vehicleType);
 
             if (command == "Drive")
             {
                 try
                 {
-                    currentVehicle.Drive(double.Parse(distanceOrLiters));
+                    currentVehicle.Drive(distanceOrLiters);
                     Console.WriteLine($"{vehicleType} travelled {distanceOrLiters} km");
                 }
                 catch (InvalidOperationException)
@@ -37,7 +37,7 @@ class StartUp
             }
             else if (command == "Refuel")
             {
-                currentVehicle.Refuel(double.Parse(distanceOrLiters));
+                currentVehicle.Refuel(distanceOrLiters);
             }
         }
 
