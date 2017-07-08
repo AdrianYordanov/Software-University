@@ -8,6 +8,6 @@
 
     public override void Refuel(double liters)
     {
-        base.Refuel(liters * 0.95);
+        this.FuelQuantity += liters * 0.95;
     }
 }

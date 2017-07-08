@@ -47,10 +47,7 @@ abstract class Vehicle
         this.FuelQuantity -= liters;
     }
 
-    public virtual void Refuel(double liters)
-    {
-        this.FuelQuantity += liters;
-    }
+    public abstract void Refuel(double liters);
 
     public override string ToString()
     {

@@ -5,4 +5,9 @@
     {
         this.FuelConsumption += 0.9;
     }
+
+    public override void Refuel(double liters)
+    {
+        this.FuelQuantity += liters;
+    }
 }
