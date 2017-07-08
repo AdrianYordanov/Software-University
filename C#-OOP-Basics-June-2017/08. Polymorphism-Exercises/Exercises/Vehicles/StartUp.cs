@@ -23,21 +23,22 @@ class StartUp
             var distanceOrLiters = double.Parse(commandTokens[2]);
             var currentVehicle = vehicles.First(vehicle => vehicle.GetType().ToString() == vehicleType);
 
-            if (command == "Drive")
+            try
             {
-                try
+                if (command == "Drive")
                 {
+
                     currentVehicle.Drive(distanceOrLiters);
                     Console.WriteLine($"{vehicleType} travelled {distanceOrLiters} km");
                 }
-                catch (InvalidOperationException)
+                else if (command == "Refuel")
                 {
-                    Console.WriteLine($"{vehicleType} needs refueling");
+                    currentVehicle.Refuel(distanceOrLiters);
                 }
             }
-            else if (command == "Refuel")
+            catch (InvalidOperationException ioe)
             {
-                currentVehicle.Refuel(distanceOrLiters);
+                Console.WriteLine(ioe.Message);
             }
         }
 

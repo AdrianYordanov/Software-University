@@ -19,6 +19,11 @@ abstract class Vehicle
         }
         protected set
         {
+            if (value < 0)
+            {
+                throw new InvalidOperationException($"{this.GetType()} needs refueling");
+            }
+
             this.fuelQuantity = value;
         }
     }
@@ -38,12 +43,6 @@ abstract class Vehicle
     public void Drive(double distance)
     {
         var liters = distance * this.FuelConsumption;
-
-        if (liters > this.FuelQuantity)
-        {
-            throw new InvalidOperationException();
-        }
-
         this.FuelQuantity -= liters;
     }
 
