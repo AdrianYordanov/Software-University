@@ -1,3 +1,5 @@
+"use strict";
+
 function addAndRemoveElements(input) {
     let result = [];
     let number = 1;
