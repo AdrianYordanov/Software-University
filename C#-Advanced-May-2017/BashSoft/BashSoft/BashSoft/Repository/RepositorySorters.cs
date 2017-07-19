@@ -1,8 +1,10 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-
-namespace BashSoft
+﻿namespace BashSoft.Repository
 {
+    using System.Collections.Generic;
+    using System.Linq;
+    using IO;
+    using StaticData;
+
     public static class RepositorySorters
     {
         public static void OrderAndTake(Dictionary<string, List<int>> wantedData, string comparison, int studentsToTake)

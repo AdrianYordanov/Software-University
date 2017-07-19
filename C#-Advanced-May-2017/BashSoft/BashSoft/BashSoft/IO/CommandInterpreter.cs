@@ -1,7 +1,11 @@
-﻿using System.Diagnostics;
-
-namespace BashSoft
+﻿namespace BashSoft.IO
 {
+    using System;
+    using System.Diagnostics;
+    using Judge;
+    using Repository;
+    using StaticData;
+
     public static class CommandInterpreter
     {
         public static void InterpredCommand(string input)
@@ -42,10 +46,10 @@ namespace BashSoft
                     TryOrderAndTake(input, data);
                     break;
                 case "download":
-                    //TODO: implement after functionality is implemented
+                    // TODO: implement after functionality is implemented
                     break;
                 case "downloadAsynch":
-                    //TODO: implement after functionality is implemented
+                    // TODO: implement after functionality is implemented
                     break;
                 case "show":
                     TryShowWantedData(input, data);
@@ -66,7 +70,7 @@ namespace BashSoft
             if (data.Length == 2)
             {
                 var fileName = data[1];
-                Process.Start(SessionData.currentPath + "\\" + fileName);
+                Process.Start(SessionData.CurrentPath + "\\" + fileName);
             }
             else
             {
@@ -89,26 +93,27 @@ namespace BashSoft
 
         private static void TryTraverseFolders(string input, string[] data)
         {
-            if (data.Length == 1)
+            switch (data.Length)
             {
-                IOManager.TraverseDirectory(0);
-            }
-            else if (data.Length == 2)
-            {
-                var depth = 0;
+                case 1:
+                    IOManager.TraverseDirectory(0);
+                    break;
+                case 2:
+                    // ReSharper disable once RedundantAssignment
+                    var depth = 0;
+                    if (int.TryParse(data[1], out depth))
+                    {
+                        IOManager.TraverseDirectory(depth);
+                    }
+                    else
+                    {
+                        OutputWriter.DisplayException(ExceptionMessages.UnableToParseNumber);
+                    }
 
-                if (int.TryParse(data[1], out depth))
-                {
-                    IOManager.TraverseDirectory(depth);
-                }
-                else
-                {
-                    OutputWriter.DisplayException(ExceptionMessages.UnableToParseNumber);
-                }
-            }
-            else
-            {
-                DisplayInvalidCommandMessage(input);
+                    break;
+                default:
+                    DisplayInvalidCommandMessage(input);
+                    break;
             }
         }
 
@@ -169,17 +174,17 @@ namespace BashSoft
         private static void TryGetHelp()
         {
             OutputWriter.WriteMessageOnNewLine($"{new string('_', 100)}");
-            OutputWriter.WriteMessageOnNewLine(string.Format("|{0, -98}|", "make directory - mkdir: path "));
-            OutputWriter.WriteMessageOnNewLine(string.Format("|{0, -98}|", "traverse directory - ls: depth "));
-            OutputWriter.WriteMessageOnNewLine(string.Format("|{0, -98}|", "comparing files - cmp: path1 path2"));
-            OutputWriter.WriteMessageOnNewLine(string.Format("|{0, -98}|", "change directory - changeDirREl:relative path"));
-            OutputWriter.WriteMessageOnNewLine(string.Format("|{0, -98}|", "change directory - changeDir:absolute path"));
-            OutputWriter.WriteMessageOnNewLine(string.Format("|{0, -98}|", "read students data base - readDb: path"));
-            OutputWriter.WriteMessageOnNewLine(string.Format("|{0, -98}|", "filter {courseName} excelent/average/poor  take 2/5/all students - filterExcelent (the output is written on the console)"));
-            OutputWriter.WriteMessageOnNewLine(string.Format("|{0, -98}|", "order increasing students - order {courseName} ascending/descending take 20/10/all (the output is written on the console)"));
-            OutputWriter.WriteMessageOnNewLine(string.Format("|{0, -98}|", "download file - download: path of file (saved in current directory)"));
-            OutputWriter.WriteMessageOnNewLine(string.Format("|{0, -98}|", "download file asinchronously - downloadAsynch: path of file (save in the current directory)"));
-            OutputWriter.WriteMessageOnNewLine(string.Format("|{0, -98}|", "get help – help"));
+            OutputWriter.WriteMessageOnNewLine($"|{"make directory - mkdir: path ",-98}|");
+            OutputWriter.WriteMessageOnNewLine($"|{"traverse directory - ls: depth ",-98}|");
+            OutputWriter.WriteMessageOnNewLine($"|{"comparing files - cmp: path1 path2",-98}|");
+            OutputWriter.WriteMessageOnNewLine($"|{"change directory - changeDirREl:relative path",-98}|");
+            OutputWriter.WriteMessageOnNewLine($"|{"change directory - changeDir:absolute path",-98}|");
+            OutputWriter.WriteMessageOnNewLine($"|{"read students data base - readDb: path",-98}|");
+            OutputWriter.WriteMessageOnNewLine($"|{"filter {courseName} excelent/average/poor  take 2/5/all students - filterExcelent (the output is written on the console)",-98}|");
+            OutputWriter.WriteMessageOnNewLine($"|{"order increasing students - order {courseName} ascending/descending take 20/10/all (the output is written on the console)",-98}|");
+            OutputWriter.WriteMessageOnNewLine($"|{"download file - download: path of file (saved in current directory)",-98}|");
+            OutputWriter.WriteMessageOnNewLine($"|{"download file asinchronously - downloadAsynch: path of file (save in the current directory)",-98}|");
+            OutputWriter.WriteMessageOnNewLine($"|{"get help – help",-98}|");
             OutputWriter.WriteMessageOnNewLine($"{new string('_', 100)}");
             OutputWriter.WriteEmptyLine();
         }
@@ -230,8 +235,8 @@ namespace BashSoft
                 }
                 else
                 {
+                    // ReSharper disable once RedundantAssignment
                     var studentsToTake = 0;
-
                     if (int.TryParse(takeQuantity, out studentsToTake))
                     {
                         StudentsRepository.FilterAndTake(courseName, filter, studentsToTake);
@@ -275,6 +280,7 @@ namespace BashSoft
                 }
                 else
                 {
+                    // ReSharper disable once RedundantAssignment
                     var studentsToTake = 0;
 
                     if (int.TryParse(takeQuantity, out studentsToTake))

@@ -1,8 +1,10 @@
-﻿using System;
-using System.IO;
-
-namespace BashSoft
+﻿namespace BashSoft.Judge
 {
+    using System;
+    using System.IO;
+    using IO;
+    using StaticData;
+
     public static class Tester
     {
         public static void CompareContent(string userOutputPath, string expectedOutputPath)
@@ -16,13 +18,15 @@ namespace BashSoft
                 var actualOutputLines = File.ReadAllLines(userOutputPath);
                 var expectedOutputLines = File.ReadAllLines(expectedOutputPath);
 
+                // ReSharper disable once RedundantAssignment
                 var hasMismatch = false;
-                var mismatches = GetLinesWithPossibleMismatches(actualOutputLines, expectedOutputLines, out hasMismatch);
+                var mismatches =
+                    GetLinesWithPossibleMismatches(actualOutputLines, expectedOutputLines, out hasMismatch);
 
                 PrintOutput(mismatches, hasMismatch, mismatchPath);
                 OutputWriter.WriteMessageOnNewLine("File read!");
             }
-            catch(FileNotFoundException)
+            catch (FileNotFoundException)
             {
                 OutputWriter.DisplayException(ExceptionMessages.InvalidPath);
             }
@@ -30,7 +34,7 @@ namespace BashSoft
 
         private static string GetMismatchPath(string expectedOutputPath)
         {
-            var indexOf = expectedOutputPath.LastIndexOf("\\");
+            var indexOf = expectedOutputPath.LastIndexOf(@"\", StringComparison.Ordinal);
             var directoryPath = expectedOutputPath.Substring(0, indexOf);
             var finalPath = directoryPath + @"\Mismatch.txt";
             return finalPath;
@@ -40,6 +44,7 @@ namespace BashSoft
             string[] actualOutputLines, string[] expectedOutputLines, out bool hasMismatch)
         {
             hasMismatch = false;
+            // ReSharper disable once RedundantAssignment
             var output = string.Empty;
             var mismatches = new string[actualOutputLines.Length];
             OutputWriter.WriteMessageOnNewLine("Comparing files...");
@@ -53,7 +58,7 @@ namespace BashSoft
                 OutputWriter.DisplayException(ExceptionMessages.ComparisonOfFilesWithDifferentSizes);
             }
 
-            for (int index = 0; index < minOutputLines; index++)
+            for (var index = 0; index < minOutputLines; index++)
             {
                 var actualLine = actualOutputLines[index];
                 var expectedLine = expectedOutputLines[index];
@@ -89,7 +94,7 @@ namespace BashSoft
                 {
                     File.WriteAllLines(mismatchPath, mismatches);
                 }
-                catch(DirectoryNotFoundException)
+                catch (DirectoryNotFoundException)
                 {
                     OutputWriter.DisplayException(ExceptionMessages.InvalidPath);
                 }

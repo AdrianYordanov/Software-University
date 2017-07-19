@@ -1,8 +1,10 @@
 ﻿namespace BashSoft
 {
-    class BashSoftProgram
+    using IO;
+
+    internal class BashSoftProgram
     {
-        static void Main()
+        private static void Main()
         {
             InputReader.StartReadingCommands();
         }

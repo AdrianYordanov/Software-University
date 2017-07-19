@@ -1,8 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace BashSoft
+﻿namespace BashSoft.IO
 {
+    using System;
+    using System.Collections.Generic;
+
     public static class OutputWriter
     {
         public static void WriteMessage(string message)
@@ -30,7 +30,7 @@ namespace BashSoft
 
         public static void PrintStudent(KeyValuePair<string, List<int>> student)
         {
-            OutputWriter.WriteMessageOnNewLine(string.Format($"{student.Key} - {string.Join(", ", student.Value)}"));
+            WriteMessageOnNewLine(string.Format($"{student.Key} - {string.Join(", ", student.Value)}"));
         }
     }
 }

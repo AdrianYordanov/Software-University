@@ -1,9 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace BashSoft
+﻿namespace BashSoft.Repository
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using IO;
+    using StaticData;
+
     public static class RepositoryFilters
     {
         public static void FilterAndTake(Dictionary<string, List<int>> wantedData, string wantedFilter, int studentsToTake)
@@ -32,20 +34,20 @@ namespace BashSoft
         {
             var counterForPrinted = 0;
 
-            foreach (var userName_Points in wantedData)
+            foreach (var userNamePoints in wantedData)
             {
                 if (counterForPrinted == studentsToTake)
                 {
                     break;
                 }
 
-                var averageScore = userName_Points.Value.Average();
+                var averageScore = userNamePoints.Value.Average();
                 var percentageOfFullFilment = averageScore / 100;
-                var mark = percentageOfFullFilment * 4 + 2;
+                var mark = (percentageOfFullFilment * 4) + 2;
 
                 if (givenFilter(mark))
                 {
-                    OutputWriter.PrintStudent(userName_Points);
+                    OutputWriter.PrintStudent(userNamePoints);
                     counterForPrinted++;
                 }
             }

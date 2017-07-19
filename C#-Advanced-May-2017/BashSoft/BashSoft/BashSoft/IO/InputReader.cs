@@ -1,23 +1,24 @@
-﻿using System;
-
-namespace BashSoft
+﻿namespace BashSoft.IO
 {
+    using System;
+    using StaticData;
+
     public static class InputReader
     {
-        private const string endCommand = "quit";
+        private const string EndCommand = "quit";
 
         public static void StartReadingCommands()
         {
-            OutputWriter.WriteMessage($"{SessionData.currentPath}> ");
-            var input = Console.ReadLine();
-            input = input.Trim();
+            OutputWriter.WriteMessage($"{SessionData.CurrentPath}> ");
+            // ReSharper disable once PossibleNullReferenceException
+            var input = Console.ReadLine().Trim();
 
-            while (input != endCommand)
+            while (input != EndCommand)
             {
                 CommandInterpreter.InterpredCommand(input);
-                OutputWriter.WriteMessage($"{SessionData.currentPath}> ");
-                input = Console.ReadLine();
-                input = input.Trim();
+                OutputWriter.WriteMessage($"{SessionData.CurrentPath}> ");
+                // ReSharper disable once PossibleNullReferenceException
+                input = Console.ReadLine().Trim();
             }
         }
     }
