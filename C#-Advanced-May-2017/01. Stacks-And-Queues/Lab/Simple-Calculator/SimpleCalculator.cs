@@ -1,16 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 
-class SimpleCalculator
+public class SimpleCalculator
 {
-    static void Main()
+    public static void Main()
     {
         var input = Console.ReadLine();
         var tokens = input.Split(' ');
         var stack = new Stack<double>();
 
-
-        for (int i = 0; i < tokens.Length; i++)
+        for (var i = 0; i < tokens.Length; i++)
         {
             if (stack.Count == 0)
             {
@@ -18,13 +17,15 @@ class SimpleCalculator
             }
             else
             {
-                var operation = tokens[i];
-                i++;
+                var operation = tokens[i++];
 
-                switch (operation)
+                if (operation == "+")
                 {
-                    case "+": stack.Push(stack.Pop() + double.Parse(tokens[i])); break;
-                    case "-": stack.Push(stack.Pop() - double.Parse(tokens[i])); break;
+                    stack.Push(stack.Pop() + double.Parse(tokens[i]));
+                }
+                else if (operation == "-")
+                {
+                    stack.Push(stack.Pop() - double.Parse(tokens[i]));
                 }
             }
         }
