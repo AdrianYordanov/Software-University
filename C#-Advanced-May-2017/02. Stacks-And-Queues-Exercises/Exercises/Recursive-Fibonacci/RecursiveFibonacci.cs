@@ -1,22 +1,20 @@
 ﻿using System;
 
-class RecursiveFibonacci
+public class RecursiveFibonacci
 {
     private static ulong[] lookupArray;
 
-    static void Main()
+    public static void Main()
     {
         lookupArray = new ulong[50];
         lookupArray[0] = 1;
         lookupArray[1] = 1;
-
         var n = ulong.Parse(Console.ReadLine());
-        var result = getFibonacci(n);
-
+        var result = GetFibonacci(n);
         Console.WriteLine(result);
     }
 
-    public static ulong getFibonacci(ulong n)
+    public static ulong GetFibonacci(ulong n)
     {
         if (n <= 2)
         {
@@ -28,7 +26,7 @@ class RecursiveFibonacci
             return lookupArray[n - 1];
         }
 
-        lookupArray[n - 1] = getFibonacci(n - 1) + getFibonacci(n - 2);
+        lookupArray[n - 1] = GetFibonacci(n - 1) + GetFibonacci(n - 2);
         return lookupArray[n - 1];
     }
 }
