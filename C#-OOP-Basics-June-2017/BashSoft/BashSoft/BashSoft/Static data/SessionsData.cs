@@ -4,14 +4,6 @@
 
     public static class SessionsData
     {
-        private static string currentPath;
-
-        public static string CurrentPath
-        {
-            get => currentPath;
-
-            // ReSharper disable once ValueParameterNotUsed
-            set => currentPath = Directory.GetCurrentDirectory();
-        }
+        private static readonly string CurrentPath = Directory.GetCurrentDirectory();
     }
 }
