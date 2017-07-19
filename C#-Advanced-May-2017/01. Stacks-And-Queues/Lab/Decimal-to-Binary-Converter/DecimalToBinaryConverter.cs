@@ -7,7 +7,6 @@ public class DecimalToBinaryConverter
     {
         var number = int.Parse(Console.ReadLine());
         var stack = new Stack<int>();
-
         if (number == 0)
         {
             Console.WriteLine(number);
