@@ -2,19 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 
-class BalancedParentheses
+public class BalancedParentheses
 {
-    static void Main()
+    public static void Main()
     {
         var input = Console.ReadLine();
         var stack = new Stack<char>();
-        var openBrackets = new char[] { '{', '[', '(' };
+        var openBrackets = new[] { '{', '[', '(' };
         var isBalanced = true;
 
-        for (int i = 0; i < input.Length; i++)
+        foreach (var currentBracket in input)
         {
-            var currentBracket = input[i];
-
             if (openBrackets.Contains(currentBracket))
             {
                 stack.Push(currentBracket);
@@ -31,9 +29,27 @@ class BalancedParentheses
 
                 switch (currentBracket)
                 {
-                    case '}': if (lastOpenBracket != '{') { isBalanced = false; } break;
-                    case ']': if (lastOpenBracket != '[') { isBalanced = false; } break;
-                    case ')': if (lastOpenBracket != '(') { isBalanced = false; } break;
+                    case '}':
+                        if (lastOpenBracket != '{')
+                        {
+                            isBalanced = false;
+                        }
+
+                        break;
+                    case ']':
+                        if (lastOpenBracket != '[')
+                        {
+                            isBalanced = false;
+                        }
+
+                        break;
+                    case ')':
+                        if (lastOpenBracket != '(')
+                        {
+                            isBalanced = false;
+                        }
+
+                        break;
                 }
 
                 if (!isBalanced)
