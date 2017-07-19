@@ -3,7 +3,7 @@
 // ReSharper disable once CheckNamespace
 public class StartUp
 {
-    static void Main()
+    private static void Main()
     {
         var personInterface = typeof(Citizen).GetInterface("IPerson");
         var properties = personInterface.GetProperties();

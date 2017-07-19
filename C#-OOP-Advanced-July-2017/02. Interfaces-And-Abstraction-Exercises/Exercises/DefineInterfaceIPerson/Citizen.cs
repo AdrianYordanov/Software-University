@@ -1,8 +1,9 @@
 ﻿// ReSharper disable once CheckNamespace
+
 public class Citizen : IPerson
 {
-    private string name;
     private int age;
+    private string name;
 
     public Citizen(string name, int age)
     {
