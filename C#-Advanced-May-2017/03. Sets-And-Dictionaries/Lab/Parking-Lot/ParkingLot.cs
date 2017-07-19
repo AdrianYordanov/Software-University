@@ -2,23 +2,24 @@
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
-class ParkingLot
+public class ParkingLot
 {
-    static void Main()
+    public static void Main()
     {
         var input = Console.ReadLine();
         var parking = new SortedSet<string>();
-
         while (input != "END")
         {
             var tokens = Regex.Split(input, "[, ]+", RegexOptions.IgnorePatternWhitespace);
             var operation = tokens[0];
             var carNumber = tokens[1];
-
-            switch (operation)
+            if (operation == "IN")
             {
-                case "IN": parking.Add(carNumber); break;
-                case "OUT": parking.Remove(carNumber); break;
+                parking.Add(carNumber);
+            }
+            else if (operation == "OUT")
+            {
+                parking.Remove(carNumber);
             }
 
             input = Console.ReadLine();
