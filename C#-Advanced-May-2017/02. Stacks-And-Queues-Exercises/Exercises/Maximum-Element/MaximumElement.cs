@@ -2,29 +2,27 @@
 using System.Collections.Generic;
 using System.Linq;
 
-class MaximumElement
+public class MaximumElement
 {
-    static void Main()
+    public static void Main()
     {
         var n = int.Parse(Console.ReadLine());
         var stack = new Stack<int>();
         var maxNumbers = new Stack<int>();
         var maxElement = int.MinValue;
 
-        for (int i = 0; i < n; i++)
+        for (var i = 0; i < n; i++)
         {
             var query = Console.ReadLine()
-                .Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+                .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
                 .Select(int.Parse)
                 .ToArray();
-
             switch (query[0])
             {
                 case 1:
                     {
                         var pushValue = query[1];
                         stack.Push(pushValue);
-
                         if (pushValue > maxElement)
                         {
                             maxElement = pushValue;
@@ -33,6 +31,7 @@ class MaximumElement
 
                         break;
                     }
+
                 case 2:
                     {
                         if (stack.Count == 0)
@@ -45,19 +44,12 @@ class MaximumElement
                         if (removeNumber == maxElement)
                         {
                             maxNumbers.Pop();
-
-                            if (maxNumbers.Count > 0)
-                            {
-                                maxElement = maxNumbers.Peek();
-                            }
-                            else
-                            {
-                                maxElement = int.MinValue;
-                            }
+                            maxElement = maxNumbers.Count > 0 ? maxNumbers.Peek() : int.MinValue;
                         }
 
                         break;
                     }
+
                 case 3:
                     {
                         Console.WriteLine(maxElement);
