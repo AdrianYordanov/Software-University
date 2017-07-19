@@ -12,7 +12,7 @@
         {
             if (this.Data.Length == 2)
             {
-                string relPath = this.Data[1];
+                var relPath = this.Data[1];
                 this.InputOutputManager.ChangeCurrentDirectoryRelative(relPath);
             }
             else

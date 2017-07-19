@@ -30,7 +30,7 @@
 
         private void PrintStudents(Dictionary<string, double> studentsSorted)
         {
-            foreach (KeyValuePair<string, double> keyValuePair in studentsSorted)
+            foreach (var keyValuePair in studentsSorted)
             {
                 OutputWriter.PrintStudent(keyValuePair);
             }

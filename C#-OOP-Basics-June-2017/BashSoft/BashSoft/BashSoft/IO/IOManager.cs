@@ -10,18 +10,20 @@
         public void TraverseDirectory(int depth)
         {
             OutputWriter.WriteEmptyLine();
-            int initialIndentation = SessionsData.currentPath.Split('\\').Length;
-            Queue<string> subFolders = new Queue<string>();
+            var initialIndentation = SessionsData.currentPath.Split('\\').Length;
+            var subFolders = new Queue<string>();
             subFolders.Enqueue(SessionsData.currentPath);
 
             while (subFolders.Count != 0)
             {
-                string currentPath = subFolders.Dequeue();
-                int indentation = currentPath.Split('\\').Length - initialIndentation;
+                var currentPath = subFolders.Dequeue();
+                var indentation = currentPath.Split('\\').Length - initialIndentation;
+
                 if (depth - indentation < 0)
                 {
                     break;
                 }
+
                 OutputWriter.WriteMessageOnNewLine(string.Format("{0}{1}", new string('-', indentation), currentPath));
 
                 try

@@ -12,7 +12,7 @@
         {
             if (this.Data.Length == 2)
             {
-                string absolutePath = this.Data[1];
+                var absolutePath = this.Data[1];
                 this.InputOutputManager.ChangeCurrentDirectoryAbsolute(absolutePath);
             }
             else

@@ -17,7 +17,7 @@
             while (true)
             {
                 OutputWriter.WriteMessage($"{SessionsData.currentPath}> ");
-                string input = Console.ReadLine();
+                var input = Console.ReadLine();
                 input = input.Trim();
                 if (input == endCommand)
                 {

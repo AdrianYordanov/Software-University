@@ -24,7 +24,7 @@
 
             try
             {
-                Command command = this.ParseCommand(input, commandName, data);
+                var command = this.ParseCommand(input, commandName, data);
                 command.Execute();
             }
             catch (Exception ex)
