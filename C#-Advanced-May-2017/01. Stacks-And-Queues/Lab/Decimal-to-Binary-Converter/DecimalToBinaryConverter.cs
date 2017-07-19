@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-class DecimalToBinaryConverter
+public class DecimalToBinaryConverter
 {
-    static void Main()
+    public static void Main()
     {
         var number = int.Parse(Console.ReadLine());
         var stack = new Stack<int>();
@@ -16,15 +16,7 @@ class DecimalToBinaryConverter
 
         while (number > 0)
         {
-            if (number % 2 == 0)
-            {
-                stack.Push(0);
-            }
-            else
-            {
-                stack.Push(1);
-            }
-
+            stack.Push(number % 2 == 0 ? 0 : 1);
             number /= 2;
         }
 
