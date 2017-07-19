@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-class HotPotato
+public class HotPotato
 {
-    static void Main()
+    public static void Main()
     {
         var names = Console.ReadLine().Split(' ');
         var n = int.Parse(Console.ReadLine());
@@ -11,7 +11,7 @@ class HotPotato
 
         while (queue.Count > 1)
         {
-            for (int i = 0; i < n - 1; i++)
+            for (var i = 0; i < n - 1; i++)
             {
                 queue.Enqueue(queue.Dequeue());
             }
