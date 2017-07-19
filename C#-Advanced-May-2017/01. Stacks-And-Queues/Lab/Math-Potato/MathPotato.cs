@@ -9,7 +9,6 @@ public class MathPotato
         var n = int.Parse(Console.ReadLine());
         var queue = new Queue<string>(names);
         var cycles = 1;
-
         while (queue.Count > 1)
         {
             for (var i = 0; i < n - 1; i++)
@@ -28,12 +27,7 @@ public class MathPotato
     {
         if ((candidate & 1) == 0)
         {
-            if (candidate == 2)
-            {
-                return true;
-            }
-
-            return false;
+            return candidate == 2;
         }
 
         for (var i = 3; i * i <= candidate; i += 2)
