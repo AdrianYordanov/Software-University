@@ -2,14 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 
-class TruckTour
+public class TruckTour
 {
-    static void Main()
+    public static void Main()
     {
         var n = int.Parse(Console.ReadLine());
         var circle = new Queue<long[]>();
-
-        for (int i = 0; i < n; i++)
+        for (var i = 0; i < n; i++)
         {
             var tokens = Console.ReadLine()
                 .Split(' ')
@@ -18,16 +17,14 @@ class TruckTour
             circle.Enqueue(tokens);
         }
 
-        int startIndex = 0;
-        long tankFuel = 0;
-
+        var startIndex = 0;
         for (; startIndex < circle.Count; ++startIndex)
         {
             // Now we start and try to go to the next pump.
-            bool shouldBreak = true;
+            var shouldBreak = true;
             var currentPump = circle.Dequeue();
             circle.Enqueue(currentPump);
-            tankFuel = currentPump[0] - currentPump[1];
+            var tankFuel = currentPump[0] - currentPump[1];
 
             if (tankFuel < 0)
             {
@@ -35,7 +32,7 @@ class TruckTour
                 continue;
             }
 
-            for (int itteration = 0; itteration < circle.Count; itteration++)
+            for (var itteration = 0; itteration < circle.Count; itteration++)
             {
                 currentPump = circle.Dequeue();
                 circle.Enqueue(currentPump);
