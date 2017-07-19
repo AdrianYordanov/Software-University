@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-class BasicStackOperations
+public class BasicStackOperations
 {
-    static void Main()
+    public static void Main()
     {
         var tokens = Console.ReadLine().Split(' ');
         var numbers = Console.ReadLine().Split(' ');
@@ -12,12 +12,12 @@ class BasicStackOperations
         var s = int.Parse(tokens[1]);
         var x = int.Parse(tokens[2]);
 
-        for (int pushElementCounter = 0; pushElementCounter < n; pushElementCounter++)
+        for (var pushElementCounter = 0; pushElementCounter < n; pushElementCounter++)
         {
             stack.Push(int.Parse(numbers[pushElementCounter]));
         }
 
-        for (int popElementsCounter = 0; popElementsCounter < s; popElementsCounter++)
+        for (var popElementsCounter = 0; popElementsCounter < s; popElementsCounter++)
         {
             stack.Pop();
         }
@@ -25,7 +25,6 @@ class BasicStackOperations
         var stackCount = stack.Count;
         var isFoundX = false;
         var smallestNumber = int.MaxValue;
-
 
         while (stack.Count > 0)
         {
