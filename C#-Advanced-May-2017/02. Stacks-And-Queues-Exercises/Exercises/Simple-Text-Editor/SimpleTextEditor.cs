@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 
-class SimpleTextEditor
+public class SimpleTextEditor
 {
-    static void Main()
+    public static void Main()
     {
         var n = int.Parse(Console.ReadLine());
         var stringHistory = new Stack<string>();
         stringHistory.Push(string.Empty);
 
-        for (int i = 0; i < n; i++)
+        for (var i = 0; i < n; i++)
         {
             var tokens = Console.ReadLine().Split(' ');
             var operation = int.Parse(tokens[0]);
@@ -23,6 +23,7 @@ class SimpleTextEditor
                         stringHistory.Push(update);
                         break;
                     }
+
                 case 2:
                     {
                         var count = int.Parse(tokens[1]);
@@ -31,6 +32,7 @@ class SimpleTextEditor
                         stringHistory.Push(update);
                         break;
                     }
+
                 case 3:
                     {
                         var index = int.Parse(tokens[1]);
@@ -38,6 +40,7 @@ class SimpleTextEditor
                         Console.WriteLine(lastUpdate[index - 1]);
                         break;
                     }
+
                 case 4:
                     {
                         stringHistory.Pop();
