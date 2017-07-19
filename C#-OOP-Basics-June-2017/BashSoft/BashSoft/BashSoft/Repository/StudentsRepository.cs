@@ -8,7 +8,7 @@
     using Exceptions;
     using IO;
     using Models;
-    using Static_data;
+    using StaticData;
 
     public class StudentsRepository
     {

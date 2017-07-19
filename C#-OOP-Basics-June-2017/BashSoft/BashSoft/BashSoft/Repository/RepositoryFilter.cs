@@ -3,7 +3,7 @@
     using System;
     using System.Collections.Generic;
     using IO;
-    using Static_data;
+    using StaticData;
 
     public class RepositoryFilter
     {

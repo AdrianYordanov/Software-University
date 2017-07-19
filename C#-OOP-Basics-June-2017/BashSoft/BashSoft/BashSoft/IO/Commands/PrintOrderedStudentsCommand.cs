@@ -3,7 +3,7 @@
     using Exceptions;
     using Judge;
     using Repository;
-    using Static_data;
+    using StaticData;
 
     public class PrintOrderedStudentsCommand : Command
     {

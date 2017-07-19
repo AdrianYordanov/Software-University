@@ -4,7 +4,7 @@
     using System.Collections.Generic;
     using System.IO;
     using Exceptions;
-    using Static_data;
+    using StaticData;
 
     // ReSharper disable once InconsistentNaming
     public class IOManager

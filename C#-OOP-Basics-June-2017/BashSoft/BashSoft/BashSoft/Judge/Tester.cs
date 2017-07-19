@@ -4,7 +4,7 @@
     using System.IO;
     using Exceptions;
     using IO;
-    using Static_data;
+    using StaticData;
 
     public class Tester
     {
