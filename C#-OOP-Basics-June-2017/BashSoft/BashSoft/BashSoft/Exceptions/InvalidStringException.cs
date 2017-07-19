@@ -8,10 +8,12 @@
 
         public InvalidStringException()
             : base(NullOrEmptyValue)
-        { }
+        {
+        }
 
         public InvalidStringException(string message)
             : base(message)
-        { }
+        {
+        }
     }
 }

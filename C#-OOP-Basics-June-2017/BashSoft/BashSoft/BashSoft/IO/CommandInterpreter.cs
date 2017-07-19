@@ -1,14 +1,16 @@
-﻿namespace BashSoft
+﻿namespace BashSoft.IO
 {
     using System;
-    using BashSoft.Exceptions;
-    using BashSoft.IO.Commands;
+    using Commands;
+    using Exceptions;
+    using Judge;
+    using Repository;
 
     public class CommandInterpreter
     {
-        private Tester judge;
-        private StudentsRepository repository;
-        private IOManager inputOutputManager;
+        private readonly IOManager inputOutputManager;
+        private readonly Tester judge;
+        private readonly StudentsRepository repository;
 
         public CommandInterpreter(Tester judge, StudentsRepository repository, IOManager inputOutputManager)
         {

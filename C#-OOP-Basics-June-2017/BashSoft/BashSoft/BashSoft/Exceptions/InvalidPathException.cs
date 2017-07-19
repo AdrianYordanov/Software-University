@@ -8,10 +8,12 @@
 
         public InvalidPathException()
             : base(InvalidPath)
-        { }
+        {
+        }
 
         public InvalidPathException(string message)
             : base(message)
-        { }
+        {
+        }
     }
 }

@@ -1,12 +1,16 @@
-﻿using BashSoft.Exceptions;
-
-namespace BashSoft.IO.Commands
+﻿namespace BashSoft.IO.Commands
 {
+    using Exceptions;
+    using Judge;
+    using Repository;
+    using Static_data;
+
     public class TraverseFoldersCommand : Command
     {
         public TraverseFoldersCommand(string input, string[] data, Tester judge, StudentsRepository repository, IOManager inputOutputManager)
             : base(input, data, judge, repository, inputOutputManager)
-        { }
+        {
+        }
 
         public override void Execute()
         {
@@ -16,6 +20,7 @@ namespace BashSoft.IO.Commands
             }
             else if (this.Data.Length == 2)
             {
+                // ReSharper disable once RedundantAssignment
                 var depth = 0;
                 var hasParsed = int.TryParse(this.Data[1], out depth);
 

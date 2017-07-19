@@ -1,12 +1,17 @@
 ﻿namespace BashSoft.IO.Commands
 {
-    using BashSoft.Exceptions;
+    using Exceptions;
+    using Judge;
+    using Repository;
+    using Static_data;
 
     public class PrintFilteredStudentsCommand : Command
     {
-        public PrintFilteredStudentsCommand(string input, string[] data, Tester judge, StudentsRepository repository, IOManager inputOutputManager)
+        public PrintFilteredStudentsCommand(string input, string[] data, Tester judge, StudentsRepository repository,
+            IOManager inputOutputManager)
             : base(input, data, judge, repository, inputOutputManager)
-        { }
+        {
+        }
 
         public override void Execute()
         {
@@ -16,8 +21,7 @@
                 var filter = this.Data[2].ToLower();
                 var takeCommand = this.Data[3].ToLower();
                 var takeQuantity = this.Data[4].ToLower();
-
-                TryParseParametersForFilterAndTake(takeCommand, takeQuantity, courseName, filter);
+                this.TryParseParametersForFilterAndTake(takeCommand, takeQuantity, courseName, filter);
             }
             else
             {
@@ -25,7 +29,8 @@
             }
         }
 
-        private void TryParseParametersForFilterAndTake(string takeCommand, string takeQuantity, string courseName, string filter)
+        private void TryParseParametersForFilterAndTake(string takeCommand, string takeQuantity, string courseName,
+            string filter)
         {
             if (takeCommand == "take")
             {
@@ -35,8 +40,7 @@
                 }
                 else
                 {
-                    var studentsToTake = 0;
-                    var hasParsed = int.TryParse(takeQuantity, out studentsToTake);
+                    var hasParsed = int.TryParse(takeQuantity, out int studentsToTake);
 
                     if (hasParsed)
                     {

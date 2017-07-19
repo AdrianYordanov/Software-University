@@ -1,12 +1,16 @@
 ﻿namespace BashSoft.IO.Commands
 {
-    using BashSoft.Exceptions;
+    using Exceptions;
+    using Judge;
+    using Repository;
+    using Static_data;
 
     public class PrintOrderedStudentsCommand : Command
     {
         public PrintOrderedStudentsCommand(string input, string[] data, Tester judge, StudentsRepository repository, IOManager inputOutputManager)
             : base(input, data, judge, repository, inputOutputManager)
-        { }
+        {
+        }
 
         public override void Execute()
         {
@@ -17,7 +21,7 @@
                 var takeCommand = this.Data[3].ToLower();
                 var takeQuantity = this.Data[4].ToLower();
 
-                TryParseParametersForOrderAndTake(takeCommand, takeQuantity, courseName, filter);
+                this.TryParseParametersForOrderAndTake(takeCommand, takeQuantity, courseName, filter);
             }
             else
             {
@@ -35,6 +39,7 @@
                 }
                 else
                 {
+                    // ReSharper disable once RedundantAssignment
                     var studentsToTake = 0;
                     var hasParsed = int.TryParse(takeQuantity, out studentsToTake);
 

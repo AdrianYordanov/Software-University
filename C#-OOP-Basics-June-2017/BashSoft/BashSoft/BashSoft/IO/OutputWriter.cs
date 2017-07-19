@@ -1,4 +1,4 @@
-﻿namespace BashSoft
+﻿namespace BashSoft.IO
 {
     using System;
     using System.Collections.Generic;
@@ -22,7 +22,7 @@
 
         public static void DisplayException(string message)
         {
-            ConsoleColor currentColor = Console.ForegroundColor;
+            var currentColor = Console.ForegroundColor;
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine(message);
             Console.ForegroundColor = currentColor;
@@ -30,7 +30,7 @@
 
         public static void PrintStudent(KeyValuePair<string, double> student)
         {
-            OutputWriter.WriteMessageOnNewLine($"{student.Key} - {student.Value}");
+            WriteMessageOnNewLine($"{student.Key} - {student.Value}");
         }
     }
 }

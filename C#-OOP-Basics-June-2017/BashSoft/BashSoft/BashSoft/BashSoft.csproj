@@ -55,7 +55,9 @@
     <Compile Include="IO\Commands\Command.cs" />
     <Compile Include="IO\Commands\CompareFilesCommand.cs" />
     <Compile Include="IO\Commands\DropDatabaseCommand.cs" />
-    <Compile Include="IO\Commands\PrintFilteredStudentsCommand.cs" />
+    <Compile Include="IO\Commands\PrintFilteredStudentsCommand.cs">
+      <ExcludeFromStyleCop>True</ExcludeFromStyleCop>
+    </Compile>
     <Compile Include="IO\Commands\GetHelpCommand.cs" />
     <Compile Include="IO\Commands\MakeDirectoryCommand.cs" />
     <Compile Include="IO\Commands\OpenFileCommand.cs" />

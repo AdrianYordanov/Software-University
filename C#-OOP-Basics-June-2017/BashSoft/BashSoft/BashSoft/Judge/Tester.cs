@@ -1,8 +1,10 @@
-﻿namespace BashSoft
+﻿namespace BashSoft.Judge
 {
     using System;
     using System.IO;
-    using BashSoft.Exceptions;
+    using Exceptions;
+    using IO;
+    using Static_data;
 
     public class Tester
     {
@@ -12,12 +14,11 @@
 
             try
             {
-                var mismatchPath = GetMismatchPath(expectedOutputPath);
+                var mismatchPath = this.GetMismatchPath(expectedOutputPath);
                 var actualOutputLines = File.ReadAllLines(userOutputPath);
                 var expectedOutputLines = File.ReadAllLines(expectedOutputPath);
-                var hasMismatch = false;
-                var mismatches = GetLinesWithPossibleMismatches(actualOutputLines, expectedOutputLines, out hasMismatch);
-                PrintOutput(mismatches, hasMismatch, mismatchPath);
+                var mismatches = this.GetLinesWithPossibleMismatches(actualOutputLines, expectedOutputLines, out bool hasMismatch);
+                this.PrintOutput(mismatches, hasMismatch, mismatchPath);
                 OutputWriter.WriteMessageOnNewLine("Files read!");
             }
             catch (IOException)
@@ -45,7 +46,6 @@
         private string[] GetLinesWithPossibleMismatches(string[] actualOutputLines, string[] expectedOutputLines, out bool hasMismatch)
         {
             hasMismatch = false;
-            var output = string.Empty;
             var mismatches = new string[actualOutputLines.Length];
             OutputWriter.WriteMessageOnNewLine("Comparing files...");
             var minOutputlines = actualOutputLines.Length;
@@ -57,11 +57,13 @@
                 OutputWriter.DisplayException(ExceptionMessages.ComparisonOfFilesWithDifferentSizes);
             }
 
-            for (int index = 0; index < minOutputlines; index++)
+            for (var index = 0; index < minOutputlines; index++)
             {
                 var actualLine = actualOutputLines[index];
                 var expectedLine = expectedOutputLines[index];
 
+                // ReSharper disable once RedundantAssignment
+                var output = string.Empty;
                 if (!actualLine.Equals(expectedLine))
                 {
                     output = $"Mismatch at line {index} -- expected: \"{expectedLine}\", actual: \"{actualLine}\"";
@@ -73,6 +75,7 @@
                     output = actualLine;
                     output += Environment.NewLine;
                 }
+
                 mismatches[index] = output;
             }
 

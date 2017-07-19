@@ -1,56 +1,29 @@
 ﻿namespace BashSoft.IO.Commands
 {
     using System;
-    using BashSoft.Exceptions;
+    using Exceptions;
+    using Judge;
+    using Repository;
 
     public abstract class Command
     {
-        private Tester judge;
-        private StudentsRepository repository;
-        private IOManager inputOutputManager;
+        private string[] data;
 
         private string input;
-        private string[] data;
 
         protected Command(string input, string[] data, Tester judge, StudentsRepository repository, IOManager inputOutputManager)
         {
             this.Input = input;
             this.Data = data;
-            this.judge = judge;
-            this.repository = repository;
-            this.inputOutputManager = inputOutputManager;
-        }
-
-        protected Tester Judge
-        {
-            get
-            {
-                return this.judge;
-            }
-        }
-
-        protected StudentsRepository Repository
-        {
-            get
-            {
-                return this.repository;
-            }
-        }
-
-        protected IOManager InputOutputManager
-        {
-            get
-            {
-                return this.inputOutputManager;
-            }
+            this.Judge = judge;
+            this.Repository = repository;
+            this.InputOutputManager = inputOutputManager;
         }
 
         public string[] Data
         {
-            get
-            {
-                return this.data;
-            }
+            get => this.data;
+
             protected set
             {
                 if (value == null || value.Length == 0)
@@ -64,10 +37,8 @@
 
         public string Input
         {
-            get
-            {
-                return this.input;
-            }
+            get => this.input;
+
             protected set
             {
                 if (string.IsNullOrEmpty(value))
@@ -78,6 +49,12 @@
                 this.input = value;
             }
         }
+
+        protected Tester Judge { get; }
+
+        protected StudentsRepository Repository { get; }
+
+        protected IOManager InputOutputManager { get; }
 
         public abstract void Execute();
     }

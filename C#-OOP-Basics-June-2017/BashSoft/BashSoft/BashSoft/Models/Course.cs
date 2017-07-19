@@ -1,15 +1,14 @@
 ﻿namespace BashSoft.Models
 {
     using System.Collections.Generic;
-    using BashSoft.Exceptions;
+    using Exceptions;
 
     public class Course
     {
         public const int MaxScoreOnExamTasks = 100;
         public const int NumberOfTasksOnExam = 5;
-
+        private readonly Dictionary<string, Student> studentsByName;
         private string name;
-        private Dictionary<string, Student> studentsByName;
 
         public Course(string name)
         {
@@ -19,10 +18,8 @@
 
         public string Name
         {
-            get
-            {
-                return this.name;
-            }
+            get => this.name;
+
             set
             {
                 if (string.IsNullOrEmpty(value))
@@ -34,13 +31,7 @@
             }
         }
 
-        public IReadOnlyDictionary<string, Student> StudentsByName
-        {
-            get
-            {
-                return this.studentsByName;
-            }
-        }
+        public IReadOnlyDictionary<string, Student> StudentsByName => this.studentsByName;
 
         public void EntrollStudent(Student student)
         {

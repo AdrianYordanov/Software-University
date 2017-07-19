@@ -8,6 +8,7 @@
 
         public InvalidCommandException(string message)
             : base(string.Format(InvalidCommand, message))
-        { }
+        {
+        }
     }
 }

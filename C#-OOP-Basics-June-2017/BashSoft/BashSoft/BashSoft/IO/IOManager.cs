@@ -1,18 +1,20 @@
-﻿namespace BashSoft
+﻿namespace BashSoft.IO
 {
     using System;
     using System.Collections.Generic;
     using System.IO;
-    using BashSoft.Exceptions;
+    using Exceptions;
+    using Static_data;
 
+    // ReSharper disable once InconsistentNaming
     public class IOManager
     {
         public void TraverseDirectory(int depth)
         {
             OutputWriter.WriteEmptyLine();
-            var initialIndentation = SessionsData.currentPath.Split('\\').Length;
+            var initialIndentation = SessionsData.CurrentPath.Split('\\').Length;
             var subFolders = new Queue<string>();
-            subFolders.Enqueue(SessionsData.currentPath);
+            subFolders.Enqueue(SessionsData.CurrentPath);
 
             while (subFolders.Count != 0)
             {
@@ -24,14 +26,14 @@
                     break;
                 }
 
-                OutputWriter.WriteMessageOnNewLine(string.Format("{0}{1}", new string('-', indentation), currentPath));
+                OutputWriter.WriteMessageOnNewLine($"{new string('-', indentation)}{currentPath}");
 
                 try
                 {
                     foreach (var file in Directory.GetFiles(currentPath))
                     {
-                        int indexOfLastSlash = file.LastIndexOf("\\");
-                        string filename = file.Substring(indexOfLastSlash);
+                        var indexOfLastSlash = file.LastIndexOf(@"\", StringComparison.Ordinal);
+                        var filename = file.Substring(indexOfLastSlash);
                         OutputWriter.WriteMessageOnNewLine(new string('-', indexOfLastSlash) + filename);
                     }
 
@@ -50,7 +52,7 @@
 
         public void CreateDirectoryInCurrentFolder(string name)
         {
-            string path = GetCurrentDirectoryPath() + "\\" + name;
+            var path = this.GetCurrentDirectoryPath() + "\\" + name;
 
             try
             {
@@ -68,21 +70,22 @@
             {
                 try
                 {
-                    string currentPath = SessionsData.currentPath;
-                    int indexOfLastSlash = currentPath.LastIndexOf("\\");
-                    string newPath = currentPath.Substring(0, indexOfLastSlash);
-                    SessionsData.currentPath = newPath;
+                    var currentPath = SessionsData.CurrentPath;
+                    var indexOfLastSlash = currentPath.LastIndexOf(@"\", StringComparison.Ordinal);
+                    var newPath = currentPath.Substring(0, indexOfLastSlash);
+                    SessionsData.CurrentPath = newPath;
                 }
                 catch (ArgumentOutOfRangeException)
                 {
+                    // ReSharper disable once NotResolvedInText
                     throw new ArgumentOutOfRangeException("indexOfLastSlash", ExceptionMessages.UnableToGoHigherInPartitionHierarchy);
                 }
             }
             else
             {
-                string currentPath = SessionsData.currentPath;
-                currentPath += "\\" + relativePath;
-                ChangeCurrentDirectoryAbsolute(currentPath);
+                var currentPath = SessionsData.CurrentPath;
+                currentPath += @"\" + relativePath;
+                this.ChangeCurrentDirectoryAbsolute(currentPath);
             }
         }
 
@@ -93,12 +96,12 @@
                 throw new InvalidPathException();
             }
 
-            SessionsData.currentPath = absolutePath;
+            SessionsData.CurrentPath = absolutePath;
         }
 
         private string GetCurrentDirectoryPath()
         {
-            return SessionsData.currentPath;
+            return SessionsData.CurrentPath;
         }
     }
 }

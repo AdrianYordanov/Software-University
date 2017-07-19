@@ -1,8 +1,10 @@
-﻿namespace BashSoft
+﻿namespace BashSoft.Repository
 {
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using IO;
+    using Static_data;
 
     public class RepositorySorter
     {
@@ -12,13 +14,13 @@
 
             if (comparison == "ascending")
             {
-                PrintStudents(studentsWithMarks.OrderBy(x => x.Value)
+                this.PrintStudents(studentsWithMarks.OrderBy(x => x.Value)
                     .Take(studentsToTake)
                     .ToDictionary(pair => pair.Key, pair => pair.Value));
             }
             else if (comparison == "descending")
             {
-                PrintStudents(studentsWithMarks.OrderByDescending(x => x.Value)
+                this.PrintStudents(studentsWithMarks.OrderByDescending(x => x.Value)
                     .Take(studentsToTake)
                     .ToDictionary(pair => pair.Key, pair => pair.Value));
             }

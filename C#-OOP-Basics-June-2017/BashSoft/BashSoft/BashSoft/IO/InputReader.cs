@@ -1,11 +1,12 @@
-﻿namespace BashSoft
+﻿namespace BashSoft.IO
 {
     using System;
+    using Static_data;
 
     public class InputReader
     {
-        private const string endCommand = "quit";
-        private CommandInterpreter interpreter;
+        private const string EndCommand = "quit";
+        private readonly CommandInterpreter interpreter;
 
         public InputReader(CommandInterpreter interpreter)
         {
@@ -16,14 +17,15 @@
         {
             while (true)
             {
-                OutputWriter.WriteMessage($"{SessionsData.currentPath}> ");
-                var input = Console.ReadLine();
-                input = input.Trim();
-                if (input == endCommand)
+                OutputWriter.WriteMessage($"{SessionsData.CurrentPath}> ");
+                // ReSharper disable once PossibleNullReferenceException
+                var input = Console.ReadLine().Trim();
+                if (input == EndCommand)
                 {
                     break;
                 }
-                interpreter.InterpredCommand(input);
+
+                this.interpreter.InterpredCommand(input);
             }
         }
     }

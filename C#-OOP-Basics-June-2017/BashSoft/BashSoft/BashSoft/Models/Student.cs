@@ -3,13 +3,14 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using BashSoft.Exceptions;
+    using Exceptions;
+    using Static_data;
 
     public class Student
     {
+        private readonly Dictionary<string, Course> enrolledCourses;
+        private readonly Dictionary<string, double> marksByCourseName;
         private string userName;
-        private Dictionary<string, Course> enrolledCourses;
-        private Dictionary<string, double> marksByCourseName;
 
         public Student(string userName)
         {
@@ -20,10 +21,8 @@
 
         public string UserName
         {
-            get
-            {
-                return this.userName;
-            }
+            get => this.userName;
+
             private set
             {
                 if (string.IsNullOrEmpty(value))
@@ -35,21 +34,9 @@
             }
         }
 
-        public IReadOnlyDictionary<string, Course> EnrolledCourses
-        {
-            get
-            {
-                return this.enrolledCourses;
-            }
-        }
+        public IReadOnlyDictionary<string, Course> EnrolledCourses => this.enrolledCourses;
 
-        public IReadOnlyDictionary<string, double> MarksByCourseName
-        {
-            get
-            {
-                return this.marksByCourseName;
-            }
-        }
+        public IReadOnlyDictionary<string, double> MarksByCourseName => this.marksByCourseName;
 
         public void EntrollInCourse(Course course)
         {
@@ -73,13 +60,13 @@
                 throw new ArgumentException(ExceptionMessages.InvalidNumberOfScores);
             }
 
-            this.marksByCourseName.Add(courseName, CalculateMark(scores));
+            this.marksByCourseName.Add(courseName, this.CalculateMark(scores));
         }
 
         private double CalculateMark(int[] scores)
         {
             var percentageOfSolvedExam = scores.Sum() / (double)(Course.NumberOfTasksOnExam * Course.MaxScoreOnExamTasks);
-            var mark = percentageOfSolvedExam * 4 + 2;
+            var mark = (percentageOfSolvedExam * 4) + 2;
             return mark;
         }
     }

@@ -1,7 +1,9 @@
-﻿namespace BashSoft
+﻿namespace BashSoft.Repository
 {
     using System;
     using System.Collections.Generic;
+    using IO;
+    using Static_data;
 
     public class RepositoryFilter
     {
@@ -9,15 +11,15 @@
         {
             if (wantedFilter == "excellent")
             {
-                FilterAndTake(studentsWithMarks, x => x >= 5, studentsTotTake);
+                this.FilterAndTake(studentsWithMarks, x => x >= 5, studentsTotTake);
             }
             else if (wantedFilter == "average")
             {
-                FilterAndTake(studentsWithMarks, x => x < 5 && x >= 3.5, studentsTotTake);
+                this.FilterAndTake(studentsWithMarks, x => x < 5 && x >= 3.5, studentsTotTake);
             }
             else if (wantedFilter == "poor")
             {
-                FilterAndTake(studentsWithMarks, x => x < 3.5, studentsTotTake);
+                this.FilterAndTake(studentsWithMarks, x => x < 3.5, studentsTotTake);
             }
             else
             {
