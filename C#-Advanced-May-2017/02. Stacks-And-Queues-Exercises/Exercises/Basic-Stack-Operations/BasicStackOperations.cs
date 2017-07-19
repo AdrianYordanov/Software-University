@@ -11,7 +11,6 @@ public class BasicStackOperations
         var n = int.Parse(tokens[0]);
         var s = int.Parse(tokens[1]);
         var x = int.Parse(tokens[2]);
-
         for (var pushElementCounter = 0; pushElementCounter < n; pushElementCounter++)
         {
             stack.Push(int.Parse(numbers[pushElementCounter]));
@@ -25,7 +24,6 @@ public class BasicStackOperations
         var stackCount = stack.Count;
         var isFoundX = false;
         var smallestNumber = int.MaxValue;
-
         while (stack.Count > 0)
         {
             var popNumber = stack.Pop();
