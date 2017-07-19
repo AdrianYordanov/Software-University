@@ -11,7 +11,6 @@ public class BasicQueueOperations
         var n = int.Parse(tokens[0]);
         var s = int.Parse(tokens[1]);
         var x = int.Parse(tokens[2]);
-
         for (var enqueueElementCounter = 0; enqueueElementCounter < n; enqueueElementCounter++)
         {
             queue.Enqueue(int.Parse(numbers[enqueueElementCounter]));
@@ -25,7 +24,6 @@ public class BasicQueueOperations
         var queueCount = queue.Count;
         var isFoundX = false;
         var smallestNumber = int.MaxValue;
-
         while (queue.Count > 0)
         {
             var enqueueNumber = queue.Dequeue();
