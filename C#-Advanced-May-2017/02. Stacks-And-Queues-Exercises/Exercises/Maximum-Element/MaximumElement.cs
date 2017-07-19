@@ -10,7 +10,6 @@ public class MaximumElement
         var stack = new Stack<int>();
         var maxNumbers = new Stack<int>();
         var maxElement = int.MinValue;
-
         for (var i = 0; i < n; i++)
         {
             var query = Console.ReadLine()
