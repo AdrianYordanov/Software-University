@@ -8,7 +8,6 @@ public class HotPotato
         var names = Console.ReadLine().Split(' ');
         var n = int.Parse(Console.ReadLine());
         var queue = new Queue<string>(names);
-
         while (queue.Count > 1)
         {
             for (var i = 0; i < n - 1; i++)
