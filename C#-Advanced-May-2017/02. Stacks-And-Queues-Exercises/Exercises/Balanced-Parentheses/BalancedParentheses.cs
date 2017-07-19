@@ -10,7 +10,6 @@ public class BalancedParentheses
         var stack = new Stack<char>();
         var openBrackets = new[] { '{', '[', '(' };
         var isBalanced = true;
-
         foreach (var currentBracket in input)
         {
             if (openBrackets.Contains(currentBracket))
