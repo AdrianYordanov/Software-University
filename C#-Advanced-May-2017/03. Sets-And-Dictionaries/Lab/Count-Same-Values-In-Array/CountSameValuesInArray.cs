@@ -2,20 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 
-class CountSameValuesInArray
+public class CountSameValuesInArray
 {
-    static void Main()
+    public static void Main()
     {
         var numbers = Console.ReadLine()
-            .Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+            .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
             .Select(double.Parse)
             .ToArray();
         var dictionary = new SortedDictionary<double, int>();
-
-        for (int i = 0; i < numbers.Length; i++)
+        foreach (var currentNumber in numbers)
         {
-            var currentNumber = numbers[i];
-
             if (!dictionary.ContainsKey(currentNumber))
             {
                 dictionary.Add(currentNumber, 1);
