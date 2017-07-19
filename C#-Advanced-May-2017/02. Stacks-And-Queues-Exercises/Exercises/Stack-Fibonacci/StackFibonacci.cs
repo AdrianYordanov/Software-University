@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 
-class StackFibonacci
+public class StackFibonacci
 {
-    static void Main()
+    public static void Main()
     {
         var n = ulong.Parse(Console.ReadLine());
         var stack = new Stack<ulong>(new ulong[] { 0, 1 });
-
-        for (ulong i = 2; i <= n; i++)
+        for (var i = 2UL; i <= n; i++)
         {
             var last = stack.Pop();
             var beforeLast = stack.Pop();
