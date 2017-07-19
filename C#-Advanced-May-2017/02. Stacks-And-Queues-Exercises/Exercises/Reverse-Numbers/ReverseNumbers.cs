@@ -1,16 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 
-class ReverseNumbers
+public class ReverseNumbers
 {
-    static void Main()
+    public static void Main()
     {
-        var tokens = Console.ReadLine().Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+        var tokens = Console.ReadLine().Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
         var stack = new Stack<int>();
-
-        for (int i = 0; i < tokens.Length; i++)
+        foreach (var currentString in tokens)
         {
-            stack.Push(int.Parse(tokens[i]));
+            stack.Push(int.Parse(currentString));
         }
 
         while (stack.Count > 0)
