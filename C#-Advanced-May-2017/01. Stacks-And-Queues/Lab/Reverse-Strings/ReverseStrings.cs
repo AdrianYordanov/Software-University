@@ -7,7 +7,6 @@ public class ReverseStrings
     {
         var input = Console.ReadLine();
         var stack = new Stack<char>();
-
         foreach (var character in input)
         {
             stack.Push(character);
