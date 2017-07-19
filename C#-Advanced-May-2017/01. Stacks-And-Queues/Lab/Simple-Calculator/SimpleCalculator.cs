@@ -8,7 +8,6 @@ public class SimpleCalculator
         var input = Console.ReadLine();
         var tokens = input.Split(' ');
         var stack = new Stack<double>();
-
         for (var i = 0; i < tokens.Length; i++)
         {
             if (stack.Count == 0)
@@ -18,7 +17,6 @@ public class SimpleCalculator
             else
             {
                 var operation = tokens[i++];
-
                 if (operation == "+")
                 {
                     stack.Push(stack.Pop() + double.Parse(tokens[i]));
