@@ -7,7 +7,6 @@ public class MatchingBrackets
     {
         var input = Console.ReadLine();
         var stack = new Stack<int>();
-
         for (var i = 0; i < input.Length; i++)
         {
             if (input[i] == '(')
@@ -15,11 +14,13 @@ public class MatchingBrackets
                 stack.Push(i);
             }
 
-            if (input[i] == ')')
+            if (input[i] != ')')
             {
-                var lastScopeIndexOpen = stack.Pop();
-                Console.WriteLine(input.Substring(lastScopeIndexOpen, i - lastScopeIndexOpen + 1));
+                continue;
             }
+
+            var lastScopeIndexOpen = stack.Pop();
+            Console.WriteLine(input.Substring(lastScopeIndexOpen, i - lastScopeIndexOpen + 1));
         }
     }
 }
