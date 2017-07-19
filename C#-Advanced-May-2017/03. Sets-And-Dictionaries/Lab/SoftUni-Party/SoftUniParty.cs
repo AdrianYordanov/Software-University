@@ -1,18 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 
-class SoftUniParty
+public class SoftUniParty
 {
-    static void Main()
+    public static void Main()
     {
         var input = string.Empty;
         var guestes = new SortedSet<string>();
-
         while ((input = Console.ReadLine()) != "PARTY")
         {
             guestes.Add(input);
         }
-
 
         while ((input = Console.ReadLine()) != "END")
         {
@@ -24,7 +22,6 @@ class SoftUniParty
         }
 
         Console.WriteLine(guestes.Count);
-
         foreach (var personNumber in guestes)
         {
             Console.WriteLine(personNumber);
