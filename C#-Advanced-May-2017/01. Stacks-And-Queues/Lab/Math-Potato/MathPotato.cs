@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-class MathPotato
+public class MathPotato
 {
-    static void Main()
+    public static void Main()
     {
         var names = Console.ReadLine().Split(' ');
         var n = int.Parse(Console.ReadLine());
@@ -12,20 +12,12 @@ class MathPotato
 
         while (queue.Count > 1)
         {
-            for (int i = 0; i < n - 1; i++)
+            for (var i = 0; i < n - 1; i++)
             {
                 queue.Enqueue(queue.Dequeue());
             }
 
-            if (IsPrime(cycles))
-            {
-                Console.WriteLine($"Prime {queue.Peek()}");
-            }
-            else
-            {
-                Console.WriteLine($"Removed {queue.Dequeue()}");
-            }
-
+            Console.WriteLine(IsPrime(cycles) ? $"Prime {queue.Peek()}" : $"Removed {queue.Dequeue()}");
             cycles++;
         }
 
@@ -40,19 +32,18 @@ class MathPotato
             {
                 return true;
             }
-            else
+
+            return false;
+        }
+
+        for (var i = 3; i * i <= candidate; i += 2)
+        {
+            if (candidate % i == 0)
             {
                 return false;
             }
         }
 
-        for (int i = 3; (i * i) <= candidate; i += 2)
-        {
-            if ((candidate % i) == 0)
-            {
-                return false;
-            }
-        }
         return candidate != 1;
     }
 }
