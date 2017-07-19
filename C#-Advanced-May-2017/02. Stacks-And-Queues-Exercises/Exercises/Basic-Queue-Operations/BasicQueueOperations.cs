@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-class BasicQueueOperations
+public class BasicQueueOperations
 {
-    static void Main()
+    public static void Main()
     {
         var tokens = Console.ReadLine().Split(' ');
         var numbers = Console.ReadLine().Split(' ');
@@ -12,12 +12,12 @@ class BasicQueueOperations
         var s = int.Parse(tokens[1]);
         var x = int.Parse(tokens[2]);
 
-        for (int enqueueElementCounter = 0; enqueueElementCounter < n; enqueueElementCounter++)
+        for (var enqueueElementCounter = 0; enqueueElementCounter < n; enqueueElementCounter++)
         {
             queue.Enqueue(int.Parse(numbers[enqueueElementCounter]));
         }
 
-        for (int dequeueElementsCounter = 0; dequeueElementsCounter < s; dequeueElementsCounter++)
+        for (var dequeueElementsCounter = 0; dequeueElementsCounter < s; dequeueElementsCounter++)
         {
             queue.Dequeue();
         }
@@ -25,7 +25,6 @@ class BasicQueueOperations
         var queueCount = queue.Count;
         var isFoundX = false;
         var smallestNumber = int.MaxValue;
-
 
         while (queue.Count > 0)
         {
