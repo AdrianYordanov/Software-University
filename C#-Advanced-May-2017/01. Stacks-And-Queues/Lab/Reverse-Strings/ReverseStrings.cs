@@ -1,19 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 
-class ReverseStrings
+public class ReverseStrings
 {
-    static void Main()
+    public static void Main()
     {
         var input = Console.ReadLine();
         var stack = new Stack<char>();
 
-        for (int i = 0; i < input.Length; i++)
+        foreach (var character in input)
         {
-            stack.Push(input[i]);
+            stack.Push(character);
         }
 
-        for (int i = 0; stack.Count > 0; i++)
+        while (stack.Count > 0)
         {
             Console.Write(stack.Pop());
         }
