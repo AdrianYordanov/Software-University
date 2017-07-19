@@ -1,4 +1,4 @@
-﻿public class Ferrari
+﻿public class Ferrari : ICar
 {
     private string driver;
     private string model;
