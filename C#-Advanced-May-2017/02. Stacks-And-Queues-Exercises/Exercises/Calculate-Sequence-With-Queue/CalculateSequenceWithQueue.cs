@@ -10,7 +10,6 @@ public class CalculateSequenceWithQueue
         var queue = new Queue<long>();
 
         queue.Enqueue(n);
-
         for (var i = 0; i < membersCount; i++)
         {
             var currentS = queue.Dequeue();
