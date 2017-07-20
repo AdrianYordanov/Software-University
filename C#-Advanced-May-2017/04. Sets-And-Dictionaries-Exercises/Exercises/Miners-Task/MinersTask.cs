@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 
-class MinersTask
+public class MinersTask
 {
-    static void Main()
+    public static void Main()
     {
         var input = string.Empty;
         var dictionary = new Dictionary<string, long>();
-
         while ((input = Console.ReadLine()) != "stop")
         {
             var quantity = long.Parse(Console.ReadLine());
