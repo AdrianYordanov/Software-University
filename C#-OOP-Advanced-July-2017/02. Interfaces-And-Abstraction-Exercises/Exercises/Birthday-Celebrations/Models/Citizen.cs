@@ -1,9 +1,9 @@
 public class Citizen : IIdentifiable, IName, IAge, IBirthdate
 {
+    private string name;
     private int age;
     private string birthdate;
     private string id;
-    private string name;
 
     public Citizen(string name, int age, string id, string birthdate)
     {
@@ -11,6 +11,12 @@ public class Citizen : IIdentifiable, IName, IAge, IBirthdate
         this.Age = age;
         this.Id = id;
         this.Birthdate = birthdate;
+    }
+
+    public string Name
+    {
+        get => this.name;
+        private set => this.name = value;
     }
 
     public int Age
@@ -29,11 +35,5 @@ public class Citizen : IIdentifiable, IName, IAge, IBirthdate
     {
         get => this.id;
         private set => this.id = value;
-    }
-
-    public string Name
-    {
-        get => this.name;
-        private set => this.name = value;
     }
 }
