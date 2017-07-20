@@ -1,19 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 
-class Phonebook
+public class Phonebook
 {
-    static void Main()
+    public static void Main()
     {
         var phonebook = new Dictionary<string, string>();
         var input = string.Empty;
-
         while ((input = Console.ReadLine()) != "search")
         {
             var tokens = input.Split('-');
             var name = tokens[0];
             var number = tokens[1];
-
             if (phonebook.ContainsKey(name))
             {
                 phonebook[name] = number;
@@ -26,14 +24,7 @@ class Phonebook
 
         while ((input = Console.ReadLine()) != "stop")
         {
-            if (phonebook.ContainsKey(input))
-            {
-                Console.WriteLine($"{input} -> {phonebook[input]}");
-            }
-            else
-            {
-                Console.WriteLine($"Contact {input} does not exist.");
-            }
+            Console.WriteLine(phonebook.ContainsKey(input) ? $"{input} -> {phonebook[input]}" : $"Contact {input} does not exist.");
         }
     }
 }
