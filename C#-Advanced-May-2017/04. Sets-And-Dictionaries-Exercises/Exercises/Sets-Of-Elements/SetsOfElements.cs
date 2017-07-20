@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 
-class SetsOfElements
+public class SetsOfElements
 {
-    static void Main()
+    public static void Main()
     {
         var tokens = Console.ReadLine()
             .Split(' ')
@@ -12,14 +12,13 @@ class SetsOfElements
             .ToArray();
         var firstSet = new HashSet<int>();
         var secondSet = new HashSet<int>();
-
-        for (int i = 0; i < tokens[0]; i++)
+        for (var i = 0; i < tokens[0]; i++)
         {
             var number = int.Parse(Console.ReadLine());
             firstSet.Add(number);
         }
 
-        for (int i = 0; i < tokens[1]; i++)
+        for (var i = 0; i < tokens[1]; i++)
         {
             var number = int.Parse(Console.ReadLine());
             secondSet.Add(number);
