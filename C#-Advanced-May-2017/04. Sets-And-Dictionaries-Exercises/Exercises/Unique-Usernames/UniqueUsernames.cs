@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 
-class UniqueUsernames
+public class UniqueUsernames
 {
-    static void Main()
+    public static void Main()
     {
         var n = int.Parse(Console.ReadLine());
         var users = new HashSet<string>();
-
-        for (int i = 0; i < n; i++)
+        for (var i = 0; i < n; i++)
         {
             var username = Console.ReadLine();
             users.Add(username);
