@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 
-class PeriodicTable
+public class PeriodicTable
 {
-    static void Main()
+    public static void Main()
     {
         var n = int.Parse(Console.ReadLine());
         var sortedSet = new SortedSet<string>();
-
-        for (int i = 0; i < n; i++)
+        for (var i = 0; i < n; i++)
         {
             var tokens = Console.ReadLine().Split(' ');
-
             foreach (var token in tokens)
             {
                 sortedSet.Add(token);
