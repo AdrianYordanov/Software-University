@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 
-class CountSymbols
+public class CountSymbols
 {
-    static void Main()
+    public static void Main()
     {
         var input = Console.ReadLine();
         var container = new SortedDictionary<char, int>();
-
         foreach (var character in input)
         {
             if (!container.ContainsKey(character))
