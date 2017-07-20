@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 
-class DragonArmy
+public class DragonArmy
 {
-    static void Main()
+    public static void Main()
     {
         var n = int.Parse(Console.ReadLine());
         var dragonTypes = new Dictionary<string, SortedDictionary<string, int[]>>();
-
-        for (int i = 0; i < n; ++i)
+        for (var i = 0; i < n; ++i)
         {
             var tokens = Console.ReadLine().Split(' ');
             var type = tokens[0];
@@ -16,21 +15,20 @@ class DragonArmy
             int damage = 0,
                 health = 0,
                 armor = 0;
-
             if (!int.TryParse(tokens[2], out damage))
             {
                 damage = 45;
-            };
+            }
 
             if (!int.TryParse(tokens[3], out health))
             {
                 health = 250;
-            };
+            }
 
             if (!int.TryParse(tokens[4], out armor))
             {
                 armor = 10;
-            };
+            }
 
             if (dragonTypes.ContainsKey(type))
             {
@@ -42,13 +40,12 @@ class DragonArmy
                 }
                 else
                 {
-                    dragonTypes[type].Add(name, new int[] { damage, health, armor });
+                    dragonTypes[type].Add(name, new[] { damage, health, armor });
                 }
             }
             else
             {
-                var dragonNames = new SortedDictionary<string, int[]>();
-                dragonNames.Add(name, new int[] { damage, health, armor });
+                var dragonNames = new SortedDictionary<string, int[]> { { name, new[] { damage, health, armor } } };
                 dragonTypes.Add(type, dragonNames);
             }
         }
@@ -57,11 +54,9 @@ class DragonArmy
         {
             var type = pair.Key;
             var dragons = pair.Value;
-
-            double avarageDamage = 0;
-            double avarageHealth = 0;
-            double avarageArmor = 0;
-
+            var avarageDamage = 0D;
+            var avarageHealth = 0D;
+            var avarageArmor = 0D;
             foreach (var dragonInfo in dragons.Values)
             {
                 avarageDamage += dragonInfo[0];
@@ -72,14 +67,11 @@ class DragonArmy
             avarageDamage /= dragons.Count;
             avarageHealth /= dragons.Count;
             avarageArmor /= dragons.Count;
-
-            Console.WriteLine(String.Format("{0}::({1:f2}/{2:f2}/{3:f2})", type, avarageDamage, avarageHealth, avarageArmor));
-
+            Console.WriteLine("{0}::({1:f2}/{2:f2}/{3:f2})", type, avarageDamage, avarageHealth, avarageArmor);
             foreach (var nestedPair in dragons)
             {
                 var name = nestedPair.Key;
                 var info = nestedPair.Value;
-
                 Console.WriteLine($"-{name} -> damage: {info[0]}, health: {info[1]}, armor: {info[2]}");
             }
         }
