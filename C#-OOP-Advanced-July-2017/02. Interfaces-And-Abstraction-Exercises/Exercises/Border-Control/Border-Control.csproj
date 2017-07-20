@@ -42,11 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ICitizen.cs" />
-    <Compile Include="IIdentifiable.cs" />
-    <Compile Include="IRobot.cs" />
-    <Compile Include="Citizen.cs" />
-    <Compile Include="Robot.cs" />
+    <Compile Include="Interfaces\IAge.cs" />
+    <Compile Include="Interfaces\IIdentifiable.cs" />
+    <Compile Include="Interfaces\IName.cs" />
+    <Compile Include="Models\Citizen.cs" />
+    <Compile Include="Models\Robot.cs" />
     <Compile Include="StartUp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -1,13 +1,11 @@
-public class Citizen : IIdentifiable, ICitizen
+﻿public class Robot : IIdentifiable, IName
 {
-    private int age;
-    private string id;
     private string name;
+    private string id;
 
-    public Citizen(string name, int age, string id)
+    public Robot(string name, string id)
     {
         this.Name = name;
-        this.Age = age;
         this.Id = id;
     }
 
@@ -15,12 +13,6 @@ public class Citizen : IIdentifiable, ICitizen
     {
         get => this.name;
         private set => this.name = value;
-    }
-
-    public int Age
-    {
-        get => this.age;
-        private set => this.age = value;
     }
 
     public string Id
