@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Border-Control", "Border-Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Define-Interface-IPerson", "Define-Interface-IPerson\Define-Interface-IPerson.csproj", "{AEAF2010-DB05-49AA-82AB-65D7CEA2AF0D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Birthday-Celebrations", "Birthday-Celebrations\Birthday-Celebrations.csproj", "{43AD8D56-7C28-4C94-BC97-3AEE733F6408}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{AEAF2010-DB05-49AA-82AB-65D7CEA2AF0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AEAF2010-DB05-49AA-82AB-65D7CEA2AF0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AEAF2010-DB05-49AA-82AB-65D7CEA2AF0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43AD8D56-7C28-4C94-BC97-3AEE733F6408}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43AD8D56-7C28-4C94-BC97-3AEE733F6408}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43AD8D56-7C28-4C94-BC97-3AEE733F6408}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43AD8D56-7C28-4C94-BC97-3AEE733F6408}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
