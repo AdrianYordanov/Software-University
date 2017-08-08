@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Generic-Count-Method-String
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Generic-Count-Method-Double", "Generic-Count-Method-Double\Generic-Count-Method-Double.csproj", "{A11BE2E0-9218-42E9-A117-A8F2EB340DA5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Custom-List", "Custom-List\Custom-List.csproj", "{E994A151-07CD-4E1B-83E7-A615C7680328}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{A11BE2E0-9218-42E9-A117-A8F2EB340DA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A11BE2E0-9218-42E9-A117-A8F2EB340DA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A11BE2E0-9218-42E9-A117-A8F2EB340DA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E994A151-07CD-4E1B-83E7-A615C7680328}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E994A151-07CD-4E1B-83E7-A615C7680328}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E994A151-07CD-4E1B-83E7-A615C7680328}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E994A151-07CD-4E1B-83E7-A615C7680328}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
