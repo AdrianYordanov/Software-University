@@ -3,23 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
-public class CustomList<T> : IEnumerable<T> where T : IComparable<T>
+public class CustomList<T> : IEnumerable where T : IComparable<T>
 {
     private IList<T> data;
 
     public CustomList()
     {
         this.data = new List<T>();
-    }
-
-    public IEnumerator<T> GetEnumerator()
-    {
-        return this.data.GetEnumerator();
-    }
-
-    IEnumerator IEnumerable.GetEnumerator()
-    {
-        return this.data.GetEnumerator();
     }
 
     public void Add(T element)
@@ -66,5 +56,10 @@ public class CustomList<T> : IEnumerable<T> where T : IComparable<T>
     public void Sort()
     {
         this.data = this.data.OrderBy(i => i).ToList();
+    }
+
+    public IEnumerator GetEnumerator()
+    {
+        return this.data.GetEnumerator();
     }
 }
