@@ -5,8 +5,8 @@
 
     public CustomTuple(TFirstItem firstItem, TSecondItem secondItem)
     {
-        this.firstItem = firstItem;
-        this.secondItem = secondItem;
+        this.FirstItem = firstItem;
+        this.SecondItem = secondItem;
     }
 
     public TFirstItem FirstItem
