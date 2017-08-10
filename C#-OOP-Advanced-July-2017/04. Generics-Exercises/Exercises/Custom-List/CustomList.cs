@@ -1,11 +1,10 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
-public class CustomList<T> : IEnumerable where T : IComparable<T>
+public class CustomList<T> where T : IComparable<T>
 {
-    private IList<T> data;
+    private readonly IList<T> data;
 
     public CustomList()
     {
@@ -53,13 +52,8 @@ public class CustomList<T> : IEnumerable where T : IComparable<T>
         return this.data.Min();
     }
 
-    public void Sort()
+    public override string ToString()
     {
-        this.data = this.data.OrderBy(i => i).ToList();
-    }
-
-    public IEnumerator GetEnumerator()
-    {
-        return this.data.GetEnumerator();
+        return string.Join(Environment.NewLine, this.data);
     }
 }
