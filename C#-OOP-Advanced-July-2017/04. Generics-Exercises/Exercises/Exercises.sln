@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Generic-Count-Method-Double
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Custom-List", "Custom-List\Custom-List.csproj", "{E994A151-07CD-4E1B-83E7-A615C7680328}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Custom-List-Sorter", "Custom-List-Sorter\Custom-List-Sorter.csproj", "{6B340912-7DBA-4F8E-B24C-F90DDB251A0C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{E994A151-07CD-4E1B-83E7-A615C7680328}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E994A151-07CD-4E1B-83E7-A615C7680328}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E994A151-07CD-4E1B-83E7-A615C7680328}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B340912-7DBA-4F8E-B24C-F90DDB251A0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B340912-7DBA-4F8E-B24C-F90DDB251A0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B340912-7DBA-4F8E-B24C-F90DDB251A0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B340912-7DBA-4F8E-B24C-F90DDB251A0C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
