@@ -43,11 +43,7 @@ public class StartUp
                     break;
 
                 case "Print":
-                    foreach (var item in list)
-                    {
-                        Console.WriteLine(item);
-                    }
-
+                    Console.WriteLine(list);
                     break;
 
                 case "Sort":
