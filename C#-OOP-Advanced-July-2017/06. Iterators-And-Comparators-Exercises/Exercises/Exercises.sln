@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Listy-Iterator", "Listy-Ite
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collection", "Collection\Collection.csproj", "{90B04F4C-20A7-4EF7-851B-5A36BBDE5099}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stack", "Stack\Stack.csproj", "{C0D025CC-6CBF-425D-A394-683E7864226A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{90B04F4C-20A7-4EF7-851B-5A36BBDE5099}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{90B04F4C-20A7-4EF7-851B-5A36BBDE5099}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{90B04F4C-20A7-4EF7-851B-5A36BBDE5099}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0D025CC-6CBF-425D-A394-683E7864226A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0D025CC-6CBF-425D-A394-683E7864226A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0D025CC-6CBF-425D-A394-683E7864226A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0D025CC-6CBF-425D-A394-683E7864226A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
