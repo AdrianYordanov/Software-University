@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Card-Rank", "Card-Rank\Card
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Card-Power", "Card-Power\Card-Power.csproj", "{416DCAEE-2194-412C-B697-47EA1EF38C76}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Card-ToString", "Card-ToString\Card-ToString.csproj", "{61B5A620-B024-441D-B159-02A9F60C13FC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{416DCAEE-2194-412C-B697-47EA1EF38C76}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{416DCAEE-2194-412C-B697-47EA1EF38C76}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{416DCAEE-2194-412C-B697-47EA1EF38C76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61B5A620-B024-441D-B159-02A9F60C13FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61B5A620-B024-441D-B159-02A9F60C13FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61B5A620-B024-441D-B159-02A9F60C13FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61B5A620-B024-441D-B159-02A9F60C13FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
