@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Custom-Enum-Attribute", "Cu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deck-Of-Cards", "Deck-Of-Cards\Deck-Of-Cards.csproj", "{9921CCD6-7523-4BA7-9651-AD7FA3BEA0D3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Card-Game", "Card-Game\Card-Game.csproj", "{06777F82-3B74-45C0-BE74-1B3B37B08C87}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{9921CCD6-7523-4BA7-9651-AD7FA3BEA0D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9921CCD6-7523-4BA7-9651-AD7FA3BEA0D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9921CCD6-7523-4BA7-9651-AD7FA3BEA0D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06777F82-3B74-45C0-BE74-1B3B37B08C87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06777F82-3B74-45C0-BE74-1B3B37B08C87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06777F82-3B74-45C0-BE74-1B3B37B08C87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06777F82-3B74-45C0-BE74-1B3B37B08C87}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
