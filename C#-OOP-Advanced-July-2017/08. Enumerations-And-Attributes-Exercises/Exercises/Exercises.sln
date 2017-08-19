@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Card-ToString", "Card-ToStr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Card-CompareTo", "Card-CompareTo\Card-CompareTo.csproj", "{28618C2D-AAFD-4350-850F-281B9C5CAFEF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Custom-Enum-Attribute", "Custom-Enum-Attribute\Custom-Enum-Attribute.csproj", "{2474A290-6BD8-4638-B42D-B45BA0048CE3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{28618C2D-AAFD-4350-850F-281B9C5CAFEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28618C2D-AAFD-4350-850F-281B9C5CAFEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{28618C2D-AAFD-4350-850F-281B9C5CAFEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2474A290-6BD8-4638-B42D-B45BA0048CE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2474A290-6BD8-4638-B42D-B45BA0048CE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2474A290-6BD8-4638-B42D-B45BA0048CE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2474A290-6BD8-4638-B42D-B45BA0048CE3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
