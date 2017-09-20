@@ -1,0 +1,16 @@
+USE Minions
+
+ALTER TABLE Users
+DROP CONSTRAINT PK_Users_Id_Username;
+
+ALTER TABLE Users
+ADD CONSTRAINT PK_Users_Id
+PRIMARY KEY(Id)
+
+ALTER TABLE Users
+ADD CONSTRAINT UC_Username
+UNIQUE(Username)
+
+ALTER TABLE Users
+ADD CONSTRAINT CK_Username_Min_Three_Symbols
+CHECK(LEN(Username) >= 3)
