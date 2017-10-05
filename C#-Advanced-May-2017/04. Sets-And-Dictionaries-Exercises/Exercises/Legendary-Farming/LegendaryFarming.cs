@@ -32,7 +32,8 @@ public class LegendaryFarming
                     case "motes":
                     {
                         remainingMaterials[material] += quantity;
-                        if (winner == string.Empty && remainingMaterials[material] >= 250)
+                        if (winner == string.Empty &&
+                            remainingMaterials[material] >= 250)
                         {
                             winner = material;
                             remainingMaterials[material] -= 250;
@@ -64,7 +65,8 @@ public class LegendaryFarming
         }
 
         Console.WriteLine($"{items[winner]} obtained!");
-        foreach (var material in remainingMaterials.OrderByDescending(x => x.Value).ThenBy(x => x.Key))
+        foreach (var material in remainingMaterials.OrderByDescending(x => x.Value)
+            .ThenBy(x => x.Key))
         {
             Console.WriteLine($"{material.Key}: {material.Value}");
         }

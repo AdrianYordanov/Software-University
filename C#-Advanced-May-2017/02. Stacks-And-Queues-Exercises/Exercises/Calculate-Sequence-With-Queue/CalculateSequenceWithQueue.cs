@@ -8,7 +8,6 @@ public class CalculateSequenceWithQueue
         var n = long.Parse(Console.ReadLine());
         var membersCount = 50L;
         var queue = new Queue<long>();
-
         queue.Enqueue(n);
         for (var i = 0; i < membersCount; i++)
         {

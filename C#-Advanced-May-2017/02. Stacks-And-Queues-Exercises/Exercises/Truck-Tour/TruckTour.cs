@@ -25,7 +25,6 @@ public class TruckTour
             var currentPump = circle.Dequeue();
             circle.Enqueue(currentPump);
             var tankFuel = currentPump[0] - currentPump[1];
-
             if (tankFuel < 0)
             {
                 // We dont have fuel.
@@ -38,7 +37,6 @@ public class TruckTour
                 circle.Enqueue(currentPump);
                 tankFuel += currentPump[0];
                 tankFuel -= currentPump[1];
-
                 if (tankFuel < 0)
                 {
                     shouldBreak = false;

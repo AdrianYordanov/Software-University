@@ -10,40 +10,41 @@ public class SimpleTextEditor
         stringHistory.Push(string.Empty);
         for (var i = 0; i < n; i++)
         {
-            var tokens = Console.ReadLine().Split(' ');
+            var tokens = Console.ReadLine()
+                .Split(' ');
             var operation = int.Parse(tokens[0]);
             switch (operation)
             {
                 case 1:
-                    {
-                        var textAppend = tokens[1];
-                        var update = stringHistory.Peek() + textAppend;
-                        stringHistory.Push(update);
-                        break;
-                    }
+                {
+                    var textAppend = tokens[1];
+                    var update = stringHistory.Peek() + textAppend;
+                    stringHistory.Push(update);
+                    break;
+                }
 
                 case 2:
-                    {
-                        var count = int.Parse(tokens[1]);
-                        var update = stringHistory.Peek();
-                        update = update.Remove(update.Length - count);
-                        stringHistory.Push(update);
-                        break;
-                    }
+                {
+                    var count = int.Parse(tokens[1]);
+                    var update = stringHistory.Peek();
+                    update = update.Remove(update.Length - count);
+                    stringHistory.Push(update);
+                    break;
+                }
 
                 case 3:
-                    {
-                        var index = int.Parse(tokens[1]);
-                        var lastUpdate = stringHistory.Peek();
-                        Console.WriteLine(lastUpdate[index - 1]);
-                        break;
-                    }
+                {
+                    var index = int.Parse(tokens[1]);
+                    var lastUpdate = stringHistory.Peek();
+                    Console.WriteLine(lastUpdate[index - 1]);
+                    break;
+                }
 
                 case 4:
-                    {
-                        stringHistory.Pop();
-                        break;
-                    }
+                {
+                    stringHistory.Pop();
+                    break;
+                }
             }
         }
     }

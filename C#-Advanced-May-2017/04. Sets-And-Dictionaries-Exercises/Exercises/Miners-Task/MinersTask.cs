@@ -10,7 +10,6 @@ public class MinersTask
         while ((input = Console.ReadLine()) != "stop")
         {
             var quantity = long.Parse(Console.ReadLine());
-
             if (dictionary.ContainsKey(input))
             {
                 dictionary[input] += quantity;

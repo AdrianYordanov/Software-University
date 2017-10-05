@@ -16,24 +16,28 @@ public class PopulationCounter
             var cityPopulation = long.Parse(tokens[2]);
             if (countries.ContainsKey(country))
             {
-                countries[country].Add(city, cityPopulation);
+                countries[country]
+                    .Add(city, cityPopulation);
             }
             else
             {
-                var cities = new Dictionary<string, long> { { city, cityPopulation } };
+                var cities = new Dictionary<string, long>
+                {
+                    {
+                        city, cityPopulation
+                    }
+                };
                 countries.Add(country, cities);
             }
         }
 
-        var orderedCountries = countries
-            .OrderByDescending(pair => pair.Value.Values.Sum())
+        var orderedCountries = countries.OrderByDescending(pair => pair.Value.Values.Sum())
             .ToDictionary(x => x.Key, x => x.Value);
         foreach (var pair in orderedCountries)
         {
             var country = pair.Key;
             var cities = pair.Value;
-            var orderedCities = cities
-                .OrderByDescending(x => x.Value)
+            var orderedCities = cities.OrderByDescending(x => x.Value)
                 .ToDictionary(x => x.Key, x => x.Value);
             Console.WriteLine($"{country} (total population: {orderedCities.Values.Sum()})");
             foreach (var nestedPair in orderedCities)

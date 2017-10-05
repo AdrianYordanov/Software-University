@@ -9,30 +9,29 @@ public class DragonArmy
         var dragonTypes = new Dictionary<string, SortedDictionary<string, int[]>>();
         for (var i = 0; i < n; ++i)
         {
-            var tokens = Console.ReadLine().Split(' ');
+            var tokens = Console.ReadLine()
+                .Split(' ');
             var type = tokens[0];
             var name = tokens[1];
-            int damage = 0,
-                health = 0,
-                armor = 0;
-            if (!int.TryParse(tokens[2], out damage))
+            if (!int.TryParse(tokens[2], out int damage))
             {
                 damage = 45;
             }
 
-            if (!int.TryParse(tokens[3], out health))
+            if (!int.TryParse(tokens[3], out int health))
             {
                 health = 250;
             }
 
-            if (!int.TryParse(tokens[4], out armor))
+            if (!int.TryParse(tokens[4], out int armor))
             {
                 armor = 10;
             }
 
             if (dragonTypes.ContainsKey(type))
             {
-                if (dragonTypes[type].ContainsKey(name))
+                if (dragonTypes[type]
+                    .ContainsKey(name))
                 {
                     dragonTypes[type][name][0] = damage;
                     dragonTypes[type][name][1] = health;
@@ -40,12 +39,25 @@ public class DragonArmy
                 }
                 else
                 {
-                    dragonTypes[type].Add(name, new[] { damage, health, armor });
+                    dragonTypes[type]
+                        .Add(
+                            name, 
+                            new[] { damage, health, armor });
                 }
             }
             else
             {
-                var dragonNames = new SortedDictionary<string, int[]> { { name, new[] { damage, health, armor } } };
+                var dragonNames = new SortedDictionary<string, int[]>
+                {
+                    {
+                        name, new[]
+                        {
+                            damage,
+                            health,
+                            armor
+                        }
+                    }
+                };
                 dragonTypes.Add(type, dragonNames);
             }
         }

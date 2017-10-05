@@ -24,7 +24,8 @@ public class FixEmails
         {
             var email = dictionary[name];
             var domain = email.Substring(email.Length - 2);
-            if (domain.ToLower() == "us" || domain.ToLower() == "uk")
+            if (domain.ToLower() == "us" ||
+                domain.ToLower() == "uk")
             {
                 dictionary.Remove(name);
                 continue;

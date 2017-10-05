@@ -5,7 +5,8 @@ public class MathPotato
 {
     public static void Main()
     {
-        var names = Console.ReadLine().Split(' ');
+        var names = Console.ReadLine()
+            .Split(' ');
         var n = int.Parse(Console.ReadLine());
         var queue = new Queue<string>(names);
         var cycles = 1;

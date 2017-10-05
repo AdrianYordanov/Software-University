@@ -5,8 +5,10 @@ public class BasicStackOperations
 {
     public static void Main()
     {
-        var tokens = Console.ReadLine().Split(' ');
-        var numbers = Console.ReadLine().Split(' ');
+        var tokens = Console.ReadLine()
+            .Split(' ');
+        var numbers = Console.ReadLine()
+            .Split(' ');
         var stack = new Stack<int>();
         var n = int.Parse(tokens[0]);
         var s = int.Parse(tokens[1]);
@@ -27,7 +29,6 @@ public class BasicStackOperations
         while (stack.Count > 0)
         {
             var popNumber = stack.Pop();
-
             if (popNumber == x)
             {
                 isFoundX = true;

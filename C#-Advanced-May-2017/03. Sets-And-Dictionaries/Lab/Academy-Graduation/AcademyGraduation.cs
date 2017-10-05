@@ -12,7 +12,12 @@ public class AcademyGraduation
         {
             var name = Console.ReadLine();
             var grades = Console.ReadLine()
-                .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+                .Split(
+                    new[]
+                    {
+                        ' '
+                    },
+                    StringSplitOptions.RemoveEmptyEntries)
                 .Select(double.Parse)
                 .ToArray();
             students.Add(name, grades);
@@ -20,7 +25,7 @@ public class AcademyGraduation
 
         foreach (var name in students.Keys)
         {
-            Console.WriteLine($"{name} is graduated with {students[name].Average()}");
+            Console.WriteLine($"{name} is graduated with {students[name] .Average()}");
         }
     }
 }

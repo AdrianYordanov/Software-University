@@ -5,8 +5,10 @@ public class BasicQueueOperations
 {
     public static void Main()
     {
-        var tokens = Console.ReadLine().Split(' ');
-        var numbers = Console.ReadLine().Split(' ');
+        var tokens = Console.ReadLine()
+            .Split(' ');
+        var numbers = Console.ReadLine()
+            .Split(' ');
         var queue = new Queue<int>();
         var n = int.Parse(tokens[0]);
         var s = int.Parse(tokens[1]);
@@ -27,7 +29,6 @@ public class BasicQueueOperations
         while (queue.Count > 0)
         {
             var enqueueNumber = queue.Dequeue();
-
             if (enqueueNumber == x)
             {
                 isFoundX = true;

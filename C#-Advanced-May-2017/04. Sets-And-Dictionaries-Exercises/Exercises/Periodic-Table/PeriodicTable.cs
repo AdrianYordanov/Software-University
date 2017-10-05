@@ -9,7 +9,8 @@ public class PeriodicTable
         var sortedSet = new SortedSet<string>();
         for (var i = 0; i < n; i++)
         {
-            var tokens = Console.ReadLine().Split(' ');
+            var tokens = Console.ReadLine()
+                .Split(' ');
             foreach (var token in tokens)
             {
                 sortedSet.Add(token);

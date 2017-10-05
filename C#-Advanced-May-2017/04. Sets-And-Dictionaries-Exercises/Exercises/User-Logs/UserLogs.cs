@@ -11,22 +11,31 @@ public class UserLogs
         while ((input = Console.ReadLine()) != "end")
         {
             var tokens = input.Split(' ');
-            var ip = tokens[0].Split('=')[1];
-            var user = tokens[2].Split('=')[1];
+            var ip = tokens[0]
+                .Split('=')[1];
+            var user = tokens[2]
+                .Split('=')[1];
             if (users.ContainsKey(user))
             {
-                if (users[user].ContainsKey(ip))
+                if (users[user]
+                    .ContainsKey(ip))
                 {
                     users[user][ip]++;
                 }
                 else
                 {
-                    users[user].Add(ip, 1);
+                    users[user]
+                        .Add(ip, 1);
                 }
             }
             else
             {
-                var userIps = new Dictionary<string, int> { { ip, 1 } };
+                var userIps = new Dictionary<string, int>
+                {
+                    {
+                        ip, 1
+                    }
+                };
                 users.Add(user, userIps);
             }
         }
@@ -35,7 +44,11 @@ public class UserLogs
         {
             var ips = users[name];
             Console.WriteLine(name + ":");
-            Console.WriteLine(string.Join(", ", ips.Select(x => x.Key + " => " + x.Value).ToArray()) + ".");
+            Console.WriteLine(
+                string.Join(
+                    ", ",
+                    ips.Select(x => x.Key + " => " + x.Value).ToArray()) +
+                ".");
         }
     }
 }

@@ -24,7 +24,8 @@ public class Phonebook
 
         while ((input = Console.ReadLine()) != "stop")
         {
-            Console.WriteLine(phonebook.ContainsKey(input) ? $"{input} -> {phonebook[input]}" : $"Contact {input} does not exist.");
+            Console.WriteLine(
+                phonebook.ContainsKey(input) ? $"{input} -> {phonebook[input]}" : $"Contact {input} does not exist.");
         }
     }
 }
