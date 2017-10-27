@@ -1,8 +1,8 @@
 ﻿using System;
 
-class StartUp
+public class StartUp
 {
-    static void Main()
+    private static void Main()
     {
         var account = new BankAccount();
         account.ID = 1;
