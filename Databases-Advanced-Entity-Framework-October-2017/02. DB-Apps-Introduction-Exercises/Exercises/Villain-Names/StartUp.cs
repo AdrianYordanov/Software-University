@@ -8,7 +8,7 @@ public class StartUp
         var builder = new SqlConnectionStringBuilder
         {
             // Change '.' with the name of your SQL Server, if it doesn't work.
-            ["Data Source"] = @"DESKTOP-FPETI1U\SQLEXPRESS",
+            ["Data Source"] = @".",
             ["Integrated Security"] = true,
             ["initial catalog"] = "MinionsDB"
         };
