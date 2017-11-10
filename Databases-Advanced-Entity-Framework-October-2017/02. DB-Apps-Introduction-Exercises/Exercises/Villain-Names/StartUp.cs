@@ -6,7 +6,7 @@ public class StartUp
 {
     public static void Main()
     {
-        var connection = new SqlConnection(@"Data Source = DESKTOP-FPETI1U\SQLEXPRESS; Integrated Security = true; Database = MinionsDB");
+        var connection = new SqlConnection(@"Data Source = .; Integrated Security = true; Database = MinionsDB");
         connection.Open();
         using (connection)
         {
