@@ -1,40 +1,28 @@
 ﻿using System;
 using System.Data.SqlClient;
+using System.IO;
 
 public class StartUp
 {
     public static void Main()
     {
-        var builder = new SqlConnectionStringBuilder
-        {
-            // Change '.' with the name of your SQL Server, if it doesn't work.
-            ["Data Source"] = @".",
-            ["Integrated Security"] = true,
-            ["initial catalog"] = "MinionsDB"
-        };
-        var connection = new SqlConnection(builder.ToString());
+        var connection = new SqlConnection(@"Data Source = DESKTOP-FPETI1U\SQLEXPRESS; Integrated Security = true; Database = MinionsDB");
         connection.Open();
         using (connection)
         {
-            try
+            var command = GetCommand("GetVillains", connection);
+            var reader = command.ExecuteReader();
+            while (reader.Read())
             {
-                var command = new SqlCommand(
-                    "SELECT v.[Name], COUNT(*) AS [Minions Count] FROM Villains AS v\n" +
-                    "INNER JOIN MinionsVillains AS mv ON mv.VillainId = v.Id\n" +
-                    "GROUP BY v.[Name]\n" +
-                    "HAVING COUNT(*) > 3\n" +
-                    "ORDER BY[Minions Count] DESC\n",
-                    connection);
-                var reader = command.ExecuteReader();
-                while (reader.Read())
-                {
-                    Console.WriteLine($"{reader["Name"]} - {reader["Minions Count"]}");
-                }
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
+                Console.WriteLine($"{reader["Name"]} - {reader["Minions Count"]}");
             }
         }
+    }
+
+    public static SqlCommand GetCommand(string commandName, SqlConnection connection)
+    {
+        var query = File.ReadAllText($@"sql\{commandName}.sql");
+        var cmd = new SqlCommand(query, connection);
+        return cmd;
     }
 }

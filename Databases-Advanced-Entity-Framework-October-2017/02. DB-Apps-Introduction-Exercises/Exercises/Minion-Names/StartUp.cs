@@ -1,57 +1,45 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.IO;
 
 public class StartUp
 {
     public static void Main()
     {
-        var builder = new SqlConnectionStringBuilder
-        {
-            // Change '.' with the name of your SQL Server, if it doesn't work.
-            ["Data Source"] = @".",
-            ["Integrated Security"] = true,
-            ["initial catalog"] = "MinionsDB"
-        };
-        var connection = new SqlConnection(builder.ToString());
+        var connection = new SqlConnection(@"Data Source = .; Integrated Security = true; Database = MinionsDB");
         connection.Open();
         using (connection)
         {
-            try
+            Console.Write("Villain id: ");
+            var villainId = int.Parse(Console.ReadLine());
+            var command = GetCommand("GetVillain", connection);
+            command.Parameters.AddWithValue("@villainId", villainId);
+            var name = (string)command.ExecuteScalar();
+            if (name == null)
             {
-                var villainId = int.Parse(Console.ReadLine());
-                var command = new SqlCommand("SELECT [Name] FROM Villains\n" + "WHERE Id = @villainId", connection);
-                command.Parameters.AddWithValue("@villainId", villainId);
-                var name = (string)command.ExecuteScalar();
-                if (name == null)
-                {
-                    Console.WriteLine($"No villain with ID {villainId} exists in the database.");
-                }
-                else
-                {
-                    command.CommandText = "SELECT m.[Name], m.Age FROM Villains AS v\n" +
-                                          "INNER JOIN MinionsVillains AS mv ON mv.VillainId = v.Id\n" +
-                                          "INNER JOIN Minions AS m ON m.Id = mv.MinionId\n" +
-                                          "WHERE v.Id = @villainId";
-                    var reader = command.ExecuteReader();
-                    if (!reader.Read())
-                    {
-                        Console.WriteLine("(no minions)");
-                    }
-                    else
-                    {
-                        reader.Dispose();
-                        reader = command.ExecuteReader();
-                        for (var i = 1; reader.Read(); i++)
-                        {
-                            Console.WriteLine($"{i}. {reader["Name"]} {reader["Age"]}");
-                        }
-                    }
-                }
+                Console.WriteLine($"No villain with ID {villainId} exists in the database.");
             }
-            catch (Exception e)
+            else
             {
-                Console.WriteLine(e.Message);
+                command = GetCommand("GetMinions", connection);
+                command.Parameters.AddWithValue("@villainId", villainId);
+                var reader = command.ExecuteReader();
+                var minions = new List<string>();
+                for (var i = 1; reader.Read(); i++)
+                {
+                    minions.Add($"{i}. {reader["Name"]} {reader["Age"]}");
+                }
+
+                Console.WriteLine(minions.Count == 0 ? "(no minions)" : string.Join(Environment.NewLine, minions));
             }
         }
+    }
+
+    public static SqlCommand GetCommand(string commandName, SqlConnection connection)
+    {
+        var query = File.ReadAllText($@"sql\{commandName}.sql");
+        var cmd = new SqlCommand(query, connection);
+        return cmd;
     }
 }

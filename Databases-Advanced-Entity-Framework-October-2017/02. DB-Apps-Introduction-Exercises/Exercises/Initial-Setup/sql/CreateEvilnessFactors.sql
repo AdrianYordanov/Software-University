@@ -1,0 +1,5 @@
+CREATE TABLE EvilnessFactors
+(
+	Id INT PRIMARY KEY,
+	Name VARCHAR(10) UNIQUE NOT NULL
+)
