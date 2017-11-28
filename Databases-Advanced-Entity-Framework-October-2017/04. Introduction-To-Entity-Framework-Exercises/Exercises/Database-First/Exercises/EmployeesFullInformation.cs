@@ -6,17 +6,19 @@ public class EmployeesFullInformation
 {
     public void Run()
     {
-        var db = new SoftUniContext();
-        var employees = db.Employees.Select(
-            e => new
-            {
-                FullName = $"{e.FirstName} {e.LastName} {e.MiddleName}",
-                e.JobTitle,
-                e.Salary
-            });
-        foreach (var employee in employees)
+        using (var db = new SoftUniContext())
         {
-            Console.WriteLine($"{employee.FullName} {employee.JobTitle} {employee.Salary:F2}");
+            var employees = db.Employees.Select(
+                e => new
+                {
+                    FullName = $"{e.FirstName} {e.LastName} {e.MiddleName}",
+                    e.JobTitle,
+                    e.Salary
+                });
+            foreach (var employee in employees)
+            {
+                Console.WriteLine($"{employee.FullName} {employee.JobTitle} {employee.Salary:F2}");
+            }
         }
     }
 }

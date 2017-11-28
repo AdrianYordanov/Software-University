@@ -6,14 +6,16 @@ public class EmployeesWithSalaryOverFiftyThousand
 {
     public void Run()
     {
-        var db = new SoftUniContext();
-        var employees = db.Employees.Where(e => e.Salary > 50000)
-            .OrderBy(e => e.FirstName)
-            .Select(e => e.FirstName)
-            .ToList();
-        foreach (var employee in employees)
+        using (var db = new SoftUniContext())
         {
-            Console.WriteLine(employee);
+            var employees = db.Employees.Where(e => e.Salary > 50000)
+                .OrderBy(e => e.FirstName)
+                .Select(e => e.FirstName)
+                .ToList();
+            foreach (var employee in employees)
+            {
+                Console.WriteLine(employee);
+            }
         }
     }
 }
