@@ -6,5 +6,6 @@
         // new EmployeesWithSalaryOverFiftyThousand().Run();
         // new EmployeesFromResearchAndDevelopment().Run();
         // new AddingNewAddressAndUpdatingEmployee().Run();
+        // new EmployeesAndProjects().Run();
     }
 }
