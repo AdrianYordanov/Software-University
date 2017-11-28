@@ -4,5 +4,6 @@
     {
         // new EmployeesFullInformation().Run();
         // new EmployeesWithSalaryOverFiftyThousand().Run();
+        new EmployeesFromResearchAndDevelopment().Run();
     }
 }
