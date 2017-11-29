@@ -16,6 +16,7 @@ namespace Database_First
             // new DepartmentsWithMoreThanFiveEmployees().Run();
             // new FindLatestTenProjects().Run();
             // new IncreaseSalaries().Run();
+            // new FindEmployeesByFirstNameStartingWith().Run();
         }
     }
 }
