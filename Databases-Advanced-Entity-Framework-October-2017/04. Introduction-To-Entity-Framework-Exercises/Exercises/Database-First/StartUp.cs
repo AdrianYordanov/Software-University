@@ -18,6 +18,7 @@ namespace Database_First
             // new IncreaseSalaries().Run();
             // new FindEmployeesByFirstNameStartingWith().Run();
             // new DeleteProjectById().Run();
+            // new RemoveTowns().Run();
         }
     }
 }
