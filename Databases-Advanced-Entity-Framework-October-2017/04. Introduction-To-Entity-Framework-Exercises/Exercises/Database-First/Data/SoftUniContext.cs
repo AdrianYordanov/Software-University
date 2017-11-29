@@ -55,8 +55,7 @@ namespace Database_First.Data
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer(
-                    @"Server=DESKTOP-FPETI1U\SQLEXPRESS;Database=SoftUni;Integrated Security=True;");
+                optionsBuilder.UseSqlServer(Configuration.ConnectionString);
             }
         }
 
