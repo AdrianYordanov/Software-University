@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
-using P02_DatabaseFirst.Data;
+using Database_First.Data;
 
 public class Employee147
 {

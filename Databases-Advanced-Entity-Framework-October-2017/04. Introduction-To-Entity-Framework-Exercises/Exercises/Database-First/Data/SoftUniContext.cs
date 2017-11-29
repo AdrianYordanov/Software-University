@@ -1,4 +1,5 @@
-﻿namespace P02_DatabaseFirst.Data
+﻿// Rename namespace to "P02_DatabaseFirst.Data.Models" in judge
+namespace Database_First.Data
 {
     using Microsoft.EntityFrameworkCore;
     using Models;
