@@ -2,7 +2,6 @@
 {
     public static class Configuration
     {
-        public const string ConnectionString =
-            @"Server = .; Integrated Security = True; Database = SoftUni";
+        public const string ConnectionString = @"Server = .; Integrated Security = True; Database = SoftUni";
     }
 }
