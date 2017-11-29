@@ -1,23 +1,24 @@
-﻿
-
-using System.Linq;
-using Database_First.Data;
-using Database_First.Data.Models;
-
-public class AddingNewAddressAndUpdatingEmployee
+﻿namespace Database_First.Exercises
 {
-    public void Run()
+    using System.Linq;
+    using Data;
+    using Data.Models;
+
+    public class AddingNewAddressAndUpdatingEmployee
     {
-        using (var db = new SoftUniContext())
+        public void Run()
         {
-            var address = new Address
+            using (var db = new SoftUniContext())
             {
-                AddressText = "Vitoshka 15",
-                TownId = 4
-            };
-            var employee = db.Employees.SingleOrDefault(e => e.LastName == "Nakov");
-            employee.Address = address;
-            db.SaveChanges();
+                var address = new Address
+                {
+                    AddressText = "Vitoshka 15",
+                    TownId = 4
+                };
+                var employee = db.Employees.SingleOrDefault(e => e.LastName == "Nakov");
+                employee.Address = address;
+                db.SaveChanges();
+            }
         }
     }
 }

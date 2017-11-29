@@ -1,29 +1,32 @@
-﻿using System;
-using System.Linq;
-using Microsoft.EntityFrameworkCore;
-using Database_First.Data;
-
-public class AddressesByTown
+﻿namespace Database_First.Exercises
 {
-    public void Run()
+    using System;
+    using System.Linq;
+    using Data;
+    using Microsoft.EntityFrameworkCore;
+
+    public class AddressesByTown
     {
-        using (var db = new SoftUniContext())
+        public void Run()
         {
-            var adresses = db.Addresses.Include(a => a.Town)
-                .OrderByDescending(a => a.Employees.Count)
-                .ThenBy(a => a.Town.Name)
-                .ThenBy(a => a.AddressText)
-                .Select(
-                    a => new
-                    {
-                        a.AddressText,
-                        Town = a.Town.Name,
-                        EmployeeCount = a.Employees.Count
-                    })
-                .Take(10);
-            foreach (var adress in adresses)
+            using (var db = new SoftUniContext())
             {
-                Console.WriteLine($"{adress.AddressText}, {adress.Town} - {adress.EmployeeCount} employees");
+                var adresses = db.Addresses.Include(a => a.Town)
+                    .OrderByDescending(a => a.Employees.Count)
+                    .ThenBy(a => a.Town.Name)
+                    .ThenBy(a => a.AddressText)
+                    .Select(
+                        a => new
+                        {
+                            a.AddressText,
+                            Town = a.Town.Name,
+                            EmployeeCount = a.Employees.Count
+                        })
+                    .Take(10);
+                foreach (var adress in adresses)
+                {
+                    Console.WriteLine($"{adress.AddressText}, {adress.Town} - {adress.EmployeeCount} employees");
+                }
             }
         }
     }

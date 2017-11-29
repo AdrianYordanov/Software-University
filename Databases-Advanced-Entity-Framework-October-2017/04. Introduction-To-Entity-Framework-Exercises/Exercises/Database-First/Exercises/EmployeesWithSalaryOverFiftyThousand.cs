@@ -1,20 +1,23 @@
-﻿using System;
-using System.Linq;
-using Database_First.Data;
-
-public class EmployeesWithSalaryOverFiftyThousand
+﻿namespace Database_First.Exercises
 {
-    public void Run()
+    using System;
+    using System.Linq;
+    using Data;
+
+    public class EmployeesWithSalaryOverFiftyThousand
     {
-        using (var db = new SoftUniContext())
+        public void Run()
         {
-            var employees = db.Employees.Where(e => e.Salary > 50000)
-                .OrderBy(e => e.FirstName)
-                .Select(e => e.FirstName)
-                .ToList();
-            foreach (var employee in employees)
+            using (var db = new SoftUniContext())
             {
-                Console.WriteLine(employee);
+                var employees = db.Employees.Where(e => e.Salary > 50000)
+                    .OrderBy(e => e.FirstName)
+                    .Select(e => e.FirstName)
+                    .ToList();
+                foreach (var employee in employees)
+                {
+                    Console.WriteLine(employee);
+                }
             }
         }
     }

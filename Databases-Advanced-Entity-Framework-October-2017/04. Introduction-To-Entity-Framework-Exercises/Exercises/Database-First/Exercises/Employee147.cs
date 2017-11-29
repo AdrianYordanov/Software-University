@@ -1,21 +1,24 @@
-﻿using System;
-using System.Linq;
-using Microsoft.EntityFrameworkCore;
-using Database_First.Data;
-
-public class Employee147
+﻿namespace Database_First.Exercises
 {
-    public void Run()
+    using System;
+    using System.Linq;
+    using Data;
+    using Microsoft.EntityFrameworkCore;
+
+    public class Employee147
     {
-        using (var db = new SoftUniContext())
+        public void Run()
         {
-            var employee = db.Employees.Include(e => e.EmployeesProjects)
-                .ThenInclude(e => e.Project)
-                .SingleOrDefault(e => e.EmployeeId == 147);
-            Console.WriteLine($"{employee.FirstName} {employee.LastName} - {employee.JobTitle}");
-            foreach (var project in employee.EmployeesProjects.OrderBy(p => p.Project.Name))
+            using (var db = new SoftUniContext())
             {
-                Console.WriteLine(project.Project.Name);
+                var employee = db.Employees.Include(e => e.EmployeesProjects)
+                    .ThenInclude(e => e.Project)
+                    .SingleOrDefault(e => e.EmployeeId == 147);
+                Console.WriteLine($"{employee.FirstName} {employee.LastName} - {employee.JobTitle}");
+                foreach (var project in employee.EmployeesProjects.OrderBy(p => p.Project.Name))
+                {
+                    Console.WriteLine(project.Project.Name);
+                }
             }
         }
     }
