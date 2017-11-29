@@ -7,5 +7,6 @@
         // new EmployeesFromResearchAndDevelopment().Run();
         // new AddingNewAddressAndUpdatingEmployee().Run();
         // new EmployeesAndProjects().Run();
+        // new AddressesByTown().Run();
     }
 }
