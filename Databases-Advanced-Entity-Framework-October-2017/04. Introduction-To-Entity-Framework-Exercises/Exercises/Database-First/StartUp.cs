@@ -11,5 +11,6 @@
         // new Employee147().Run();
         // new DepartmentsWithMoreThanFiveEmployees().Run();
         // new FindLatestTenProjects().Run();
+        // new IncreaseSalaries().Run();
     }
 }
