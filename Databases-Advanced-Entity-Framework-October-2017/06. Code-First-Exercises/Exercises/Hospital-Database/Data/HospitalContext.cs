@@ -44,6 +44,12 @@
             set;
         }
 
+        public DbSet<Doctor> Doctors
+        {
+            get;
+            set;
+        }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
@@ -71,6 +77,10 @@
                         pm.PatientId,
                         pm.MedicamentId
                     });
+            modelBuilder.Entity<Doctor>()
+                .HasMany(d => d.Visitations)
+                .WithOne(v => v.Doctor)
+                .HasForeignKey(v => v.DoctorId);
         }
     }
 }
