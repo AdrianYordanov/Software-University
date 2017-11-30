@@ -4,6 +4,7 @@ namespace P03_SalesDatabase
     using System.Linq;
     using Data;
     using Data.Models;
+    using Microsoft.EntityFrameworkCore;
 
     public class StartUp
     {
@@ -17,7 +18,7 @@ namespace P03_SalesDatabase
             using (var db = new SalesContext())
             {
                 db.Database.EnsureDeleted();
-                db.Database.EnsureCreated();
+                db.Database.Migrate();
                 var sales = new[]
                 {
                     new Sale(new DateTime(2007, 6, 5)),
@@ -29,9 +30,9 @@ namespace P03_SalesDatabase
                 }.ToList();
                 var products = new[]
                 {
-                    new Product("iPhone", 12, 870, sales),
-                    new Product("Samsung Galaxy S5", 10, 560, sales),
-                    new Product("Audi A3", 200, 20000, sales)
+                    new Product("iPhone", 12, 870, "apple phone se", sales),
+                    new Product("Samsung Galaxy S5", 10, 560, "the brand new samsung smartphone", sales),
+                    new Product("Audi A3", 200, 20000, "Audi A3 2014, full packet", sales)
                 }.ToList();
                 var customers = new[]
                 {

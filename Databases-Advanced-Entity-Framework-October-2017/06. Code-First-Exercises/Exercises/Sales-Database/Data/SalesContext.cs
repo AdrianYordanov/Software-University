@@ -54,6 +54,9 @@
                 .HasMany(p => p.Sales)
                 .WithOne(s => s.Product)
                 .HasForeignKey(s => s.ProductId);
+            modelBuilder.Entity<Product>()
+                .Property(p => p.Description)
+                .HasDefaultValue("No description");
             modelBuilder.Entity<Customer>()
                 .HasMany(c => c.Sales)
                 .WithOne(s => s.Customer)
@@ -62,6 +65,9 @@
                 .HasMany(s => s.Sales)
                 .WithOne(s => s.Store)
                 .HasForeignKey(s => s.StoreId);
+            modelBuilder.Entity<Sale>()
+                .Property(s => s.Date)
+                .HasDefaultValueSql("GETDATE()");
         }
     }
 }

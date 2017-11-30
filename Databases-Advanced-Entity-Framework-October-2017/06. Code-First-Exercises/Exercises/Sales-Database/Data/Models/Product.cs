@@ -4,16 +4,17 @@
 
     public class Product
     {
-        public Product(string name, decimal quantity, decimal price)
+        public Product(string name, decimal quantity, decimal price, string description)
         {
             this.Name = name;
             this.Quantity = quantity;
             this.Price = price;
+            this.Description = description;
             this.Sales = new List<Sale>();
         }
 
-        public Product(string name, int quantity, decimal price, ICollection<Sale> sales)
-            : this(name, quantity, price)
+        public Product(string name, int quantity, decimal price, string description, ICollection<Sale> sales)
+            : this(name, quantity, price, description)
         {
             this.Sales = sales;
         }
@@ -37,6 +38,12 @@
         }
 
         public decimal Price
+        {
+            get;
+            set;
+        }
+
+        public string Description
         {
             get;
             set;
