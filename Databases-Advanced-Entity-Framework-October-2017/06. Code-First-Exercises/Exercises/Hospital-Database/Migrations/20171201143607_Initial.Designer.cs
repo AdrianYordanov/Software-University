@@ -11,8 +11,8 @@ using System;
 namespace HospitalDatabase.Migrations
 {
     [DbContext(typeof(HospitalContext))]
-    [Migration("20171130123507_Doctor")]
-    partial class Doctor
+    [Migration("20171201143607_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -37,20 +37,6 @@ namespace HospitalDatabase.Migrations
                     b.HasIndex("PatientId");
 
                     b.ToTable("Diagnoses");
-                });
-
-            modelBuilder.Entity("P01_HospitalDatabase.Data.Models.Doctor", b =>
-                {
-                    b.Property<int>("DoctorId")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("Name");
-
-                    b.Property<string>("Specialty");
-
-                    b.HasKey("DoctorId");
-
-                    b.ToTable("Doctors");
                 });
 
             modelBuilder.Entity("P01_HospitalDatabase.Data.Models.Medicament", b =>
@@ -107,13 +93,9 @@ namespace HospitalDatabase.Migrations
 
                     b.Property<DateTime>("Date");
 
-                    b.Property<int>("DoctorId");
-
                     b.Property<int>("PatientId");
 
                     b.HasKey("VisitationId");
-
-                    b.HasIndex("DoctorId");
 
                     b.HasIndex("PatientId");
 
@@ -143,11 +125,6 @@ namespace HospitalDatabase.Migrations
 
             modelBuilder.Entity("P01_HospitalDatabase.Data.Models.Visitation", b =>
                 {
-                    b.HasOne("P01_HospitalDatabase.Data.Models.Doctor", "Doctor")
-                        .WithMany("Visitations")
-                        .HasForeignKey("DoctorId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
                     b.HasOne("P01_HospitalDatabase.Data.Models.Patient", "Patient")
                         .WithMany("Visitations")
                         .HasForeignKey("PatientId")

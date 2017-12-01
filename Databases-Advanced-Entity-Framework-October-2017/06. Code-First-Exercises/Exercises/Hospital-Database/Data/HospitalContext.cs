@@ -77,6 +77,14 @@
                         pm.PatientId,
                         pm.MedicamentId
                     });
+            modelBuilder.Entity<PatientMedicament>()
+                .HasOne(pm => pm.Patient)
+                .WithMany(p => p.Prescriptions)
+                .HasForeignKey(pm => pm.PatientId);
+            modelBuilder.Entity<PatientMedicament>()
+                .HasOne(pm => pm.Medicament)
+                .WithMany(m => m.Prescriptions)
+                .HasForeignKey(pm => pm.MedicamentId);
             modelBuilder.Entity<Doctor>()
                 .HasMany(d => d.Visitations)
                 .WithOne(v => v.Doctor)
