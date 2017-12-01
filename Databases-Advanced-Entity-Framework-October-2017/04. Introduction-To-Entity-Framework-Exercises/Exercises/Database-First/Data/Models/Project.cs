@@ -1,5 +1,4 @@
-﻿// Rename namespace to "P02_DatabaseFirst.Data.Models" in judge
-namespace Database_First.Data.Models
+﻿namespace P02_DatabaseFirst.Data.Models
 {
     using System;
     using System.Collections.Generic;

@@ -1,4 +1,4 @@
-﻿namespace Database_First.Exercises
+﻿namespace P02_DatabaseFirst.Exercises
 {
     using System;
     using System.Linq;

@@ -1,7 +1,6 @@
-﻿// Rename namespace to "P02_DatabaseFirst" in judge
-namespace Database_First
+﻿namespace P02_DatabaseFirst
 {
-    // Include the namespace Database_First.Exercises to execute the exercise you want.
+    // Include the namespace P02_DatabaseFirst.Exercises to execute the exercise you want.
     public class StartUp
     {
         public static void Main()

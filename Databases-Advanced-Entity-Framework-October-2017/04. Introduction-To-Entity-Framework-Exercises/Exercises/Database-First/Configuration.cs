@@ -1,4 +1,4 @@
-﻿namespace Database_First
+﻿namespace P02_DatabaseFirst
 {
     public static class Configuration
     {
