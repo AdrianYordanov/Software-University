@@ -6,12 +6,7 @@ public class ReverseNumbers
     public static void Main()
     {
         var tokens = Console.ReadLine()
-            .Split(
-                new[]
-                {
-                    ' '
-                },
-                StringSplitOptions.RemoveEmptyEntries);
+            .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
         var stack = new Stack<int>();
         foreach (var currentString in tokens)
         {

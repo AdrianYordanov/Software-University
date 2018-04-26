@@ -8,12 +8,7 @@ public class BalancedParentheses
     {
         var input = Console.ReadLine();
         var stack = new Stack<char>();
-        var openBrackets = new[]
-        {
-            '{',
-            '[',
-            '('
-        };
+        var openBrackets = new[] { '{', '[', '(' };
         var isBalanced = true;
         foreach (var currentBracket in input)
         {

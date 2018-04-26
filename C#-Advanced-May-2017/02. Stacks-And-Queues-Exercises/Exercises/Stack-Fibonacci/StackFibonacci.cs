@@ -6,12 +6,7 @@ public class StackFibonacci
     public static void Main()
     {
         var n = ulong.Parse(Console.ReadLine());
-        var stack = new Stack<ulong>(
-            new ulong[]
-            {
-                0,
-                1
-            });
+        var stack = new Stack<ulong>(new ulong[] { 0, 1 });
         for (var i = 2UL; i <= n; i++)
         {
             var last = stack.Pop();

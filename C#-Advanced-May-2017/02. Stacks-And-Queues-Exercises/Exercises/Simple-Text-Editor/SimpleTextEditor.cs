@@ -16,35 +16,35 @@ public class SimpleTextEditor
             switch (operation)
             {
                 case 1:
-                {
-                    var textAppend = tokens[1];
-                    var update = stringHistory.Peek() + textAppend;
-                    stringHistory.Push(update);
-                    break;
-                }
+                    {
+                        var textAppend = tokens[1];
+                        var update = stringHistory.Peek() + textAppend;
+                        stringHistory.Push(update);
+                        break;
+                    }
 
                 case 2:
-                {
-                    var count = int.Parse(tokens[1]);
-                    var update = stringHistory.Peek();
-                    update = update.Remove(update.Length - count);
-                    stringHistory.Push(update);
-                    break;
-                }
+                    {
+                        var count = int.Parse(tokens[1]);
+                        var update = stringHistory.Peek();
+                        update = update.Remove(update.Length - count);
+                        stringHistory.Push(update);
+                        break;
+                    }
 
                 case 3:
-                {
-                    var index = int.Parse(tokens[1]);
-                    var lastUpdate = stringHistory.Peek();
-                    Console.WriteLine(lastUpdate[index - 1]);
-                    break;
-                }
+                    {
+                        var index = int.Parse(tokens[1]);
+                        var lastUpdate = stringHistory.Peek();
+                        Console.WriteLine(lastUpdate[index - 1]);
+                        break;
+                    }
 
                 case 4:
-                {
-                    stringHistory.Pop();
-                    break;
-                }
+                    {
+                        stringHistory.Pop();
+                        break;
+                    }
             }
         }
     }

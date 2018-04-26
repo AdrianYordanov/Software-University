@@ -13,51 +13,46 @@ public class MaximumElement
         for (var i = 0; i < n; i++)
         {
             var query = Console.ReadLine()
-                .Split(
-                    new[]
-                    {
-                        ' '
-                    },
-                    StringSplitOptions.RemoveEmptyEntries)
+                .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
                 .Select(int.Parse)
                 .ToArray();
             switch (query[0])
             {
                 case 1:
-                {
-                    var pushValue = query[1];
-                    stack.Push(pushValue);
-                    if (pushValue > maxElement)
                     {
-                        maxElement = pushValue;
-                        maxNumbers.Push(maxElement);
-                    }
+                        var pushValue = query[1];
+                        stack.Push(pushValue);
+                        if (pushValue > maxElement)
+                        {
+                            maxElement = pushValue;
+                            maxNumbers.Push(maxElement);
+                        }
 
-                    break;
-                }
-
-                case 2:
-                {
-                    if (stack.Count == 0)
-                    {
                         break;
                     }
 
-                    var removeNumber = stack.Pop();
-                    if (removeNumber == maxElement)
+                case 2:
                     {
-                        maxNumbers.Pop();
-                        maxElement = maxNumbers.Count > 0 ? maxNumbers.Peek() : int.MinValue;
+                        if (stack.Count == 0)
+                        {
+                            break;
+                        }
+
+                        var removeNumber = stack.Pop();
+                        if (removeNumber == maxElement)
+                        {
+                            maxNumbers.Pop();
+                            maxElement = maxNumbers.Count > 0 ? maxNumbers.Peek() : int.MinValue;
+                        }
+
+                        break;
                     }
 
-                    break;
-                }
-
                 case 3:
-                {
-                    Console.WriteLine(maxElement);
-                    break;
-                }
+                    {
+                        Console.WriteLine(maxElement);
+                        break;
+                    }
             }
         }
     }

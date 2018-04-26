@@ -8,12 +8,7 @@ public class PoisonousPlants
     {
         var n = int.Parse(Console.ReadLine());
         var plants = Console.ReadLine()
-            .Split(
-                new[]
-                {
-                    ' '
-                },
-                StringSplitOptions.RemoveEmptyEntries)
+            .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
             .Select(int.Parse)
             .ToArray();
         var days = new int[n];
@@ -22,8 +17,8 @@ public class PoisonousPlants
         for (var i = 0; i < plants.Length; i++)
         {
             var maxDays = 0;
-            while (proximityStack.Count > 0 &&
-                   plants[proximityStack.Peek()] >= plants[i])
+            while (proximityStack.Count > 0
+                   && plants[proximityStack.Peek()] >= plants[i])
             {
                 maxDays = Math.Max(maxDays, days[proximityStack.Pop()]);
             }
