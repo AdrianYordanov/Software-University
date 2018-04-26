@@ -11,7 +11,7 @@ public class HotPotato
         var queue = new Queue<string>(names);
         while (queue.Count > 1)
         {
-            for (var i = 0; i < n - 1; i++)
+            for (var i = 0; i < (n - 1); i++)
             {
                 queue.Enqueue(queue.Dequeue());
             }

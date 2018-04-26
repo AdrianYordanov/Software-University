@@ -12,7 +12,7 @@ public class MathPotato
         var cycles = 1;
         while (queue.Count > 1)
         {
-            for (var i = 0; i < n - 1; i++)
+            for (var i = 0; i < (n - 1); i++)
             {
                 queue.Enqueue(queue.Dequeue());
             }
@@ -24,14 +24,14 @@ public class MathPotato
         Console.WriteLine($"Last is {queue.Dequeue()}");
     }
 
-    public static bool IsPrime(int candidate)
+    private static bool IsPrime(int candidate)
     {
         if ((candidate & 1) == 0)
         {
             return candidate == 2;
         }
 
-        for (var i = 3; i * i <= candidate; i += 2)
+        for (var i = 3; (i * i) <= candidate; i += 2)
         {
             if (candidate % i == 0)
             {

@@ -20,7 +20,7 @@ public class MatchingBrackets
             }
 
             var lastScopeIndexOpen = stack.Pop();
-            Console.WriteLine(input.Substring(lastScopeIndexOpen, i - lastScopeIndexOpen + 1));
+            Console.WriteLine(input.Substring(lastScopeIndexOpen, (i - lastScopeIndexOpen) + 1));
         }
     }
 }
