@@ -1,15 +1,14 @@
 ﻿using System;
 
-class ActionPrint
+public class ActionPrint
 {
-    static void Main()
+    private static void Main()
     {
-        Action<string> print = (inputString) =>
-        {
-            var collection = inputString.Split(' ');
-            Console.WriteLine(string.Join(Environment.NewLine, collection));
-        };
-
+        Action<string> print = inputString =>
+            {
+                var collection = inputString.Split(' ');
+                Console.WriteLine(string.Join(Environment.NewLine, collection));
+            };
         print(Console.ReadLine());
     }
 }

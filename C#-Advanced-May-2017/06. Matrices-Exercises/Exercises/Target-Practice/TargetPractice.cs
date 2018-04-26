@@ -1,8 +1,8 @@
 ﻿using System;
 
-class TargetPractice
+public class TargetPractice
 {
-    static void Main()
+    private static void Main()
     {
         var firstTokens = Console.ReadLine().Split(' ');
         var line = Console.ReadLine();
@@ -14,13 +14,12 @@ class TargetPractice
         var radius = int.Parse(secondTokens[2]);
         var matrix = new char[rowsCount, colsCount];
 
-
         // Define matrix.
         for (int i = rowsCount - 1, stringIndex = 0, counter = 0; i >= 0; i--, ++counter)
         {
             if (counter % 2 == 0)
             {
-                for (int j = colsCount - 1; j >= 0; j--, stringIndex++)
+                for (var j = colsCount - 1; j >= 0; j--, stringIndex++)
                 {
                     if (stringIndex >= line.Length)
                     {
@@ -32,7 +31,7 @@ class TargetPractice
             }
             else
             {
-                for (int j = 0; j < colsCount; j++, stringIndex++)
+                for (var j = 0; j < colsCount; j++, stringIndex++)
                 {
                     if (stringIndex >= line.Length)
                     {
@@ -45,9 +44,9 @@ class TargetPractice
         }
 
         // Shot on the matrix.
-        for (int row = 0; row < rowsCount; row++)
+        for (var row = 0; row < rowsCount; row++)
         {
-            for (int col = 0; col < colsCount; col++)
+            for (var col = 0; col < colsCount; col++)
             {
                 if (ShouldBeShooted(row, col, bombRow, bombCol, radius))
                 {
@@ -57,9 +56,9 @@ class TargetPractice
         }
 
         // All characters falling down.
-        for (int col = 0; col < colsCount; col++)
+        for (var col = 0; col < colsCount; col++)
         {
-            for (int row = 0; row < rowsCount - 1; row++)
+            for (var row = 0; row < (rowsCount - 1); row++)
             {
                 if (matrix[row + 1, col] == ' ')
                 {
@@ -83,9 +82,9 @@ class TargetPractice
         }
 
         // Printing matrix
-        for (int i = 0; i < rowsCount; i++)
+        for (var i = 0; i < rowsCount; i++)
         {
-            for (int j = 0; j < colsCount; j++)
+            for (var j = 0; j < colsCount; j++)
             {
                 Console.Write($"{matrix[i, j]}");
             }
@@ -96,7 +95,7 @@ class TargetPractice
 
     private static bool ShouldBeShooted(int x, int y, int impactRow, int impactCol, int impactRadius)
     {
-        var distance = Math.Sqrt((x - impactRow) * (x - impactRow) + (y - impactCol) * (y - impactCol));
+        var distance = Math.Sqrt(((x - impactRow) * (x - impactRow)) + ((y - impactCol) * (y - impactCol)));
         return distance <= impactRadius;
     }
 }

@@ -4,7 +4,7 @@ using System.Linq;
 
 public class BalancedParentheses
 {
-    public static void Main()
+    private static void Main()
     {
         var input = Console.ReadLine();
         var stack = new Stack<char>();

@@ -3,31 +3,20 @@ using System.IO;
 using System.Security.Cryptography;
 using System.Text;
 
-class CryptoStreamExample
+public class CryptoStreamExample
 {
-    const string EncryptionKey = "ABCDEFGH";
-    const string FilePath = "../../encrypted.txt";
+    private const string EncryptionKey = "ABCDEFGH";
 
-    static void Main()
-    {
-        SaveEncrypted("Hello world", EncryptionKey, FilePath);
+    private const string FilePath = "../../encrypted.txt";
 
-        string result = Decrypt(EncryptionKey, FilePath);
-        Console.WriteLine(result);
-    }
-
-    static string Decrypt(string key, string path)
+    private static string Decrypt(string key, string path)
     {
         var fileStream = new FileStream(path, FileMode.Open);
-
         using (fileStream)
         {
-            var cryptoProvider = new DESCryptoServiceProvider();
-            cryptoProvider.Key = Encoding.ASCII.GetBytes(key);
-            cryptoProvider.IV = Encoding.ASCII.GetBytes(key);
-
+            var cryptoProvider =
+                new DESCryptoServiceProvider { Key = Encoding.ASCII.GetBytes(key), IV = Encoding.ASCII.GetBytes(key) };
             var cryptoStream = new CryptoStream(fileStream, cryptoProvider.CreateDecryptor(), CryptoStreamMode.Read);
-
             using (cryptoStream)
             {
                 using (var reader = new StreamReader(cryptoStream))
@@ -38,25 +27,28 @@ class CryptoStreamExample
         }
     }
 
-    static void SaveEncrypted(string text, string key, string path)
+    private static void Main()
     {
-        var destinationStream =
-            new FileStream(path, FileMode.OpenOrCreate, FileAccess.Write);
+        SaveEncrypted("Hello world", EncryptionKey, FilePath);
+        var result = Decrypt(EncryptionKey, FilePath);
+        Console.WriteLine(result);
+    }
 
+    private static void SaveEncrypted(string text, string key, string path)
+    {
+        var destinationStream = new FileStream(path, FileMode.OpenOrCreate, FileAccess.Write);
         using (destinationStream)
         {
             var cryptoProvider = new DESCryptoServiceProvider();
-
             cryptoProvider.Key = Encoding.ASCII.GetBytes(key);
             cryptoProvider.IV = Encoding.ASCII.GetBytes(key);
-
-            CryptoStream cryptoStream = new CryptoStream(destinationStream,
-               cryptoProvider.CreateEncryptor(), CryptoStreamMode.Write);
-
+            var cryptoStream = new CryptoStream(
+                destinationStream,
+                cryptoProvider.CreateEncryptor(),
+                CryptoStreamMode.Write);
             using (cryptoStream)
             {
-                byte[] data = Encoding.ASCII.GetBytes(text);
-
+                var data = Encoding.ASCII.GetBytes(text);
                 cryptoStream.Write(data, 0, data.Length);
             }
         }

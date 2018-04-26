@@ -1,17 +1,17 @@
 ﻿using System;
 
-class CharacterMultiplier
+public class CharacterMultiplier
 {
-    static void Main()
+    private static void Main()
     {
-        var tokens = Console.ReadLine().Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+        var tokens = Console.ReadLine().Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
         var firstString = tokens[0];
         var secondString = tokens[1];
         var result = 0;
-
-        for (int i = 0; i < firstString.Length || i < secondString.Length; i++)
+        for (var i = 0; i < firstString.Length || i < secondString.Length; i++)
         {
-            if (i < firstString.Length && i < secondString.Length)
+            if (i < firstString.Length
+                && i < secondString.Length)
             {
                 result += MultiplyCharacters(firstString[i], secondString[i]);
             }
@@ -28,7 +28,7 @@ class CharacterMultiplier
         Console.WriteLine(result);
     }
 
-    static int MultiplyCharacters(char first, char second)
+    private static int MultiplyCharacters(char first, char second)
     {
         return first * second;
     }

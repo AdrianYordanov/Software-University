@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Linq;
 
-class AddVAT
+public class AddVat
 {
-    static void Main()
+    private static void Main()
     {
         Console.ReadLine()
-            .Split(new char[] { ' ', ',' }, StringSplitOptions.RemoveEmptyEntries)
+            .Split(new[] { ' ', ',' }, StringSplitOptions.RemoveEmptyEntries)
             .Select(x => double.Parse(x) * 1.2)
             .ToList()
             .ForEach(x => Console.WriteLine($"{x:F2}"));

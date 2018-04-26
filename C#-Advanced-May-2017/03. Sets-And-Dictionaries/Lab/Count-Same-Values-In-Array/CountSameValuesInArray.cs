@@ -4,7 +4,7 @@ using System.Linq;
 
 public class CountSameValuesInArray
 {
-    public static void Main()
+    private static void Main()
     {
         var numbers = Console.ReadLine()
             .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)

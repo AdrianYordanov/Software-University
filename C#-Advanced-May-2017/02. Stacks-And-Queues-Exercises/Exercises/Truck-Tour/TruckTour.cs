@@ -4,16 +4,13 @@ using System.Linq;
 
 public class TruckTour
 {
-    public static void Main()
+    private static void Main()
     {
         var n = int.Parse(Console.ReadLine());
         var circle = new Queue<long[]>();
         for (var i = 0; i < n; i++)
         {
-            var tokens = Console.ReadLine()
-                .Split(' ')
-                .Select(long.Parse)
-                .ToArray();
+            var tokens = Console.ReadLine().Split(' ').Select(long.Parse).ToArray();
             circle.Enqueue(tokens);
         }
 

@@ -1,8 +1,8 @@
 ﻿using System;
 
-class ReverseString
+public class ReverseString
 {
-    static void Main()
+    private static void Main()
     {
         var input = Console.ReadLine().ToCharArray();
         Array.Reverse(input);

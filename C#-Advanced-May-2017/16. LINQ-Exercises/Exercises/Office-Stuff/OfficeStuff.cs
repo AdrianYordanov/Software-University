@@ -2,20 +2,18 @@
 using System.Collections.Generic;
 using System.Linq;
 
-class OfficeStuff
+public class OfficeStuff
 {
-    static void Main()
+    private static void Main()
     {
         var companyProductAmount = new SortedDictionary<string, Dictionary<string, int>>();
         var n = int.Parse(Console.ReadLine());
-
-        for (int i = 0; i < n; i++)
+        for (var i = 0; i < n; i++)
         {
-            var input = Console.ReadLine().Split(new string[] { " - ", "|" }, StringSplitOptions.RemoveEmptyEntries);
+            var input = Console.ReadLine().Split(new[] { " - ", "|" }, StringSplitOptions.RemoveEmptyEntries);
             var company = input[0];
             var product = input[2];
             var amount = int.Parse(input[1]);
-
             if (!companyProductAmount.ContainsKey(company))
             {
                 companyProductAmount[company] = new Dictionary<string, int>();

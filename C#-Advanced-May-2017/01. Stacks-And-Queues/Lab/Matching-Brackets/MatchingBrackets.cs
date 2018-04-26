@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public class MatchingBrackets
 {
-    public static void Main()
+    private static void Main()
     {
         var input = Console.ReadLine();
         var stack = new Stack<int>();

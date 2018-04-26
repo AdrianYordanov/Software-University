@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Text.RegularExpressions;
 
-class VowelCount
+public class VowelCount
 {
-    static void Main()
+    private static void Main()
     {
         var text = Console.ReadLine();
         var regex = new Regex("[AEIOUYaeiouy]");

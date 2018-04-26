@@ -2,18 +2,17 @@
 using System.IO;
 using System.Text;
 
-class MemoryStreamExample
+public class MemoryStreamExample
 {
-    static void Main()
+    private static void Main()
     {
-        string text = "Two households, both alike in dignity,In fair Verona, where we lay our scene";
-        byte[] bytes = Encoding.UTF8.GetBytes(text);
-
+        var text = "Two households, both alike in dignity,In fair Verona, where we lay our scene";
+        var bytes = Encoding.UTF8.GetBytes(text);
         using (var memoryStream = new MemoryStream(bytes))
         {
             while (true)
             {
-                int readByte = memoryStream.ReadByte();
+                var readByte = memoryStream.ReadByte();
                 if (readByte == -1)
                 {
                     break;

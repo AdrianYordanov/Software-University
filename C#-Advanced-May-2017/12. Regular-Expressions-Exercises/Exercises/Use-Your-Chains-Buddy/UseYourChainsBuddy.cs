@@ -2,26 +2,23 @@
 using System.Text;
 using System.Text.RegularExpressions;
 
-class UseYourChainsBuddy
+public class UseYourChainsBuddy
 {
-    static void Main()
+    private static void Main()
     {
         var input = Console.ReadLine();
         var result = new StringBuilder();
-        var pRegex = new Regex(@"<p>(.*?)<\/p>");
-        var matches = pRegex.Matches(input);
-
+        var tagRegex = new Regex(@"<p>(.*?)<\/p>");
+        var matches = tagRegex.Matches(input);
         foreach (Match tagContent in matches)
         {
             var inside = tagContent.Groups[1].Value;
             inside = Regex.Replace(inside, "[^a-z0-9]+", " ");
             inside = Regex.Replace(inside, @"[ \s]+", " ");
             var temp = new StringBuilder(inside);
-
-            for (int i = 0; i < temp.Length; i++)
+            for (var i = 0; i < temp.Length; i++)
             {
                 var letter = inside[i];
-
                 if (Regex.IsMatch(letter.ToString(), "[a-m]"))
                 {
                     letter = (char)(letter + 13);

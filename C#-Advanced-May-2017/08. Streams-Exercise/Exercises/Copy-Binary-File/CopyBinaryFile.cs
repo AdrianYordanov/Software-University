@@ -1,8 +1,8 @@
 ﻿using System.IO;
 
-class CopyBinaryFile
+public class CopyBinaryFile
 {
-    static void Main()
+    private static void Main()
     {
         using (var file = new FileStream("../../logo.png", FileMode.Open))
         {
@@ -10,7 +10,6 @@ class CopyBinaryFile
             {
                 var buffer = new byte[4096];
                 var countBytes = file.Read(buffer, 0, buffer.Length);
-
                 while (countBytes != 0)
                 {
                     createFile.Write(buffer, 0, countBytes);

@@ -2,14 +2,13 @@
 using System.Text;
 using System.Text.RegularExpressions;
 
-class ReplaceTagA
+public class ReplaceTagA
 {
-    static void Main()
+    private static void Main()
     {
         var html = new StringBuilder();
         var regex = new Regex(@"<a(\s+.*)>(.*)<\/a>");
-        var input = string.Empty;
-
+        string input;
         while ((input = Console.ReadLine()) != "end")
         {
             html.AppendLine(input);

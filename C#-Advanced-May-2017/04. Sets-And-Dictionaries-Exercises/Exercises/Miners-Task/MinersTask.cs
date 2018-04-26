@@ -3,10 +3,10 @@ using System.Collections.Generic;
 
 public class MinersTask
 {
-    public static void Main()
+    private static void Main()
     {
-        var input = string.Empty;
         var dictionary = new Dictionary<string, long>();
+        string input;
         while ((input = Console.ReadLine()) != "stop")
         {
             var quantity = long.Parse(Console.ReadLine());

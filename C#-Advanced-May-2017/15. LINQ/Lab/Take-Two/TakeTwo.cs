@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Linq;
 
-class TakeTwo
+public class TakeTwo
 {
-    static void Main()
+    private static void Main()
     {
         var result = Console.ReadLine()
             .Split(' ')

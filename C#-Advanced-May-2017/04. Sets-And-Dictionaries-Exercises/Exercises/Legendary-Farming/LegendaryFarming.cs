@@ -18,9 +18,7 @@ public class LegendaryFarming
         remainingMaterials.Add("motes", 0);
         while (winner == string.Empty)
         {
-            var tokens = Console.ReadLine()
-                .ToLower()
-                .Split(' ');
+            var tokens = Console.ReadLine().ToLower().Split(' ');
             for (var i = 0; i < tokens.Length; i++)
             {
                 var quantity = int.Parse(tokens[i]);
@@ -30,31 +28,31 @@ public class LegendaryFarming
                     case "shards":
                     case "fragments":
                     case "motes":
-                    {
-                        remainingMaterials[material] += quantity;
-                        if (winner == string.Empty &&
-                            remainingMaterials[material] >= 250)
                         {
-                            winner = material;
-                            remainingMaterials[material] -= 250;
-                        }
+                            remainingMaterials[material] += quantity;
+                            if (winner == string.Empty
+                                && remainingMaterials[material] >= 250)
+                            {
+                                winner = material;
+                                remainingMaterials[material] -= 250;
+                            }
 
-                        break;
-                    }
+                            break;
+                        }
 
                     default:
-                    {
-                        if (otherMaterials.ContainsKey(material))
                         {
-                            otherMaterials[material] += quantity;
-                        }
-                        else
-                        {
-                            otherMaterials.Add(material, quantity);
-                        }
+                            if (otherMaterials.ContainsKey(material))
+                            {
+                                otherMaterials[material] += quantity;
+                            }
+                            else
+                            {
+                                otherMaterials.Add(material, quantity);
+                            }
 
-                        break;
-                    }
+                            break;
+                        }
                 }
 
                 if (winner != string.Empty)
@@ -65,8 +63,7 @@ public class LegendaryFarming
         }
 
         Console.WriteLine($"{items[winner]} obtained!");
-        foreach (var material in remainingMaterials.OrderByDescending(x => x.Value)
-            .ThenBy(x => x.Key))
+        foreach (var material in remainingMaterials.OrderByDescending(x => x.Value).ThenBy(x => x.Key))
         {
             Console.WriteLine($"{material.Key}: {material.Value}");
         }

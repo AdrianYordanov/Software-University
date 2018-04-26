@@ -2,20 +2,18 @@
 using System.Collections.Generic;
 using System.Linq;
 
-class MapDistricts
+public class MapDistricts
 {
-    static void Main()
+    private static void Main()
     {
         var cities = new Dictionary<string, List<long>>();
-        var cityPopulations = Console.ReadLine().Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+        var cityPopulations = Console.ReadLine().Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
         var minPopulation = long.Parse(Console.ReadLine());
-
         foreach (var pair in cityPopulations)
         {
             var tokens = pair.Split(':');
             var city = tokens[0];
             var district = long.Parse(tokens[1]);
-
             if (!cities.ContainsKey(city))
             {
                 cities.Add(city, new List<long>());
@@ -24,16 +22,11 @@ class MapDistricts
             cities[city].Add(district);
         }
 
-        var filtered = cities
-            .Where(pair => pair.Value.Sum() >= minPopulation)
+        var filtered = cities.Where(pair => pair.Value.Sum() >= minPopulation)
             .OrderByDescending(pair => pair.Value.Sum());
-
         foreach (var pair in filtered)
         {
-            var districts =
-                pair.Value
-                .OrderByDescending(x => x)
-                .Take(5);
+            var districts = pair.Value.OrderByDescending(x => x).Take(5);
             Console.WriteLine($"{pair.Key}: {string.Join(" ", districts)}");
         }
     }

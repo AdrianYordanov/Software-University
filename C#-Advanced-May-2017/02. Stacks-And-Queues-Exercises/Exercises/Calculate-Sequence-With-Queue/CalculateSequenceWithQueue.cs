@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public class CalculateSequenceWithQueue
 {
-    public static void Main()
+    private static void Main()
     {
         var n = long.Parse(Console.ReadLine());
         var membersCount = 50L;

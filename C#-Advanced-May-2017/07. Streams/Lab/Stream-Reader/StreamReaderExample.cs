@@ -1,15 +1,14 @@
 ﻿using System;
 using System.IO;
 
-class StreamReaderExample
+public class StreamReaderExample
 {
-    static void Main()
+    private static void Main()
     {
         using (var reader = new StreamReader("../../somefile.txt"))
         {
-            int lineNumber = 0;
-            string line = reader.ReadLine();
-
+            var lineNumber = 0;
+            var line = reader.ReadLine();
             while (line != null)
             {
                 lineNumber++;

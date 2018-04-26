@@ -2,18 +2,16 @@
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
-class MatchPhoneNumber
+public class MatchPhoneNumber
 {
-    static void Main()
+    private static void Main()
     {
         var regex = new Regex(@"(?<=^| )\+359( |\-)2\1\d{3}\1\d{4}\b");
         var numbers = new List<string>();
-        var input = string.Empty;
-
+        string input;
         while ((input = Console.ReadLine()) != "end")
         {
             var matches = regex.Matches(input);
-
             foreach (Match matchedName in matches)
             {
                 numbers.Add(matchedName.Value);

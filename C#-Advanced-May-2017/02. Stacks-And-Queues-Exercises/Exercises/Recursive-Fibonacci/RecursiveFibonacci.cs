@@ -4,7 +4,7 @@ public class RecursiveFibonacci
 {
     private static ulong[] lookupArray;
 
-    public static ulong GetFibonacci(ulong n)
+    private static ulong GetFibonacci(ulong n)
     {
         if (n <= 2)
         {
@@ -20,7 +20,7 @@ public class RecursiveFibonacci
         return lookupArray[n - 1];
     }
 
-    public static void Main()
+    private static void Main()
     {
         lookupArray = new ulong[50];
         lookupArray[0] = 1;

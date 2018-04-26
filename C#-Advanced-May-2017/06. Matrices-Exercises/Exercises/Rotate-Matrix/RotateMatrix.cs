@@ -2,14 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 
-class RotateMatrix
+public class RotateMatrix
 {
-    static void Main()
+    private static void Main()
     {
-        var number = int.Parse(Console.ReadLine().Split(new char[] { '(', ')' }, StringSplitOptions.RemoveEmptyEntries)[1]);
+        var number = int.Parse(Console.ReadLine().Split(new[] { '(', ')' }, StringSplitOptions.RemoveEmptyEntries)[1]);
         var strings = new List<string>();
-        var input = string.Empty;
-
+        string input;
         while (number >= 360)
         {
             number -= 360;
@@ -24,20 +23,21 @@ class RotateMatrix
         {
             case 0:
                 {
-                    for (int stringIndex = 0; stringIndex < strings.Count; stringIndex++)
+                    for (var stringIndex = 0; stringIndex < strings.Count; stringIndex++)
                     {
                         Console.WriteLine(strings[stringIndex]);
                     }
+
                     break;
                 }
+
             case 90:
                 {
                     strings.Reverse();
                     var maxLength = strings.Max(x => x.Length);
-
-                    for (int charIndex = 0; charIndex < maxLength; charIndex++)
+                    for (var charIndex = 0; charIndex < maxLength; charIndex++)
                     {
-                        for (int stringIndex = 0; stringIndex < strings.Count; ++stringIndex)
+                        for (var stringIndex = 0; stringIndex < strings.Count; ++stringIndex)
                         {
                             if (charIndex < strings[stringIndex].Length)
                             {
@@ -54,12 +54,12 @@ class RotateMatrix
 
                     break;
                 }
+
             case 180:
                 {
                     strings.Reverse();
                     var maxLength = strings.Max(x => x.Length);
-
-                    for (int stringIndex = 0; stringIndex < strings.Count; stringIndex++)
+                    for (var stringIndex = 0; stringIndex < strings.Count; stringIndex++)
                     {
                         var reversedString = new string(strings[stringIndex].Reverse().ToArray());
                         Console.WriteLine(reversedString.PadLeft(maxLength));
@@ -67,13 +67,13 @@ class RotateMatrix
 
                     break;
                 }
+
             case 270:
                 {
                     var maxLength = strings.Max(x => x.Length);
-
-                    for (int charIndex = maxLength - 1; charIndex >= 0; charIndex--)
+                    for (var charIndex = maxLength - 1; charIndex >= 0; charIndex--)
                     {
-                        for (int stringIndex = 0; stringIndex < strings.Count; ++stringIndex)
+                        for (var stringIndex = 0; stringIndex < strings.Count; ++stringIndex)
                         {
                             if (charIndex < strings[stringIndex].Length)
                             {

@@ -1,20 +1,16 @@
 ﻿using System;
 using System.Linq;
 
-class ListOfPredicates
+public class ListOfPredicates
 {
-    static void Main()
+    private static void Main()
     {
         var n = int.Parse(Console.ReadLine());
         var sequence = Console.ReadLine().Split(' ');
-        var predicates = sequence
-            .Select(number => (Predicate<int>)(x => x % int.Parse(number) == 0))
-            .ToArray();
-
-        for (int candidateNumber = 1; candidateNumber <= n; candidateNumber++)
+        var predicates = sequence.Select(number => (Predicate<int>)(x => x % int.Parse(number) == 0)).ToArray();
+        for (var candidateNumber = 1; candidateNumber <= n; candidateNumber++)
         {
-            bool isDivisible = true;
-
+            var isDivisible = true;
             foreach (var predicate in predicates)
             {
                 if (!predicate(candidateNumber))

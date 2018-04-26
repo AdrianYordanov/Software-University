@@ -2,18 +2,16 @@
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
-class ExtractTags
+public class ExtractTags
 {
-    static void Main()
+    private static void Main()
     {
         var tags = new List<string>();
-        var input = string.Empty;
+        string input;
         var regex = new Regex("<.+?>");
-
         while ((input = Console.ReadLine()) != "END")
         {
             var matches = regex.Matches(input);
-
             foreach (Match matchedTag in matches)
             {
                 tags.Add(matchedTag.Value);

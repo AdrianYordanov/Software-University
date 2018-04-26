@@ -2,22 +2,20 @@
 using System.Text;
 using System.Text.RegularExpressions;
 
-class ExtractHyperlinks
+public class ExtractHyperlinks
 {
-    static void Main()
+    private static void Main()
     {
-        string line = string.Empty;
-        StringBuilder html = new StringBuilder();
-
+        string line;
+        var html = new StringBuilder();
         while ((line = Console.ReadLine()) != "END")
         {
             html.Append(line);
         }
 
-        Regex aPattern = new Regex(@"<a.+?>");
-        Regex hrefPattern = new Regex(@"href\s*=\s*((?<quotes>\""|')(?<res1>.+?)\k<quotes>|(?<res2>[^\""'][^\s>]+))");
-        var matchedTags = aPattern.Matches(html.ToString());
-
+        var tagPattern = new Regex(@"<a.+?>");
+        var hrefPattern = new Regex(@"href\s*=\s*((?<quotes>\""|')(?<res1>.+?)\k<quotes>|(?<res2>[^\""'][^\s>]+))");
+        var matchedTags = tagPattern.Matches(html.ToString());
         foreach (Match tag in matchedTags)
         {
             if (!hrefPattern.IsMatch(tag.Value))

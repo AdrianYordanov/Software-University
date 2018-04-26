@@ -1,19 +1,18 @@
 ﻿using System;
 using System.Numerics;
 
-class ConvertFromBaseDecimalToBaseN
+public class ConvertFromBaseDecimalToBaseN
 {
-    static void Main()
+    private static void Main()
     {
-        var tokens = Console.ReadLine().Split(new char[] { ' ', '\t' }, StringSplitOptions.RemoveEmptyEntries);
-        var nBase = int.Parse(tokens[0]);
+        var tokens = Console.ReadLine().Split(new[] { ' ', '\t' }, StringSplitOptions.RemoveEmptyEntries);
+        var baseSystem = int.Parse(tokens[0]);
         var decimalNumber = BigInteger.Parse(tokens[1]);
         var result = string.Empty;
-
         while (decimalNumber > 0)
         {
-            var remainder = decimalNumber % nBase;
-            decimalNumber = decimalNumber / nBase;
+            var remainder = decimalNumber % baseSystem;
+            decimalNumber = decimalNumber / baseSystem;
             result = remainder + result;
         }
 

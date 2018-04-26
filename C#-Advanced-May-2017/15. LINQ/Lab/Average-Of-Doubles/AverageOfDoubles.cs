@@ -1,14 +1,11 @@
 ﻿using System;
 using System.Linq;
 
-class AverageOfDoubles
+public class AverageOfDoubles
 {
-    static void Main()
+    private static void Main()
     {
-        var result = Console.ReadLine()
-            .Split(' ')
-            .Select(double.Parse)
-            .Average();
+        var result = Console.ReadLine().Split(' ').Select(double.Parse).Average();
         Console.WriteLine($"{result:F2}");
     }
 }

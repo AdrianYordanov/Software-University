@@ -1,8 +1,8 @@
 ﻿using System;
 
-class StringLength
+public class StringLength
 {
-    static void Main()
+    private static void Main()
     {
         var input = Console.ReadLine();
         var length = input.Length <= 20 ? input.Length : 20;

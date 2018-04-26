@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public class DecimalToBinaryConverter
 {
-    public static void Main()
+    private static void Main()
     {
         var number = int.Parse(Console.ReadLine());
         var stack = new Stack<int>();

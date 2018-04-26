@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public class CountSymbols
 {
-    public static void Main()
+    private static void Main()
     {
         var input = Console.ReadLine();
         var container = new SortedDictionary<char, int>();

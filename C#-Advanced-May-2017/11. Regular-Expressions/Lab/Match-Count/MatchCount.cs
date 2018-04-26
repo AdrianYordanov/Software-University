@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Text.RegularExpressions;
 
-
-class MatchCount
+public class MatchCount
 {
-    static void Main()
+    private static void Main()
     {
         var pattern = Console.ReadLine();
         var text = Console.ReadLine();

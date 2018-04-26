@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Linq;
 
-class KnightsOfHonor
+public class KnightsOfHonor
 {
-    static void Main()
+    private static void Main()
     {
-        Action<string> print = (inputString) =>
-        {
-            var result = inputString.Split(' ')
-            .Select(x => x = $"Sir {x}");
-            Console.WriteLine(string.Join(Environment.NewLine, result));
-        };
-
+        Action<string> print = inputString =>
+            {
+                var result = inputString.Split(' ').Select(x => $"Sir {x}");
+                Console.WriteLine(string.Join(Environment.NewLine, result));
+            };
         print(Console.ReadLine());
     }
 }

@@ -3,14 +3,13 @@ using System.Collections.Generic;
 
 public class PeriodicTable
 {
-    public static void Main()
+    private static void Main()
     {
         var n = int.Parse(Console.ReadLine());
         var sortedSet = new SortedSet<string>();
         for (var i = 0; i < n; i++)
         {
-            var tokens = Console.ReadLine()
-                .Split(' ');
+            var tokens = Console.ReadLine().Split(' ');
             foreach (var token in tokens)
             {
                 sortedSet.Add(token);

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public class SimpleCalculator
 {
-    public static void Main()
+    private static void Main()
     {
         var input = Console.ReadLine();
         var tokens = input.Split(' ');

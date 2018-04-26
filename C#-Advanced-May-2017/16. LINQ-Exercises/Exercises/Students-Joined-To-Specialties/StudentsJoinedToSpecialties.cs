@@ -2,53 +2,39 @@
 using System.Collections.Generic;
 using System.Linq;
 
-class StudentsJoinedToSpecialties
+public class StudentsJoinedToSpecialties
 {
-    static void Main()
+    private static void Main()
     {
         var listOfSpecialty = new List<StudentSpecialty>();
         var listOfStudents = new List<Student>();
-        var input = string.Empty;
-
+        string input;
         while ((input = Console.ReadLine()) != "Students:")
         {
-            var current = new StudentSpecialty();
-            var splitInput = input.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-            current.SpecialtyName = splitInput[0] + " " + splitInput[1];
-            current.FacultyNumbet = splitInput[2];
-            listOfSpecialty.Add(current);
+            var splitInput = input.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            listOfSpecialty.Add(new StudentSpecialty(splitInput[2], splitInput[0] + " " + splitInput[1]));
         }
 
-        var secondINput = string.Empty;
-
-        while ((secondINput = Console.ReadLine()) != "END")
+        while ((input = Console.ReadLine()) != "END")
         {
-            var current = new Student();
-            var splitInput2 = secondINput.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-            current.FacultyNumbet = splitInput2[0];
-            current.StudentName = splitInput2[1] + " " + splitInput2[2];
-            listOfStudents.Add(current);
+            var splitInput = input.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            listOfStudents.Add(new Student(splitInput[0], splitInput[1] + " " + splitInput[2]));
         }
 
-        var result = listOfStudents
-            .Join(listOfSpecialty, student => student.FacultyNumbet, specialty => specialty.FacultyNumbet, (student, specialty)
-            => new { student.StudentName, student.FacultyNumbet, specialty.SpecialtyName }).OrderBy(student => student.StudentName);
-
+        var result = listOfStudents.Join(
+                listOfSpecialty,
+                student => student.FacultyNumber,
+                specialty => specialty.FacultyNumber,
+                (student, specialty) => new
+                                            {
+                                                student.StudentName,
+                                                FacultyNumbet = student.FacultyNumber,
+                                                specialty.SpecialtyName
+                                            })
+            .OrderBy(student => student.StudentName);
         foreach (var item in result)
         {
             Console.WriteLine($"{item.StudentName} {item.FacultyNumbet} {item.SpecialtyName}");
         }
     }
-}
-
-public class StudentSpecialty
-{
-    public string SpecialtyName { get; set; }
-    public string FacultyNumbet { get; set; }
-}
-
-public class Student
-{
-    public string StudentName { get; set; }
-    public string FacultyNumbet { get; set; }
 }

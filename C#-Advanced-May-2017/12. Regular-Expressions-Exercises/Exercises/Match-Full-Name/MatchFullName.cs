@@ -2,18 +2,16 @@
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
-class MatchFullName
+public class MatchFullName
 {
-    static void Main()
+    private static void Main()
     {
         var regex = new Regex(@"\b[A-Z][a-z]+ [A-Z][a-z]+\b");
         var names = new List<string>();
-        var input = string.Empty;
-
+        string input;
         while ((input = Console.ReadLine()) != "end")
         {
             var matches = regex.Matches(input);
-
             foreach (Match matchedName in matches)
             {
                 names.Add(matchedName.Value);

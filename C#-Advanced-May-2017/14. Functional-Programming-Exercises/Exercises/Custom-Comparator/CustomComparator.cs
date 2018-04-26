@@ -2,13 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 
-class CustomComparator
+public class CustomComparator
 {
-    static void Main()
+    private static void Main()
     {
-        var numbers = Console.ReadLine().Split(' ')
-            .Select(int.Parse)
-            .ToArray();
+        var numbers = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
         var evenOddComparator = new EvenOddComparer();
         Array.Sort(numbers, evenOddComparator);
         Console.WriteLine(string.Join(" ", numbers));
@@ -18,11 +16,14 @@ class CustomComparator
     {
         public int Compare(int a, int b)
         {
-            if (IsEven(a) && !IsEven(b))
+            if (this.IsEven(a)
+                && !this.IsEven(b))
             {
                 return -1;
             }
-            else if (!IsEven(a) && IsEven(b))
+
+            if (!this.IsEven(a)
+                && this.IsEven(b))
             {
                 return 1;
             }

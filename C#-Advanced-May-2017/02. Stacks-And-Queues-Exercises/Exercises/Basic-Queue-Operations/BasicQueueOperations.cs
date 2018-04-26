@@ -3,12 +3,10 @@ using System.Collections.Generic;
 
 public class BasicQueueOperations
 {
-    public static void Main()
+    private static void Main()
     {
-        var tokens = Console.ReadLine()
-            .Split(' ');
-        var numbers = Console.ReadLine()
-            .Split(' ');
+        var tokens = Console.ReadLine().Split(' ');
+        var numbers = Console.ReadLine().Split(' ');
         var queue = new Queue<int>();
         var n = int.Parse(tokens[0]);
         var s = int.Parse(tokens[1]);

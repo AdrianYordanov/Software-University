@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public class StackFibonacci
 {
-    public static void Main()
+    private static void Main()
     {
         var n = ulong.Parse(Console.ReadLine());
         var stack = new Stack<ulong>(new ulong[] { 0, 1 });

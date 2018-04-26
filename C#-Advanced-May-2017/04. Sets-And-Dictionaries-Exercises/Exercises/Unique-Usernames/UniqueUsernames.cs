@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public class UniqueUsernames
 {
-    public static void Main()
+    private static void Main()
     {
         var n = int.Parse(Console.ReadLine());
         var users = new HashSet<string>();

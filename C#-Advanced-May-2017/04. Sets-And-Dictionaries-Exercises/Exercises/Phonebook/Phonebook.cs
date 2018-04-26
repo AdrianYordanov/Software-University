@@ -3,10 +3,10 @@ using System.Collections.Generic;
 
 public class Phonebook
 {
-    public static void Main()
+    private static void Main()
     {
         var phonebook = new Dictionary<string, string>();
-        var input = string.Empty;
+        string input;
         while ((input = Console.ReadLine()) != "search")
         {
             var tokens = input.Split('-');

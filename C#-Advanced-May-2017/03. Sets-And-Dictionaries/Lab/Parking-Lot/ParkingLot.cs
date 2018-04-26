@@ -4,7 +4,7 @@ using System.Text.RegularExpressions;
 
 public class ParkingLot
 {
-    public static void Main()
+    private static void Main()
     {
         var input = Console.ReadLine();
         var parking = new SortedSet<string>();

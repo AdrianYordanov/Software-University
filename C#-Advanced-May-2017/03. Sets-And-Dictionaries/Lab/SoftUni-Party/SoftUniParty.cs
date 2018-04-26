@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public class SoftUniParty
 {
-    public static void Main()
+    private static void Main()
     {
         var guestes = new SortedSet<string>();
         string input;

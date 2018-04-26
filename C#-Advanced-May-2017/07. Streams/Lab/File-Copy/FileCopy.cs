@@ -1,24 +1,23 @@
 ﻿using System;
 using System.IO;
 
-class FileCopy
+public class FileCopy
 {
-    const string SheepImagePath = "../../sheep.jpg";
-    const string DestinationPath = "../../result.jpg";
+    private const string DestinationPath = "../../result.jpg";
 
-    static void Main()
+    private const string SheepImagePath = "../../sheep.jpg";
+
+    private static void Main()
     {
         using (var source = new FileStream(SheepImagePath, FileMode.Open))
         {
             using (var destination = new FileStream(DestinationPath, FileMode.Create))
             {
                 double fileLength = source.Length;
-                byte[] buffer = new byte[4096];
-
+                var buffer = new byte[4096];
                 while (true)
                 {
-                    int readBytes = source.Read(buffer, 0, buffer.Length);
-
+                    var readBytes = source.Read(buffer, 0, buffer.Length);
                     if (readBytes == 0)
                     {
                         break;

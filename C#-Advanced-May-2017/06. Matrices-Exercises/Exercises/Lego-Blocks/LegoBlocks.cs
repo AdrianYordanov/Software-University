@@ -1,28 +1,32 @@
 ﻿using System;
 using System.Linq;
 
-class LegoBlocks
+public class LegoBlocks
 {
-    static void Main()
+    private static void Main()
     {
-        int rows = int.Parse(Console.ReadLine());
-        int[][] arrayFirst = new int[rows][];
-        int[][] arraySecond = new int[rows][];
-        for (int i = 0; i < arrayFirst.Length; i++)
+        var rows = int.Parse(Console.ReadLine());
+        var arrayFirst = new int[rows][];
+        var arraySecond = new int[rows][];
+        for (var i = 0; i < arrayFirst.Length; i++)
         {
-            arrayFirst[i] = Console.ReadLine().Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
-                .Select(int.Parse).ToArray();
-        }
-        for (int i = 0; i < arraySecond.Length; i++)
-        {
-            arraySecond[i] = Console.ReadLine().Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
-                .Select(int.Parse).ToArray();
+            arrayFirst[i] = Console.ReadLine()
+                .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+                .Select(int.Parse)
+                .ToArray();
         }
 
-        bool isRectangle = true;
+        for (var i = 0; i < arraySecond.Length; i++)
+        {
+            arraySecond[i] = Console.ReadLine()
+                .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+                .Select(int.Parse)
+                .ToArray();
+        }
+
+        var isRectangle = true;
         var firstLineLength = arrayFirst[0].Length + arraySecond[0].Length;
-
-        for (int i = 0; i < rows; i++)
+        for (var i = 0; i < rows; i++)
         {
             if (arrayFirst[i].Length + arraySecond[i].Length != firstLineLength)
             {
@@ -33,8 +37,8 @@ class LegoBlocks
 
         if (isRectangle)
         {
-            int[][] reverse = new int[rows][];
-            for (int i = 0; i < rows; i++)
+            var reverse = new int[rows][];
+            for (var i = 0; i < rows; i++)
             {
                 reverse[i] = arraySecond[i].Reverse().ToArray();
                 var resultArray = new int[arrayFirst[i].Length + reverse[i].Length];
@@ -43,16 +47,15 @@ class LegoBlocks
                 arrayFirst[i] = resultArray;
             }
 
-            for (int i = 0; i < rows; i++)
+            for (var i = 0; i < rows; i++)
             {
                 Console.WriteLine("[" + string.Join(", ", arrayFirst[i]) + "]");
             }
         }
         else
         {
-            int sumCells = 0;
-
-            for (int i = 0; i < rows; i++)
+            var sumCells = 0;
+            for (var i = 0; i < rows; i++)
             {
                 sumCells += arrayFirst[i].Length + arraySecond[i].Length;
             }

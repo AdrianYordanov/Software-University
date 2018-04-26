@@ -1,18 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 
-class MagicExchangeableWords
+public class MagicExchangeableWords
 {
-    static void Main()
+    private static void Main()
     {
         var input = Console.ReadLine().Split(' ');
         var firstString = input[0];
         var secondString = input[1];
         var areExchangeable = true;
-        var shorter = string.Empty;
-        var longer = string.Empty;
+        string shorter;
+        string longer;
         var dictionary = new Dictionary<char, char>();
-
         if (firstString.Length <= secondString.Length)
         {
             shorter = firstString;
@@ -25,13 +24,11 @@ class MagicExchangeableWords
         }
 
         var remainingString = longer.Substring(shorter.Length);
-
-        for (int i = 0; i < shorter.Length; i++)
+        for (var i = 0; i < shorter.Length; i++)
         {
             if (dictionary.ContainsKey(firstString[i]))
             {
                 var value = dictionary[firstString[i]];
-
                 if (value != secondString[i])
                 {
                     areExchangeable = false;
@@ -45,16 +42,15 @@ class MagicExchangeableWords
                     areExchangeable = false;
                     break;
                 }
-                else
-                {
-                    dictionary.Add(firstString[i], secondString[i]);
-                }
+
+                dictionary.Add(firstString[i], secondString[i]);
             }
         }
 
         foreach (var letter in remainingString)
         {
-            if (!dictionary.ContainsKey(letter) && !dictionary.ContainsValue(letter))
+            if (!dictionary.ContainsKey(letter)
+                && !dictionary.ContainsValue(letter))
             {
                 areExchangeable = false;
                 break;

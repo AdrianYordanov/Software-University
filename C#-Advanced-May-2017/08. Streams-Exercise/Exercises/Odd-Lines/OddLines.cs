@@ -1,17 +1,15 @@
 ﻿using System;
 using System.IO;
 
-class OddLines
+public class OddLines
 {
-    static void Main()
+    private static void Main()
     {
         var reader = new StreamReader("../../text.txt");
-
         using (reader)
         {
             var lineIndex = 0;
-            var line = string.Empty;
-
+            string line;
             while ((line = reader.ReadLine()) != null)
             {
                 if (lineIndex % 2 != 0)

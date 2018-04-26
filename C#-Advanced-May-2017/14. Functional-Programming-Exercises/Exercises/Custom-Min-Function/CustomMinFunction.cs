@@ -1,29 +1,24 @@
 ﻿using System;
 using System.Linq;
 
-class CustomMinFunction
+public class CustomMinFunction
 {
-    static void Main()
+    private static void Main()
     {
-        Func<int[], int> customMinFunc = (numArray) =>
-        {
-            var min = int.MaxValue;
-
-            for (int i = 0; i < numArray.Length; i++)
+        Func<int[], int> customMinFunc = numArray =>
             {
-                if (min > numArray[i])
+                var min = int.MaxValue;
+                for (var i = 0; i < numArray.Length; i++)
                 {
-                    min = numArray[i];
+                    if (min > numArray[i])
+                    {
+                        min = numArray[i];
+                    }
                 }
-            }
 
-            return min;
-        };
-
-        var input = Console.ReadLine()
-            .Split(' ')
-            .Select(int.Parse)
-            .ToArray();
+                return min;
+            };
+        var input = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
         Console.WriteLine(customMinFunc(input));
     }
 }

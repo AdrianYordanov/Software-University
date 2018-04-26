@@ -1,18 +1,17 @@
 ﻿using System.IO;
 
-class StreamWriterExample
+public class StreamWriterExample
 {
-    static void Main()
+    private static void Main()
     {
         using (var reader = new StreamReader("../../StreamWriterExample.cs"))
         {
             using (var writer = new StreamWriter("../../reversed.txt"))
             {
-                string line = reader.ReadLine();
-
+                var line = reader.ReadLine();
                 while (line != null)
                 {
-                    for (int i = line.Length - 1; i >= 0; i--)
+                    for (var i = line.Length - 1; i >= 0; i--)
                     {
                         writer.Write(line[i]);
                     }

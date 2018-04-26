@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Linq;
 
-class CountUppercaseWords
+public class CountUppercaseWords
 {
-    static void Main()
+    private static void Main()
     {
         Func<string, bool> isUpperCase = x => char.IsUpper(x[0]);
         Console.ReadLine()
-            .Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+            .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
             .Where(isUpperCase)
             .ToList()
-            .ForEach(x => Console.WriteLine(x));
+            .ForEach(Console.WriteLine);
     }
 }

@@ -1,20 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
 
-class SpecialWords
+public class SpecialWords
 {
-    static void Main()
+    private static void Main()
     {
         var specialWords = Console.ReadLine().Split(' ');
-        var text = Console.ReadLine().Split(new[] { '(', ')', '[', ']', '<', '>', ',', '-', '!', '?', ' ' }, StringSplitOptions.RemoveEmptyEntries);
+        var text = Console.ReadLine()
+            .Split(
+                new[] { '(', ')', '[', ']', '<', '>', ',', '-', '!', '?', ' ' },
+                StringSplitOptions.RemoveEmptyEntries);
         var words = new Dictionary<string, int>();
-
         foreach (var currentSpecialWord in specialWords)
         {
             var counter = 0;
             var foundIndex = 0;
             var indexOfWord = Array.IndexOf(text, currentSpecialWord, foundIndex);
-
             while (indexOfWord != -1)
             {
                 ++counter;

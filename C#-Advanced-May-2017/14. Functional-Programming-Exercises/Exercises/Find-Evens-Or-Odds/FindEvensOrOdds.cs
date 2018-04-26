@@ -1,9 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
 
-class FindEvensOrOdds
+public class FindEvensOrOdds
 {
-    static void Main()
+    private static Predicate<int> CreateFunction(string paramater)
+    {
+        if (paramater == "even")
+        {
+            return number => number % 2 == 0;
+        }
+
+        if (paramater == "odd")
+        {
+            return number => number % 2 != 0;
+        }
+
+        throw new Exception("Invalid parameter.");
+    }
+
+    private static void Main()
     {
         var input = Console.ReadLine().Split(' ');
         var left = int.Parse(input[0]);
@@ -11,8 +26,7 @@ class FindEvensOrOdds
         var parameter = Console.ReadLine();
         var numbers = new List<int>();
         var checkFunc = CreateFunction(parameter);
-
-        for (int i = left; i <= right; i++)
+        for (var i = left; i <= right; i++)
         {
             if (checkFunc(i))
             {
@@ -21,21 +35,5 @@ class FindEvensOrOdds
         }
 
         Console.WriteLine(string.Join(" ", numbers));
-    }
-
-    private static Predicate<int> CreateFunction(string paramater)
-    {
-        if (paramater == "even")
-        {
-            return number => number % 2 == 0;
-        }
-        else if (paramater == "odd")
-        {
-            return number => number % 2 != 0;
-        }
-        else
-        {
-            throw new Exception("Invalid parameter.");
-        }
     }
 }

@@ -1,12 +1,11 @@
 ﻿using System;
 
-class TextFilter
+public class TextFilter
 {
-    static void Main()
+    private static void Main()
     {
-        var bannedWords = Console.ReadLine().Split(new char[] { ' ', ',' }, StringSplitOptions.RemoveEmptyEntries);
+        var bannedWords = Console.ReadLine().Split(new[] { ' ', ',' }, StringSplitOptions.RemoveEmptyEntries);
         var text = Console.ReadLine();
-
         foreach (var word in bannedWords)
         {
             text = text.Replace(word, new string('*', word.Length));

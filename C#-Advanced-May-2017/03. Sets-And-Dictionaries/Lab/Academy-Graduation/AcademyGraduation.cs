@@ -4,7 +4,7 @@ using System.Linq;
 
 public class AcademyGraduation
 {
-    public static void Main()
+    private static void Main()
     {
         var studentsCount = int.Parse(Console.ReadLine());
         var students = new SortedDictionary<string, double[]>();
@@ -20,7 +20,7 @@ public class AcademyGraduation
 
         foreach (var name in students.Keys)
         {
-            Console.WriteLine($"{name} is graduated with {students[name] .Average()}");
+            Console.WriteLine($"{name} is graduated with {students[name].Average()}");
         }
     }
 }

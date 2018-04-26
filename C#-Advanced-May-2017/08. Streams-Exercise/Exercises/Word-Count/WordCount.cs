@@ -3,22 +3,17 @@ using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 
-class WordCount
+public class WordCount
 {
-    static void Main()
+    private static void Main()
     {
         var words = new Dictionary<string, int>();
-
         using (var wordReader = new StreamReader("../../words.txt"))
         {
-            var line = string.Empty;
-
+            string line;
             while ((line = wordReader.ReadLine()) != null)
             {
-                var wordTokens = Regex
-                        .Split(line.ToLower(), @"\W+");
-
-
+                var wordTokens = Regex.Split(line.ToLower(), @"\W+");
                 foreach (var word in wordTokens)
                 {
                     words[word] = 0;
@@ -27,13 +22,9 @@ class WordCount
 
             using (var textReader = new StreamReader("../../text.txt"))
             {
-                line = string.Empty;
-
                 while ((line = textReader.ReadLine()) != null)
                 {
-                    var wordTokens = Regex
-                        .Split(line.ToLower(), @"\W+");
-
+                    var wordTokens = Regex.Split(line.ToLower(), @"\W+");
                     foreach (var word in wordTokens)
                     {
                         if (words.ContainsKey(word))
@@ -47,7 +38,6 @@ class WordCount
             using (var writer = new StreamWriter("../../result.txt"))
             {
                 var orderedWords = words.OrderByDescending(x => x.Value);
-
                 foreach (var pair in orderedWords)
                 {
                     writer.WriteLine($"{pair.Key} - {pair.Value}");

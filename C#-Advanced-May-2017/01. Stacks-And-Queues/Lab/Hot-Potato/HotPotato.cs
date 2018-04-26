@@ -3,10 +3,9 @@ using System.Collections.Generic;
 
 public class HotPotato
 {
-    public static void Main()
+    private static void Main()
     {
-        var names = Console.ReadLine()
-            .Split(' ');
+        var names = Console.ReadLine().Split(' ');
         var n = int.Parse(Console.ReadLine());
         var queue = new Queue<string>(names);
         while (queue.Count > 1)

@@ -4,7 +4,7 @@ using System.Linq;
 
 public class MaximumElement
 {
-    public static void Main()
+    private static void Main()
     {
         var n = int.Parse(Console.ReadLine());
         var stack = new Stack<int>();
