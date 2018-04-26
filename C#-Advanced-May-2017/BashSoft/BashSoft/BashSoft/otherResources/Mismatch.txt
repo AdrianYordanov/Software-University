@@ -1,7 +1,0 @@
-aaa
-
-Mismatch at line 1 -- expected: "aaa", actual: "bbb"
-
-aaa
-
-
