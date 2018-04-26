@@ -5,8 +5,8 @@ public class SoftUniParty
 {
     public static void Main()
     {
-        var input = string.Empty;
         var guestes = new SortedSet<string>();
+        string input;
         while ((input = Console.ReadLine()) != "PARTY")
         {
             guestes.Add(input);

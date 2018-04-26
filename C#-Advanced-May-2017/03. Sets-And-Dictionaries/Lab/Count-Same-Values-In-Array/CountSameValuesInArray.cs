@@ -7,12 +7,7 @@ public class CountSameValuesInArray
     public static void Main()
     {
         var numbers = Console.ReadLine()
-            .Split(
-                new[]
-                {
-                    ' '
-                },
-                StringSplitOptions.RemoveEmptyEntries)
+            .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
             .Select(double.Parse)
             .ToArray();
         var dictionary = new SortedDictionary<double, int>();

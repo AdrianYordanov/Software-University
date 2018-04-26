@@ -12,12 +12,7 @@ public class AcademyGraduation
         {
             var name = Console.ReadLine();
             var grades = Console.ReadLine()
-                .Split(
-                    new[]
-                    {
-                        ' '
-                    },
-                    StringSplitOptions.RemoveEmptyEntries)
+                .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
                 .Select(double.Parse)
                 .ToArray();
             students.Add(name, grades);
