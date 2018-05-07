@@ -1,2 +1,0 @@
-Iterator pattern - Design pattern in which an iterator is used to traverse a container and access the container's elements.
-Strategy pattern - Behavioural software design pattern that enables selecting an algorithm at runtime.
