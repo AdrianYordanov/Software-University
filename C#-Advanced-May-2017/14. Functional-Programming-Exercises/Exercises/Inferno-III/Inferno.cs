@@ -6,35 +6,35 @@ public class Inferno
 {
     private static readonly Func<string, int, int[], List<int>> GetExcludedIndices =
         (chosenFilter, wantedSum, numbers) =>
+        {
+            var excluded = new List<int>();
+            for (var i = 0; i < numbers.Length; i++)
             {
-                var excluded = new List<int>();
-                for (var i = 0; i < numbers.Length; i++)
+                var sum = 0;
+                var current = numbers[i];
+                var leftNeighbour = i == 0 ? 0 : numbers[i - 1];
+                var rightNeighbour = i == numbers.Length - 1 ? 0 : numbers[i + 1];
+                switch (chosenFilter)
                 {
-                    var sum = 0;
-                    var current = numbers[i];
-                    var leftNeighbour = i == 0 ? 0 : numbers[i - 1];
-                    var rightNeighbour = i == numbers.Length - 1 ? 0 : numbers[i + 1];
-                    switch (chosenFilter)
-                    {
-                        case "Sum Left":
-                            sum = leftNeighbour + current;
-                            break;
-                        case "Sum Right":
-                            sum = rightNeighbour + current;
-                            break;
-                        case "Sum Left Right":
-                            sum = leftNeighbour + rightNeighbour + current;
-                            break;
-                    }
-
-                    if (sum == wantedSum)
-                    {
-                        excluded.Add(i);
-                    }
+                    case "Sum Left":
+                        sum = leftNeighbour + current;
+                        break;
+                    case "Sum Right":
+                        sum = rightNeighbour + current;
+                        break;
+                    case "Sum Left Right":
+                        sum = leftNeighbour + rightNeighbour + current;
+                        break;
                 }
 
-                return excluded;
-            };
+                if (sum == wantedSum)
+                {
+                    excluded.Add(i);
+                }
+            }
+
+            return excluded;
+        };
 
     private static void Main()
     {

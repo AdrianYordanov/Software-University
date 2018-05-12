@@ -21,43 +21,43 @@ public class PredicateParty
                 switch (criteria)
                 {
                     case "StartsWith":
+                    {
+                        for (var i = 0; i < names.Count; i++)
                         {
-                            for (var i = 0; i < names.Count; i++)
+                            if (startsWith(names[i]))
                             {
-                                if (startsWith(names[i]))
-                                {
-                                    names.Insert(i, names[i++]);
-                                }
+                                names.Insert(i, names[i++]);
                             }
-
-                            break;
                         }
+
+                        break;
+                    }
 
                     case "EndsWith":
+                    {
+                        for (var i = 0; i < names.Count; i++)
                         {
-                            for (var i = 0; i < names.Count; i++)
+                            if (endsWith(names[i]))
                             {
-                                if (endsWith(names[i]))
-                                {
-                                    names.Insert(i, names[i++]);
-                                }
+                                names.Insert(i, names[i++]);
                             }
-
-                            break;
                         }
+
+                        break;
+                    }
 
                     case "Length":
+                    {
+                        for (var i = 0; i < names.Count; i++)
                         {
-                            for (var i = 0; i < names.Count; i++)
+                            if (lengthIs(names[i]))
                             {
-                                if (lengthIs(names[i]))
-                                {
-                                    names.Insert(i, names[i++]);
-                                }
+                                names.Insert(i, names[i++]);
                             }
-
-                            break;
                         }
+
+                        break;
+                    }
                 }
             }
             else if (command == "Remove")

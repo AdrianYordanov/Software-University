@@ -59,31 +59,31 @@ public class ThePartyReservationFilterModule
         startsWithCollection.ToList()
             .ForEach(
                 x =>
-                    {
-                        Predicate<string> startsWith = str => str.StartsWith(x);
-                        names = names.Where(name => !startsWith(name)).ToList();
-                    });
+                {
+                    Predicate<string> startsWith = str => str.StartsWith(x);
+                    names = names.Where(name => !startsWith(name)).ToList();
+                });
         endsWithCollection.ToList()
             .ForEach(
                 x =>
-                    {
-                        Predicate<string> endsWith = str => str.EndsWith(x);
-                        names = names.Where(name => !endsWith(name)).ToList();
-                    });
+                {
+                    Predicate<string> endsWith = str => str.EndsWith(x);
+                    names = names.Where(name => !endsWith(name)).ToList();
+                });
         lengthsCollection.ToList()
             .ForEach(
                 x =>
-                    {
-                        Predicate<string> lengthIs = str => str.Length == x;
-                        names = names.Where(name => !lengthIs(name)).ToList();
-                    });
+                {
+                    Predicate<string> lengthIs = str => str.Length == x;
+                    names = names.Where(name => !lengthIs(name)).ToList();
+                });
         containsCollection.ToList()
             .ForEach(
                 x =>
-                    {
-                        Predicate<string> contains = str => str.Contains(x);
-                        names = names.Where(name => !contains(name)).ToList();
-                    });
+                {
+                    Predicate<string> contains = str => str.Contains(x);
+                    names = names.Where(name => !contains(name)).ToList();
+                });
         Console.WriteLine(string.Join(" ", names));
     }
 }

@@ -28,31 +28,31 @@ public class LegendaryFarming
                     case "shards":
                     case "fragments":
                     case "motes":
+                    {
+                        remainingMaterials[material] += quantity;
+                        if (winner == string.Empty
+                            && remainingMaterials[material] >= 250)
                         {
-                            remainingMaterials[material] += quantity;
-                            if (winner == string.Empty
-                                && remainingMaterials[material] >= 250)
-                            {
-                                winner = material;
-                                remainingMaterials[material] -= 250;
-                            }
-
-                            break;
+                            winner = material;
+                            remainingMaterials[material] -= 250;
                         }
+
+                        break;
+                    }
 
                     default:
+                    {
+                        if (otherMaterials.ContainsKey(material))
                         {
-                            if (otherMaterials.ContainsKey(material))
-                            {
-                                otherMaterials[material] += quantity;
-                            }
-                            else
-                            {
-                                otherMaterials.Add(material, quantity);
-                            }
-
-                            break;
+                            otherMaterials[material] += quantity;
                         }
+                        else
+                        {
+                            otherMaterials.Add(material, quantity);
+                        }
+
+                        break;
+                    }
                 }
 
                 if (winner != string.Empty)

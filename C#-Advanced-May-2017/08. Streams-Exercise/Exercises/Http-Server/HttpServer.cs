@@ -25,47 +25,47 @@ public class HttpServer
                 switch (path)
                 {
                     case "HTTP":
+                    {
+                        using (var reader = new StreamReader("../../pages/index.html"))
                         {
-                            using (var reader = new StreamReader("../../pages/index.html"))
+                            string line;
+                            while ((line = reader.ReadLine()) != null)
                             {
-                                string line;
-                                while ((line = reader.ReadLine()) != null)
-                                {
-                                    html += line + "\n";
-                                }
+                                html += line + "\n";
                             }
-
-                            break;
                         }
+
+                        break;
+                    }
 
                     case "info":
+                    {
+                        using (var reader = new StreamReader("../../pages/info.html"))
                         {
-                            using (var reader = new StreamReader("../../pages/info.html"))
+                            string line;
+                            while ((line = reader.ReadLine()) != null)
                             {
-                                string line;
-                                while ((line = reader.ReadLine()) != null)
-                                {
-                                    html += line + "\n";
-                                }
+                                html += line + "\n";
                             }
-
-                            html = string.Format(html, DateTime.Now, Environment.ProcessorCount);
-                            break;
                         }
+
+                        html = string.Format(html, DateTime.Now, Environment.ProcessorCount);
+                        break;
+                    }
 
                     default:
+                    {
+                        using (var reader = new StreamReader("../../pages/error.html"))
                         {
-                            using (var reader = new StreamReader("../../pages/error.html"))
+                            string line;
+                            while ((line = reader.ReadLine()) != null)
                             {
-                                string line;
-                                while ((line = reader.ReadLine()) != null)
-                                {
-                                    html += line + "\n";
-                                }
+                                html += line + "\n";
                             }
-
-                            break;
                         }
+
+                        break;
+                    }
                 }
 
                 var htmlBytes = Encoding.UTF8.GetBytes(html);

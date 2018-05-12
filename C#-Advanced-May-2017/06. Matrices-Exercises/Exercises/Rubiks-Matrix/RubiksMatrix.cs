@@ -27,82 +27,82 @@ public class RubiksMatrix
             switch (command)
             {
                 case "up":
+                {
+                    var queue = new Queue<int>();
+                    foreach (var row in matrix)
                     {
-                        var queue = new Queue<int>();
-                        foreach (var row in matrix)
-                        {
-                            queue.Enqueue(row[selectedIndex]);
-                        }
-
-                        for (var i = 0; i < (rollTimes % matrix.Length); i++)
-                        {
-                            var number = queue.Dequeue();
-                            queue.Enqueue(number);
-                        }
-
-                        foreach (var row in matrix)
-                        {
-                            row[selectedIndex] = queue.Dequeue();
-                        }
-
-                        break;
+                        queue.Enqueue(row[selectedIndex]);
                     }
+
+                    for (var i = 0; i < (rollTimes % matrix.Length); i++)
+                    {
+                        var number = queue.Dequeue();
+                        queue.Enqueue(number);
+                    }
+
+                    foreach (var row in matrix)
+                    {
+                        row[selectedIndex] = queue.Dequeue();
+                    }
+
+                    break;
+                }
 
                 case "down":
+                {
+                    var queue = new Queue<int>();
+                    for (var rowIndex = matrix.Length - 1; rowIndex >= 0; rowIndex--)
                     {
-                        var queue = new Queue<int>();
-                        for (var rowIndex = matrix.Length - 1; rowIndex >= 0; rowIndex--)
-                        {
-                            queue.Enqueue(matrix[rowIndex][selectedIndex]);
-                        }
-
-                        for (var i = 0; i < (rollTimes % matrix.Length); i++)
-                        {
-                            var number = queue.Dequeue();
-                            queue.Enqueue(number);
-                        }
-
-                        for (var rowIndex = matrix.Length - 1; rowIndex >= 0; rowIndex--)
-                        {
-                            matrix[rowIndex][selectedIndex] = queue.Dequeue();
-                        }
-
-                        break;
+                        queue.Enqueue(matrix[rowIndex][selectedIndex]);
                     }
+
+                    for (var i = 0; i < (rollTimes % matrix.Length); i++)
+                    {
+                        var number = queue.Dequeue();
+                        queue.Enqueue(number);
+                    }
+
+                    for (var rowIndex = matrix.Length - 1; rowIndex >= 0; rowIndex--)
+                    {
+                        matrix[rowIndex][selectedIndex] = queue.Dequeue();
+                    }
+
+                    break;
+                }
 
                 case "left":
+                {
+                    for (var i = 0; i < (rollTimes % matrix[selectedIndex].Length); i++)
                     {
-                        for (var i = 0; i < (rollTimes % matrix[selectedIndex].Length); i++)
-                        {
-                            var first = matrix[selectedIndex][0];
-                            Array.Copy(
-                                matrix[selectedIndex],
-                                1,
-                                matrix[selectedIndex],
-                                0,
-                                matrix[selectedIndex].Length - 1);
-                            matrix[selectedIndex][matrix[selectedIndex].Length - 1] = first;
-                        }
-
-                        break;
+                        var first = matrix[selectedIndex][0];
+                        Array.Copy(
+                            matrix[selectedIndex],
+                            1,
+                            matrix[selectedIndex],
+                            0,
+                            matrix[selectedIndex].Length - 1);
+                        matrix[selectedIndex][matrix[selectedIndex].Length - 1] = first;
                     }
+
+                    break;
+                }
 
                 case "right":
+                {
+                    for (var i = 0; i < (rollTimes % matrix[selectedIndex].Length); i++)
                     {
-                        for (var i = 0; i < (rollTimes % matrix[selectedIndex].Length); i++)
-                        {
-                            var last = matrix[selectedIndex][matrix[selectedIndex].Length - 1];
-                            Array.Copy(
-                                matrix[selectedIndex],
-                                0,
-                                matrix[selectedIndex],
-                                1,
-                                matrix[selectedIndex].Length - 1);
-                            matrix[selectedIndex][0] = last;
-                        }
-
-                        break;
+                        var last = matrix[selectedIndex][matrix[selectedIndex].Length - 1];
+                        Array.Copy(
+                            matrix[selectedIndex],
+                            0,
+                            matrix[selectedIndex],
+                            1,
+                            matrix[selectedIndex].Length - 1);
+                        matrix[selectedIndex][0] = last;
                     }
+
+                    break;
+                }
             }
         }
 

@@ -26,11 +26,11 @@ public class StudentsJoinedToSpecialties
                 student => student.FacultyNumber,
                 specialty => specialty.FacultyNumber,
                 (student, specialty) => new
-                                            {
-                                                student.StudentName,
-                                                FacultyNumbet = student.FacultyNumber,
-                                                specialty.SpecialtyName
-                                            })
+                                        {
+                                            student.StudentName,
+                                            FacultyNumbet = student.FacultyNumber,
+                                            specialty.SpecialtyName
+                                        })
             .OrderBy(student => student.StudentName);
         foreach (var item in result)
         {

@@ -22,74 +22,74 @@ public class RotateMatrix
         switch (number)
         {
             case 0:
+            {
+                for (var stringIndex = 0; stringIndex < strings.Count; stringIndex++)
                 {
-                    for (var stringIndex = 0; stringIndex < strings.Count; stringIndex++)
-                    {
-                        Console.WriteLine(strings[stringIndex]);
-                    }
-
-                    break;
+                    Console.WriteLine(strings[stringIndex]);
                 }
+
+                break;
+            }
 
             case 90:
+            {
+                strings.Reverse();
+                var maxLength = strings.Max(x => x.Length);
+                for (var charIndex = 0; charIndex < maxLength; charIndex++)
                 {
-                    strings.Reverse();
-                    var maxLength = strings.Max(x => x.Length);
-                    for (var charIndex = 0; charIndex < maxLength; charIndex++)
+                    for (var stringIndex = 0; stringIndex < strings.Count; ++stringIndex)
                     {
-                        for (var stringIndex = 0; stringIndex < strings.Count; ++stringIndex)
+                        if (charIndex < strings[stringIndex].Length)
                         {
-                            if (charIndex < strings[stringIndex].Length)
-                            {
-                                Console.Write(strings[stringIndex][charIndex]);
-                            }
-                            else
-                            {
-                                Console.Write(' ');
-                            }
+                            Console.Write(strings[stringIndex][charIndex]);
                         }
-
-                        Console.WriteLine();
+                        else
+                        {
+                            Console.Write(' ');
+                        }
                     }
 
-                    break;
+                    Console.WriteLine();
                 }
+
+                break;
+            }
 
             case 180:
+            {
+                strings.Reverse();
+                var maxLength = strings.Max(x => x.Length);
+                for (var stringIndex = 0; stringIndex < strings.Count; stringIndex++)
                 {
-                    strings.Reverse();
-                    var maxLength = strings.Max(x => x.Length);
-                    for (var stringIndex = 0; stringIndex < strings.Count; stringIndex++)
-                    {
-                        var reversedString = new string(strings[stringIndex].Reverse().ToArray());
-                        Console.WriteLine(reversedString.PadLeft(maxLength));
-                    }
-
-                    break;
+                    var reversedString = new string(strings[stringIndex].Reverse().ToArray());
+                    Console.WriteLine(reversedString.PadLeft(maxLength));
                 }
+
+                break;
+            }
 
             case 270:
+            {
+                var maxLength = strings.Max(x => x.Length);
+                for (var charIndex = maxLength - 1; charIndex >= 0; charIndex--)
                 {
-                    var maxLength = strings.Max(x => x.Length);
-                    for (var charIndex = maxLength - 1; charIndex >= 0; charIndex--)
+                    for (var stringIndex = 0; stringIndex < strings.Count; ++stringIndex)
                     {
-                        for (var stringIndex = 0; stringIndex < strings.Count; ++stringIndex)
+                        if (charIndex < strings[stringIndex].Length)
                         {
-                            if (charIndex < strings[stringIndex].Length)
-                            {
-                                Console.Write(strings[stringIndex][charIndex]);
-                            }
-                            else
-                            {
-                                Console.Write(' ');
-                            }
+                            Console.Write(strings[stringIndex][charIndex]);
                         }
-
-                        Console.WriteLine();
+                        else
+                        {
+                            Console.Write(' ');
+                        }
                     }
 
-                    break;
+                    Console.WriteLine();
                 }
+
+                break;
+            }
         }
     }
 }
