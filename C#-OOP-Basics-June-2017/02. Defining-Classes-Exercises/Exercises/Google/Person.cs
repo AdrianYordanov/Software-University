@@ -1,12 +1,10 @@
 ﻿using System.Collections.Generic;
 
-class Person
+public class Person
 {
-    private string name;
-
     public Person(string name)
     {
-        this.name = name;
+        this.Name = name;
         this.Company = null;
         this.Car = null;
         this.Parents = new List<Parent>();
@@ -14,24 +12,26 @@ class Person
         this.Pokemons = new List<Pokemon>();
     }
 
-    public Company Company { get; set; }
+    public string Name { get; }
 
-    public Car Car { get; set; }
+    public Company Company { private get; set; }
 
-    public List<Parent> Parents { get; set; }
+    public Car Car { private get; set; }
 
-    public List<Child> Children { get; set; }
+    public List<Parent> Parents { get; }
 
-    public List<Pokemon> Pokemons { get; set; }
+    public List<Child> Children { get; }
+
+    public List<Pokemon> Pokemons { get; }
 
     public override string ToString()
     {
         var result = string.Empty;
-        result += $"{this.name}\n";
+        result += $"{this.Name}\n";
         result += $"Company:\n";
-        result += this.Company == null ? string.Empty : this.Company.ToString() + "\n";
+        result += this.Company == null ? string.Empty : this.Company + "\n";
         result += $"Car:\n";
-        result += this.Car == null ? string.Empty : this.Car.ToString() + "\n";
+        result += this.Car == null ? string.Empty : this.Car + "\n";
         result += $"Pokemon:\n";
         result += this.Pokemons.Count == 0 ? string.Empty : string.Join("\n", this.Pokemons) + "\n";
         result += $"Parents:\n";

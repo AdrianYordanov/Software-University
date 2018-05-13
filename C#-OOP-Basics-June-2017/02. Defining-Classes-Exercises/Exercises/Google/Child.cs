@@ -1,4 +1,4 @@
-﻿class Child
+﻿public class Child
 {
     public Child(string name, string birthdate)
     {
@@ -6,9 +6,9 @@
         this.Birthdate = birthdate;
     }
 
-    public string Name { get; set; }
+    private string Name { get; }
 
-    public string Birthdate { get; set; }
+    private string Birthdate { get; }
 
     public override string ToString()
     {

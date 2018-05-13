@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-class Family
+public class Family
 {
-    private List<Person> members;
+    private readonly List<Person> members;
 
     public Family()
     {
@@ -17,8 +17,6 @@ class Family
 
     public Person GetOldestMember()
     {
-        return this.members
-            .OrderByDescending(person => person.Age)
-            .First();
+        return this.members.OrderByDescending(person => person.Age).First();
     }
 }

@@ -1,4 +1,4 @@
-﻿class Company
+﻿public class Company
 {
     public Company(string name, string department, decimal salary)
     {
@@ -7,11 +7,11 @@
         this.Salary = salary;
     }
 
-    public string Name { get; set; }
+    private string Name { get; }
 
-    public string Department { get; set; }
+    private string Department { get; }
 
-    public decimal Salary { get; set; }
+    private decimal Salary { get; }
 
     public override string ToString()
     {

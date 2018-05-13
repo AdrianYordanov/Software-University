@@ -1,19 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 
-class StartUp
+public class StartUp
 {
-    static void Main()
+    private static void Main()
     {
-        var accounts = new List<BankAccount>()
-        {
-            new BankAccount(){ ID = 1, Balance = 15},
-            new BankAccount(){ ID = 1, Balance = 20},
-            new BankAccount(){ ID = 1, Balance = 3},
-            new BankAccount(){ ID = 1, Balance = 5},
-        };
-
+        var accounts = new List<BankAccount>
+                       {
+                           new BankAccount(1, 15),
+                           new BankAccount(1, 20),
+                           new BankAccount(1, 3),
+                           new BankAccount(1, 5)
+                       };
         var person = new Person("Pehso", 18, accounts);
-        Console.WriteLine(person.GetBalance());
+        Console.WriteLine($"{person.Name} {person.Age} {person.GetBalance()}");
     }
 }

@@ -1,14 +1,9 @@
-﻿class Cat
+﻿public class Cat
 {
-    private string name;
-
-    public Cat(string name)
+    protected Cat(string name)
     {
         this.Name = name;
     }
-    public string Name
-    {
-        get { return this.name; }
-        private set { this.name = value; }
-    }
+
+    public string Name { get; }
 }

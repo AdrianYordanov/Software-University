@@ -1,31 +1,20 @@
 ﻿using System;
 
-class DateModifier
+public class DateModifier
 {
-    private double result;
-    private DateTime firstDate;
-    private DateTime secondDate;
-
     public DateModifier(string firstDate, string secondDate)
     {
-        var isFirstParsed = DateTime.TryParse(firstDate, out this.firstDate);
-        var isSecondParsed = DateTime.TryParse(secondDate, out this.secondDate);
-        
+        var isFirstParsed = DateTime.TryParse(firstDate, out var first);
+        var isSecondParsed = DateTime.TryParse(secondDate, out var second);
         if (isFirstParsed && isSecondParsed)
         {
-            this.result =Math.Abs((this.firstDate - this.secondDate).TotalDays);
+            this.Result = Math.Abs((first - second).TotalDays);
         }
         else
         {
-            throw new Exception("Invalid Dates");
+            throw new ArgumentException("Invalid Dates");
         }
     }
 
-    public double Result
-    {
-        get
-        {
-            return this.result;
-        }
-    }
+    public double Result { get; }
 }

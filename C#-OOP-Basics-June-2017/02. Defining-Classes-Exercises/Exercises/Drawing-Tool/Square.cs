@@ -1,20 +1,19 @@
-﻿class Square : Figure
+﻿public class Square : Figure
 {
-    private int side;
-
     public Square(int side)
     {
-        this.side = side;
+        this.Side = side;
     }
+
+    private int Side { get; }
 
     public override string Draw()
     {
-        var firstLastLine = $"|{new string('-', this.side)}|";
+        var firstLastLine = $"|{new string('-', this.Side)}|";
         var result = firstLastLine + "\n";
-
-        for (int i = 0; i < this.side - 2; i++)
+        for (var i = 0; i < (this.Side - 2); i++)
         {
-            result += $"|{new string(' ', this.side)}|\n";
+            result += $"|{new string(' ', this.Side)}|\n";
         }
 
         result += firstLastLine;

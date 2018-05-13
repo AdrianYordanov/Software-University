@@ -1,7 +1,19 @@
-﻿class Car
+﻿public class Car
 {
-    public Car(string model, int speed, int power, int weight, string type,
-        double pressure1, int age1, double pressure2, int age2, double pressure3, int age3, double pressure4, int age4)
+    public Car(
+        string model,
+        int speed,
+        int power,
+        int weight,
+        string type,
+        double pressure1,
+        int age1,
+        double pressure2,
+        int age2,
+        double pressure3,
+        int age3,
+        double pressure4,
+        int age4)
     {
         this.Model = model;
         this.CarEngine = new Engine(speed, power);
@@ -13,13 +25,13 @@
         this.Tires[3] = new Tire(pressure4, age4);
     }
 
-    public string Model { get; set; }
+    public Engine CarEngine { get; }
 
-    public Engine CarEngine { get; set; }
+    public Cargo CarCargo { get; }
 
-    public Cargo CarCargo { get; set; }
+    public Tire[] Tires { get; }
 
-    public Tire[] Tires { get; set; }
+    private string Model { get; }
 
     public override string ToString()
     {

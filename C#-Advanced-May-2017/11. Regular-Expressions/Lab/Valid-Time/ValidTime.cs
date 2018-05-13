@@ -3,12 +3,6 @@ using System.Text.RegularExpressions;
 
 public class ValidTime
 {
-    private static bool IsValidHour(string hourToString)
-    {
-        var hour = int.Parse(hourToString);
-        return hour <= 12;
-    }
-
     private static void Main()
     {
         var regex = new Regex("(?<hours>[01][0-9]):(?<minutes>[0-6][0-9]):(?<seconds>[0-6][0-9]) (A|P)M");
@@ -20,5 +14,11 @@ public class ValidTime
                     "valid" :
                     "invalid");
         }
+    }
+
+    private static bool IsValidHour(string hourToString)
+    {
+        var hour = int.Parse(hourToString);
+        return hour <= 12;
     }
 }

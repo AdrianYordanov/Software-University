@@ -1,4 +1,4 @@
-﻿class Car
+﻿public class Car
 {
     public Car(string model, int speed)
     {
@@ -6,9 +6,9 @@
         this.Speed = speed;
     }
 
-    public string Model { get; set; }
+    private string Model { get; }
 
-    public int Speed { get; set; }
+    private int Speed { get; }
 
     public override string ToString()
     {

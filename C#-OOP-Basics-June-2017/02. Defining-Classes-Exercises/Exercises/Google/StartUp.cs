@@ -1,19 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 
-class StartUp
+public class StartUp
 {
-    static void Main()
+    private static void Main()
     {
-        var input = string.Empty;
+        string input;
         var data = new Dictionary<string, Person>();
-
         while ((input = Console.ReadLine()) != "End")
         {
             var tokens = input.Split(' ');
             var name = tokens[0];
             var objectType = tokens[1];
-
             if (!data.ContainsKey(name))
             {
                 data.Add(name, new Person(name));

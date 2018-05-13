@@ -1,4 +1,4 @@
-﻿class Engine
+﻿public class Engine
 {
     public Engine(int speed, int power)
     {
@@ -6,7 +6,7 @@
         this.Power = power;
     }
 
-    public int Speed { get; set; }
+    public int Speed { get; }
 
-    public int Power { get; set; }
+    public int Power { get; }
 }

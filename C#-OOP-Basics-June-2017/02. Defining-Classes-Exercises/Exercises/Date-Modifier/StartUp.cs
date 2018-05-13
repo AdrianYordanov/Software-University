@@ -1,12 +1,19 @@
 ﻿using System;
 
-class StartUp
+public class StartUp
 {
-    static void Main()
+    private static void Main()
     {
         var firstDate = Console.ReadLine();
         var secondDate = Console.ReadLine();
-        var modifier = new DateModifier(firstDate, secondDate);
-        Console.WriteLine(modifier.Result);
+        try
+        {
+            var modifier = new DateModifier(firstDate, secondDate);
+            Console.WriteLine(modifier.Result);
+        }
+        catch (ArgumentException ae)
+        {
+            Console.WriteLine(ae.Message);
+        }
     }
 }

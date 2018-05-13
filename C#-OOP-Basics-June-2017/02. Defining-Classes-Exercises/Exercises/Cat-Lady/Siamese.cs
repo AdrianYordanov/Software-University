@@ -1,20 +1,15 @@
-﻿class Siamese : Cat
+﻿public class Siamese : Cat
 {
-    private int earSize;
-
-    public Siamese(string name, int size) : base(name)
+    public Siamese(string name, int earSize)
+        : base(name)
     {
-        this.EarSize = size;
+        this.EarSize = earSize;
     }
 
-    public int EarSize
-    {
-        get { return this.earSize; }
-        private set { this.earSize = value; }
-    }
+    private int EarSize { get; }
 
     public override string ToString()
     {
-        return $"Siamese {base.Name} {this.EarSize}";
+        return $"Siamese {this.Name} {this.EarSize}";
     }
 }

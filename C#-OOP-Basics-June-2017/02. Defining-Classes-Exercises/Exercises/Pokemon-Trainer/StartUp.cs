@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 
-class StartUp
+public class StartUp
 {
-    static void Main()
+    private static void Main()
     {
-        var input = string.Empty;
+        string input;
         var trainers = new Dictionary<string, Trainer>();
-
         while ((input = Console.ReadLine()) != "Tournament")
         {
             var tokens = input.Split(' ');
@@ -17,7 +16,6 @@ class StartUp
             var pokemonElement = tokens[2];
             var pokemonHealth = int.Parse(tokens[3]);
             var createdPokemon = new Pokemon(pokemonName, pokemonElement, pokemonHealth);
-
             if (!trainers.ContainsKey(trainerName))
             {
                 trainers.Add(trainerName, new Trainer(trainerName));
@@ -34,9 +32,7 @@ class StartUp
             }
         }
 
-        var result = trainers.Values
-            .OrderByDescending(trainer => trainer.Badges);
-
+        var result = trainers.Values.OrderByDescending(trainer => trainer.Badges);
         Console.WriteLine(string.Join(Environment.NewLine, result));
     }
 }

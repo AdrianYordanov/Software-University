@@ -3,25 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-class StartUp
+public class StartUp
 {
-    static void Main()
+    private static void Main()
     {
         var allPeople = new List<Person>();
         var searchedPerson = Console.ReadLine();
-
-        var inputLine = string.Empty;
+        string inputLine;
         while ((inputLine = Console.ReadLine()) != "End")
         {
             if (inputLine.Contains("-"))
             {
-                var tokens = inputLine
-                    .Split('-')
-                    .Select(x => x.Trim())
-                    .ToArray();
+                var tokens = inputLine.Split('-').Select(x => x.Trim()).ToArray();
                 var parentParam = tokens[0];
                 var childParam = tokens[1];
-
                 var parent = new Person();
                 if (parentParam.Contains("/"))
                 {
@@ -43,7 +38,6 @@ class StartUp
                 }
 
                 AddParentIfMissing(allPeople, parent);
-
                 if (parent.Name != null)
                 {
                     allPeople.FirstOrDefault(p => p.Name == parent.Name).AddChild(child);
@@ -59,22 +53,21 @@ class StartUp
                 var name = $"{tokens[0]} {tokens[1]}";
                 var date = tokens[2];
                 var added = false;
-
-                for (int i = 0; i < allPeople.Count; i++)
+                foreach (var people in allPeople)
                 {
-                    if (allPeople[i].Name == name)
+                    if (people.Name == name)
                     {
-                        allPeople[i].BirthDate = date;
+                        people.BirthDate = date;
                         added = true;
                     }
 
-                    if (allPeople[i].BirthDate == date)
+                    if (people.BirthDate == date)
                     {
-                        allPeople[i].Name = name;
+                        people.Name = name;
                         added = true;
                     }
 
-                    allPeople[i].AddChildrenInfo(name, date);
+                    people.AddChildrenInfo(name, date);
                 }
 
                 if (!added)
@@ -90,7 +83,6 @@ class StartUp
     private static void PrintParentsAndChildren(List<Person> allPeople, string searchedPersonParam)
     {
         Person personWithTree;
-
         if (searchedPersonParam.Contains("/"))
         {
             personWithTree = allPeople.FirstOrDefault(p => p.BirthDate == searchedPersonParam);
@@ -102,16 +94,13 @@ class StartUp
 
         var result = new StringBuilder();
         result.AppendLine($"{personWithTree.Name} {personWithTree.BirthDate}");
-
         result.AppendLine("Parents:");
-
         foreach (var parent in allPeople.Where(p => p.FindChildName(personWithTree.Name) != null))
         {
             result.AppendLine($"{parent.Name} {parent.BirthDate}");
         }
 
         result.AppendLine("Children:");
-
         foreach (var child in allPeople.FirstOrDefault(p => p.Name == personWithTree.Name).Children)
         {
             result.AppendLine($"{child.Name} {child.BirthDate}");
@@ -122,12 +111,14 @@ class StartUp
 
     private static void AddParentIfMissing(List<Person> allPeople, Person parent)
     {
-        if (parent.Name != null && allPeople.Any(p => p.Name == parent.Name))
+        if (parent.Name != null
+            && allPeople.Any(p => p.Name == parent.Name))
         {
             return;
         }
 
-        if (parent.BirthDate != null && allPeople.Any(p => p.BirthDate == parent.BirthDate))
+        if (parent.BirthDate != null
+            && allPeople.Any(p => p.BirthDate == parent.BirthDate))
         {
             return;
         }

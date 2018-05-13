@@ -1,6 +1,6 @@
 ﻿using System;
 
-class CorDraw
+public class CorDraw
 {
     public CorDraw(Figure figure)
     {

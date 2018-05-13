@@ -1,4 +1,4 @@
-﻿abstract class Figure
+﻿public abstract class Figure
 {
     public abstract string Draw();
 }

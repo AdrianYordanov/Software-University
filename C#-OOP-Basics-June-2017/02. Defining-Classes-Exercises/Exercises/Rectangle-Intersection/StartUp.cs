@@ -2,16 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 
-class StartUp
+public class StartUp
 {
-    static void Main()
+    private static void Main()
     {
         var input = Console.ReadLine();
         var rectanglesCount = int.Parse(input.Split(' ')[0]);
         var checksCount = int.Parse(input.Split(' ')[1]);
         var rectangles = new List<Rectangle>();
-
-        for (int i = 0; i < rectanglesCount; i++)
+        for (var i = 0; i < rectanglesCount; i++)
         {
             var tokens = Console.ReadLine().Split(' ');
             var id = tokens[0];
@@ -22,12 +21,12 @@ class StartUp
             rectangles.Add(new Rectangle(id, width, height, x, y));
         }
 
-        for (int i = 0; i < checksCount; i++)
+        for (var i = 0; i < checksCount; i++)
         {
             var tokens = Console.ReadLine().Split(' ');
-            var firstRectangle = rectangles.First(rectangle => rectangle.ID == tokens[0]);
-            var secondRectangle = rectangles.First(rectangle => rectangle.ID == tokens[1]);
-            Console.WriteLine((firstRectangle.IsIntersect(secondRectangle)).ToString().ToLower());
+            var firstRectangle = rectangles.First(rectangle => rectangle.Id == tokens[0]);
+            var secondRectangle = rectangles.First(rectangle => rectangle.Id == tokens[1]);
+            Console.WriteLine(firstRectangle.IsIntersect(secondRectangle).ToString().ToLower());
         }
     }
 }

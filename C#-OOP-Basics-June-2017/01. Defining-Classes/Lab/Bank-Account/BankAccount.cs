@@ -1,29 +1,12 @@
-﻿class BankAccount
+﻿public class BankAccount
 {
-    private int id;
-    private double balance;
-
-    public int ID
+    public BankAccount(int id, double ballanance)
     {
-        get
-        {
-            return this.id;
-        }
-        set
-        {
-            this.id = value;
-        }
+        this.Id = id;
+        this.Balance = ballanance;
     }
 
-    public double Balance
-    {
-        get
-        {
-            return this.balance;
-        }
-        set
-        {
-            this.balance = value;
-        }
-    }
+    public int Id { get; }
+
+    public double Balance { get; }
 }

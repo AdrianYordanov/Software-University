@@ -1,20 +1,15 @@
-﻿class Cymric : Cat
+﻿public class Cymric : Cat
 {
-    private double furLength;
-
-    public Cymric(string name, double length) : base(name)
+    public Cymric(string name, double furLength)
+        : base(name)
     {
-        this.FurLength = length;
+        this.FurLength = furLength;
     }
 
-    public double FurLength
-    {
-        get { return this.furLength; }
-        private set { this.furLength = value; }
-    }
+    private double FurLength { get; }
 
     public override string ToString()
     {
-        return $"Cymric {base.Name} {this.FurLength:f2}";
+        return $"Cymric {this.Name} {this.FurLength:f2}";
     }
 }

@@ -1,16 +1,18 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Reflection;
 
-class StartUp
+public class StartUp
 {
-    static void Main()
+    private static void Main()
     {
-        var pesho = new Person() { name = "Pesho", age = 20 };
-        var gosho = new Person() { name = "Gosho", age = 18 };
-        var stamat = new Person() { name = "Stamat", age = 43 };
-
         var personType = typeof(Person);
         var fields = personType.GetFields(BindingFlags.Public | BindingFlags.Instance);
         Console.WriteLine(fields.Length);
+        var people = new List<Person> { new Person("Pesho", 20), new Person("Gosho", 18), new Person("Stamat", 43) };
+        foreach (var person in people)
+        {
+            Console.WriteLine($"{person.Name} {person.Age}");
+        }
     }
 }

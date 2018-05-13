@@ -1,53 +1,42 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-class Trainer
+public class Trainer
 {
-    private string name;
-    private int badges;
-    private List<Pokemon> pokemons;
-
     public Trainer(string name)
     {
-        this.name = name;
-        this.badges = 0;
-        this.pokemons = new List<Pokemon>();
+        this.Name = name;
+        this.Pokemons = new List<Pokemon>();
+        this.Badges = 0;
     }
 
-    public int Badges
-    {
-        get
-        {
-            return this.badges;
-        }
-    }
+    public int Badges { get; private set; }
+
+    private string Name { get; }
+
+    private List<Pokemon> Pokemons { get; set; }
 
     public void AddPokemon(Pokemon pokemon)
     {
-        this.pokemons.Add(pokemon);
+        this.Pokemons.Add(pokemon);
     }
 
     public void TryToAddBadge(string element)
     {
-        var countWithElement = this.pokemons
-            .Where(pokemon => pokemon.Element == element)
-            .Count();
-
+        var countWithElement = this.Pokemons.Count(pokemon => pokemon.Element == element);
         if (countWithElement > 0)
         {
-            this.badges++;
+            this.Badges++;
         }
         else
         {
-            this.pokemons.ForEach(pokemon => pokemon.Health -= 10);
-            this.pokemons = this.pokemons
-                .Where(pokemon => pokemon.Health > 0)
-                .ToList();
+            this.Pokemons.ForEach(pokemon => pokemon.Health -= 10);
+            this.Pokemons = this.Pokemons.Where(pokemon => pokemon.Health > 0).ToList();
         }
     }
 
     public override string ToString()
     {
-        return $"{this.name} {this.Badges} {this.pokemons.Count}";
+        return $"{this.Name} {this.Badges} {this.Pokemons.Count}";
     }
 }

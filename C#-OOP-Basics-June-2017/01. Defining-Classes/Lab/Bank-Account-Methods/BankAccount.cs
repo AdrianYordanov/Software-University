@@ -1,30 +1,14 @@
-﻿class BankAccount
+﻿public class BankAccount
 {
-    private int id;
-    private double balance;
+    public BankAccount(int id, double ballance = 0)
+    {
+        this.Id = id;
+        this.Balance = ballance;
+    }
 
-    public int ID
-    {
-        get
-        {
-            return this.id;
-        }
-        set
-        {
-            this.id = value;
-        }
-    }
-    public double Balance
-    {
-        get
-        {
-            return this.balance;
-        }
-        set
-        {
-            this.balance = value;
-        }
-    }
+    public int Id { get; }
+
+    public double Balance { get; private set; }
 
     public void Deposit(double amount)
     {
@@ -38,6 +22,6 @@
 
     public override string ToString()
     {
-        return $"Account {this.ID}, balance {this.Balance}";
+        return $"Account {this.Id}, balance {this.Balance}";
     }
 }

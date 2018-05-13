@@ -1,20 +1,15 @@
-﻿class StreetExtraordinaire : Cat
+﻿public class StreetExtraordinaire : Cat
 {
-    private int meowingLoudness;
-
-    public StreetExtraordinaire(string name, int loudness) : base(name)
+    public StreetExtraordinaire(string name, int loudness)
+        : base(name)
     {
         this.MeowingLoudness = loudness;
     }
 
-    public int MeowingLoudness
-    {
-        get { return this.meowingLoudness; }
-        private set { this.meowingLoudness = value; }
-    }
+    private int MeowingLoudness { get; }
 
     public override string ToString()
     {
-        return $"StreetExtraordinaire {base.Name} {this.meowingLoudness}";
+        return $"StreetExtraordinaire {this.Name} {this.MeowingLoudness}";
     }
 }

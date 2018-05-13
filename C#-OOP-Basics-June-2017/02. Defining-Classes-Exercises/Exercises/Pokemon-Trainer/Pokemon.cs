@@ -1,4 +1,4 @@
-﻿class Pokemon
+﻿public class Pokemon
 {
     public Pokemon(string name, string element, int health)
     {
@@ -7,9 +7,10 @@
         this.Health = health;
     }
 
-    public string Name { get; set; }
-
-    public string Element { get; set; }
+    public string Element { get; }
 
     public int Health { get; set; }
+
+    // ReSharper disable once UnusedAutoPropertyAccessor.Local
+    private string Name { get; }
 }

@@ -1,4 +1,4 @@
-﻿class Pokemon
+﻿public class Pokemon
 {
     public Pokemon(string name, string type)
     {
@@ -6,9 +6,9 @@
         this.Type = type;
     }
 
-    public string Name { get; set; }
+    private string Name { get; }
 
-    public string Type { get; set; }
+    private string Type { get; }
 
     public override string ToString()
     {

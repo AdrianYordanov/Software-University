@@ -1,12 +1,10 @@
 ﻿using System;
 
-class StartUp
+public class StartUp
 {
-    static void Main()
+    private static void Main()
     {
-        var account = new BankAccount();
-        account.ID = 1;
-        account.Balance = 15;
-        Console.WriteLine($"Account {account.ID}, balance {account.Balance}");
+        var account = new BankAccount(1, 15);
+        Console.WriteLine($"Account {account.Id}, balance {account.Balance}");
     }
 }

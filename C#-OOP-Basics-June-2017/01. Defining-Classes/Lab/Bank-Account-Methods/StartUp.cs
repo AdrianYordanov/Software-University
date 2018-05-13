@@ -1,11 +1,10 @@
 ﻿using System;
 
-class StartUp
+public class StartUp
 {
-    static void Main()
+    private static void Main()
     {
-        var account = new BankAccount();
-        account.ID = 1;
+        var account = new BankAccount(1);
         account.Deposit(15);
         account.Withdraw(5);
         Console.WriteLine(account);

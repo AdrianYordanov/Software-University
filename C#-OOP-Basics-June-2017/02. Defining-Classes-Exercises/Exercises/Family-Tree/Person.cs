@@ -1,48 +1,45 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-class Person
+public class Person
 {
-    private List<Person> children;
-
     public Person()
     {
-        this.children = new List<Person>();
+        this.Children = new List<Person>();
     }
 
-    public Person(string name, string date) : this()
+    public Person(string name, string date)
+        : this()
     {
         this.Name = name;
         this.BirthDate = date;
     }
 
+    public List<Person> Children { get; }
+
     public string Name { get; set; }
+
     public string BirthDate { get; set; }
 
-    public IReadOnlyList<Person> Children
-    {
-        get { return this.children.AsReadOnly(); }
-    }
     public void AddChild(Person child)
     {
-        this.children.Add(child);
+        this.Children.Add(child);
     }
 
     public void AddChildrenInfo(string name, string date)
     {
-        if (this.children.FirstOrDefault(c => c.Name == name) != null)
+        if (this.Children.FirstOrDefault(c => c.Name == name) != null)
         {
-            this.children.FirstOrDefault(c => c.Name == name).BirthDate = date;
-            return;
+            this.Children.FirstOrDefault(c => c.Name == name).BirthDate = date;
         }
-        if (this.children.FirstOrDefault(c => c.BirthDate == date) != null)
+        else if (this.Children.FirstOrDefault(c => c.BirthDate == date) != null)
         {
-            this.children.FirstOrDefault(c => c.BirthDate == date).Name = name;
+            this.Children.FirstOrDefault(c => c.BirthDate == date).Name = name;
         }
     }
 
     public Person FindChildName(string childName)
     {
-        return this.children.FirstOrDefault(c => c.Name == childName);
+        return this.Children.FirstOrDefault(c => c.Name == childName);
     }
 }

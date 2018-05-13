@@ -1,26 +1,28 @@
-﻿class Car
+﻿public class Car
 {
-    private string model;
-    private double fuelAmount;
-    private double cosumptionPerKilometer;
-    private int distanceTravelled;
-
     public Car(string model, double fuelAmount, double consumptionPerKilometer)
     {
-        this.model = model;
-        this.fuelAmount = fuelAmount;
-        this.cosumptionPerKilometer = consumptionPerKilometer;
-        this.distanceTravelled = 0;
+        this.Model = model;
+        this.FuelAmount = fuelAmount;
+        this.CosumptionPerKilometer = consumptionPerKilometer;
+        this.DistanceTravelled = 0;
     }
+
+    private string Model { get; }
+
+    private double CosumptionPerKilometer { get; }
+
+    private double FuelAmount { get; set; }
+
+    private int DistanceTravelled { get; set; }
 
     public bool CanTravelDistance(int distance)
     {
-        var consumptionForTheTraveling = distance * this.cosumptionPerKilometer;
-
-        if (consumptionForTheTraveling <= this.fuelAmount)
+        var consumptionForTheTraveling = distance * this.CosumptionPerKilometer;
+        if (consumptionForTheTraveling <= this.FuelAmount)
         {
-            this.fuelAmount -= consumptionForTheTraveling;
-            this.distanceTravelled += distance;
+            this.FuelAmount -= consumptionForTheTraveling;
+            this.DistanceTravelled += distance;
             return true;
         }
 
@@ -29,6 +31,6 @@
 
     public override string ToString()
     {
-        return $"{this.model} {this.fuelAmount:F2} {this.distanceTravelled}";
+        return $"{this.Model} {this.FuelAmount:F2} {this.DistanceTravelled}";
     }
 }

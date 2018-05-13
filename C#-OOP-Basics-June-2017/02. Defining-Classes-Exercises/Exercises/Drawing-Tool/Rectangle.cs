@@ -1,22 +1,22 @@
-﻿class Rectangle : Figure
+﻿public class Rectangle : Figure
 {
-    private int width;
-    private int height;
-
     public Rectangle(int width, int height)
     {
-        this.width = width;
-        this.height = height;
+        this.Width = width;
+        this.Height = height;
     }
+
+    private int Width { get; }
+
+    private int Height { get; }
 
     public override string Draw()
     {
-        var firstLastLine = $"|{new string('-', this.width)}|";
+        var firstLastLine = $"|{new string('-', this.Width)}|";
         var result = firstLastLine + "\n";
-
-        for (int i = 0; i < this.height - 2; i++)
+        for (var i = 0; i < (this.Height - 2); i++)
         {
-            result += $"|{new string(' ', this.width)}|\n";
+            result += $"|{new string(' ', this.Width)}|\n";
         }
 
         result += firstLastLine;

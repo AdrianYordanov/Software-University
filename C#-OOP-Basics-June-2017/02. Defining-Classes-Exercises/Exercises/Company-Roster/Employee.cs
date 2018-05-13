@@ -1,46 +1,35 @@
-﻿class Employee
+﻿public class Employee
 {
-    private string name;
-    private decimal salary;
-    private string position;
-    private string department;
-    private string email;
-    private int age;
-
-    public Employee(string name, decimal salary, string position, string department, string email, int age)
+    public Employee(string name, decimal salary, string position, string department, string email = "n/a", int age = -1)
     {
-        this.name = name;
-        this.salary = salary;
-        this.position = position;
-        this.department = department;
-        this.email = email;
-        this.age = age;
+        this.Name = name;
+        this.Salary = salary;
+        this.Position = position;
+        this.Department = department;
+        this.Email = email;
+        this.Age = age;
     }
-
-    public Employee(string name, decimal salary, string position, string department, string email)
-        : this(name, salary, position, department, email, -1)
-    { }
 
     public Employee(string name, decimal salary, string position, string department, int age)
         : this(name, salary, position, department, "n/a", age)
-    { }
-
-    public Employee(string name, decimal salary, string position, string department)
-       : this(name, salary, position, department, "n/a", -1)
-    { }
-
-    public decimal Salary
     {
-        get { return this.salary; }
     }
-    
-    public string Department
-    {
-        get { return this.department; }
-    }
+
+    public decimal Salary { get; }
+
+    public string Department { get; }
+
+    private string Name { get; }
+
+    // ReSharper disable once UnusedAutoPropertyAccessor.Local
+    private string Position { get; }
+
+    private string Email { get; }
+
+    private int Age { get; }
 
     public override string ToString()
     {
-        return $"{this.name} {this.salary:F2} {this.email} {this.age}";
+        return $"{this.Name} {this.Salary:F2} {this.Email} {this.Age}";
     }
 }
