@@ -1,0 +1,16 @@
+﻿#first {
+    border: 2px blue dotted;
+    border-radius: 15px;
+    margin: 15px;
+    padding: 15px
+}
+
+#second { border: 2px red dashed }
+
+#third {
+    border: 2px green solid;
+    font-size: 18pt;
+    margin: 15px;
+    padding: 15px;
+    text-align: center;
+}

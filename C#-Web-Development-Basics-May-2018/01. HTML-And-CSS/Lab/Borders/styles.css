@@ -1,0 +1,17 @@
+﻿p {
+    border-radius: 5px 5px 5px 5px;
+    text-align: center;
+    width: 200px;
+}
+
+p:nth-child(1) { border: 1px solid red }
+
+p:nth-child(2) { border: 1px solid green }
+
+p:nth-child(3) { border: 1px solid blue }
+
+p:first-child > span:nth-child(1) { color: red }
+
+p:first-child > span:nth-child(2) { color: green }
+
+p:first-child > span:nth-child(3) { color: blue }
