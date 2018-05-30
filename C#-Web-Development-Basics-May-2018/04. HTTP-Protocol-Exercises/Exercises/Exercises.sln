@@ -3,7 +3,31 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.1
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Url-Decode", "Url-Decode\Url-Decode.csproj", "{6F36812F-ED21-40D6-A6FA-EC443F87F18F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Validate-Url", "Validate-Url\Validate-Url.csproj", "{AE3A900F-64AF-4AD3-A219-C0DA3BE31C5D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Request-Parser", "Request-Parser\Request-Parser.csproj", "{5E969597-135C-4D99-A0FD-DC3538C98AFB}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6F36812F-ED21-40D6-A6FA-EC443F87F18F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F36812F-ED21-40D6-A6FA-EC443F87F18F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F36812F-ED21-40D6-A6FA-EC443F87F18F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F36812F-ED21-40D6-A6FA-EC443F87F18F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE3A900F-64AF-4AD3-A219-C0DA3BE31C5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE3A900F-64AF-4AD3-A219-C0DA3BE31C5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE3A900F-64AF-4AD3-A219-C0DA3BE31C5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE3A900F-64AF-4AD3-A219-C0DA3BE31C5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E969597-135C-4D99-A0FD-DC3538C98AFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E969597-135C-4D99-A0FD-DC3538C98AFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E969597-135C-4D99-A0FD-DC3538C98AFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E969597-135C-4D99-A0FD-DC3538C98AFB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
