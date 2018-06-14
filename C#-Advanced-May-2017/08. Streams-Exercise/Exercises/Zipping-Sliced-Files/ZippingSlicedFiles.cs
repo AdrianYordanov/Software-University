@@ -5,6 +5,17 @@ using System.IO.Compression;
 
 public class ZippingSlicedFiles
 {
+    private static void Main()
+    {
+        var fileName = "music.mp3";
+        var fileDestination = "../..";
+        var zips = new List<string> { "part1.gz", "part2.gz", "part3.gz" };
+        var zipsDestionation = "../../generated files";
+        var parts = int.Parse(Console.ReadLine());
+        SliceAndCompress(fileName, fileDestination, parts);
+        AssembleAndDecompress(zips, zipsDestionation, "mp3");
+    }
+
     private static void AssembleAndDecompress(List<string> files, string destinationDirectory, string extension)
     {
         using (var result = new FileStream(destinationDirectory + "//result." + extension, FileMode.Create))
@@ -26,17 +37,6 @@ public class ZippingSlicedFiles
                 }
             }
         }
-    }
-
-    private static void Main()
-    {
-        var fileName = "music.mp3";
-        var fileDestination = "../..";
-        var zips = new List<string> { "part1.gz", "part2.gz", "part3.gz" };
-        var zipsDestionation = "../../generated files";
-        var parts = int.Parse(Console.ReadLine());
-        SliceAndCompress(fileName, fileDestination, parts);
-        AssembleAndDecompress(zips, zipsDestionation, "mp3");
     }
 
     private static void SliceAndCompress(string sourceFile, string destinationDirectory, int parts)
