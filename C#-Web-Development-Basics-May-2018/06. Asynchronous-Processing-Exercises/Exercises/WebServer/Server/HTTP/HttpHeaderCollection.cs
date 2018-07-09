@@ -39,7 +39,7 @@
 
         public override string ToString()
         {
-            return string.Join("\n", this.headers);
+            return string.Join(Environment.NewLine, this.headers.Values);
         }
     }
 }
