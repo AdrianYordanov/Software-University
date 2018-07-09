@@ -45,11 +45,10 @@
         private string ParseRoute(string route, List<string> parameters)
         {
             var result = new StringBuilder();
-            result.Append("^");
+            result.Append("^/");
             if (route == "/")
             {
-                result.Append("/$");
-                return result.ToString();
+                return result.Append("$").ToString();
             }
 
             var tokens = route.Split(new[] {'/'}, StringSplitOptions.RemoveEmptyEntries);
@@ -61,12 +60,12 @@
         {
             for (var i = 0; i < tokens.Length; i++)
             {
-                var end = tokens.Length - 1 == i ? "$" : "/";
+                var endCharacter = tokens.Length - 1 == i ? "$" : "/";
                 var currentToken = tokens[i];
                 if (!currentToken.StartsWith("{") &&
                     !currentToken.EndsWith("}"))
                 {
-                    result.Append($"{currentToken}");
+                    result.Append($"{currentToken}{endCharacter}");
                     continue;
                 }
 
@@ -81,7 +80,7 @@
                 var parameter = match.Substring(1, match.Length - 2);
                 var tokenWithoutCurlyBrackets = currentToken.Substring(1, currentToken.Length - 2);
                 parameters.Add(parameter);
-                result.Append($"{tokenWithoutCurlyBrackets}{end}");
+                result.Append($"{tokenWithoutCurlyBrackets}{endCharacter}");
             }
         }
     }

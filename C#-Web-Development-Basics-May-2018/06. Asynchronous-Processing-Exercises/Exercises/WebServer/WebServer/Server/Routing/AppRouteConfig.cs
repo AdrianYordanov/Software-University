@@ -6,6 +6,7 @@
     using Contracts;
     using Enums;
     using Handlers;
+    using HTTP.Contracts;
 
     public class AppRouteConfig : IAppRouteConfig
     {
@@ -23,21 +24,19 @@
 
         public IReadOnlyDictionary<HttpRequestMethod, IDictionary<string, RequestHandler>> Routes => this.routes;
 
-        public void AddRoute(string route, RequestHandler handler)
+        public void Get(string route, Func<IHttpRequest, IHttpResponse> func)
         {
-            var handlerName = handler.GetType().Name.ToLower();
-            if (handlerName.Contains("get"))
-            {
-                this.routes[HttpRequestMethod.Get].Add(route, handler);
-            }
-            else if (handlerName.Contains("post"))
-            {
-                this.routes[HttpRequestMethod.Post].Add(route, handler);
-            }
-            else
-            {
-                throw new InvalidOperationException("Invalid handler.");
-            }
+            this.AddRoute(route, HttpRequestMethod.Get, new RequestHandler(func));
+        }
+
+        public void Post(string route, Func<IHttpRequest, IHttpResponse> func)
+        {
+            this.AddRoute(route, HttpRequestMethod.Post, new RequestHandler(func));
+        }
+
+        private void AddRoute(string route, HttpRequestMethod method, RequestHandler handler)
+        {
+            this.routes[method].Add(route, handler);
         }
     }
 }
