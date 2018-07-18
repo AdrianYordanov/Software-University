@@ -19,7 +19,7 @@
         public IHttpResponse Handle(IHttpContext context)
         {
             var response = this.handlingFunc(context.Request);
-            response.Headers.Add(new HttpHeader("Content-Type", "text/html"));
+            response.Headers.Add(new HttpHeader(HttpHeader.ContentType, "text/html"));
             return response;
         }
     }

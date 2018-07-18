@@ -36,6 +36,7 @@
                 Console.WriteLine(requestAsString);
                 Console.WriteLine("-----RESPONSE-----");
                 Console.WriteLine(response);
+                Console.WriteLine();
             }
 
             this.client.Shutdown(SocketShutdown.Both);

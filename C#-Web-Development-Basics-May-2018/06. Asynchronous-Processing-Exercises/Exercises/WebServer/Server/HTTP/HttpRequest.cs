@@ -96,7 +96,7 @@
                 this.Headers.Add(header);
             }
 
-            if (!this.Headers.ContainsKey("Host"))
+            if (!this.Headers.ContainsKey(HttpHeader.Host))
             {
                 BadRequestException.ThrowInvlidRequest();
             }

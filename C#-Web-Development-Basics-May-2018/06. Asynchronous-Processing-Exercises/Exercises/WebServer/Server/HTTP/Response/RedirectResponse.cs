@@ -9,7 +9,7 @@
         {
             CoreValidator.ThrowIfNullOrEmpty(redirectUrl, nameof(redirectUrl));
             this.StatusCode = HttpStatusCode.Found;
-            this.Headers.Add(new HttpHeader("Location", redirectUrl));
+            this.Headers.Add(new HttpHeader(HttpHeader.Location, redirectUrl));
         }
     }
 }

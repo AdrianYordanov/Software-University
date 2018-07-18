@@ -13,6 +13,7 @@
             this.ValidateStatusCode(statusCode);
             this.StatusCode = statusCode;
             this.view = view;
+            this.Headers.Add(new HttpHeader(HttpHeader.ContentType, "text/html"));
         }
 
         public override string ToString()
