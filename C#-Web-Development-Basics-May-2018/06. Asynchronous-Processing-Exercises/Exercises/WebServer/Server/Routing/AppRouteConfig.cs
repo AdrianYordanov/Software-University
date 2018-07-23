@@ -34,7 +34,7 @@
             this.AddRoute(route, HttpRequestMethod.Post, new RequestHandler(func));
         }
 
-        private void AddRoute(string route, HttpRequestMethod method, RequestHandler handler)
+        public void AddRoute(string route, HttpRequestMethod method, RequestHandler handler)
         {
             this.routes[method].Add(route, handler);
         }

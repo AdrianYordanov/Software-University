@@ -13,5 +13,7 @@
         void Get(string route, Func<IHttpRequest, IHttpResponse> func);
 
         void Post(string route, Func<IHttpRequest, IHttpResponse> func);
+
+        void AddRoute(string route, HttpRequestMethod method, RequestHandler handler);
     }
 }
