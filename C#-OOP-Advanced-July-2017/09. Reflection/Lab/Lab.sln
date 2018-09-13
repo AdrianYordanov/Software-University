@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "High-Quality-Mistakes", "Hi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mission-Private-Impossible", "Mission-Private-Impossible\Mission-Private-Impossible.csproj", "{6BB1E135-71F3-467A-B295-6294632AE439}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collector", "Collector\Collector.csproj", "{780B36CB-BC1E-46DD-9810-1FF85C05291A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{6BB1E135-71F3-467A-B295-6294632AE439}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6BB1E135-71F3-467A-B295-6294632AE439}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6BB1E135-71F3-467A-B295-6294632AE439}.Release|Any CPU.Build.0 = Release|Any CPU
+		{780B36CB-BC1E-46DD-9810-1FF85C05291A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{780B36CB-BC1E-46DD-9810-1FF85C05291A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{780B36CB-BC1E-46DD-9810-1FF85C05291A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{780B36CB-BC1E-46DD-9810-1FF85C05291A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
