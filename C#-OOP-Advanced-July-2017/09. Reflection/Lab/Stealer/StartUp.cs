@@ -1,13 +1,10 @@
-﻿namespace Stealer
-{
-    using System;
+﻿using System;
 
-    public class StartUp
+public class StartUp
+{
+    private static void Main()
     {
-        private static void Main()
-        {
-            var information = new Spy().StealFieldInfo("Hacker", "username", "password");
-            Console.Write(information);
-        }
+        var information = new Spy().StealFieldInfo("Hacker", "username", "password");
+        Console.Write(information);
     }
 }
