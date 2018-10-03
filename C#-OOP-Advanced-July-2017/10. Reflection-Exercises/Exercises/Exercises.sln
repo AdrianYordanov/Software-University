@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Black-Box-Integer", "Black-
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Black-Wars-New-Factory", "Black-Wars-New-Factory\Black-Wars-New-Factory.csproj", "{E163C70A-A09E-482F-BF4F-93540334CFF7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Black-Wars-The-Command-Strike-Back", "Black-Wars-The-Command-Strike-Back\Black-Wars-The-Command-Strike-Back.csproj", "{C7F843D9-B58E-4B54-A873-4A50F1F3BCA2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{E163C70A-A09E-482F-BF4F-93540334CFF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E163C70A-A09E-482F-BF4F-93540334CFF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E163C70A-A09E-482F-BF4F-93540334CFF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7F843D9-B58E-4B54-A873-4A50F1F3BCA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7F843D9-B58E-4B54-A873-4A50F1F3BCA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7F843D9-B58E-4B54-A873-4A50F1F3BCA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7F843D9-B58E-4B54-A873-4A50F1F3BCA2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
