@@ -36,7 +36,8 @@
         private string InterpredCommand(string[] data, string commandName)
         {
             var commandClassName = char.ToUpper(commandName[0]) + commandName.Substring(1, commandName.Length - 1);
-            var commandType = Type.GetType($"Black_Wars_The_Command_Strike_Back.Core.Commands.{commandClassName}Command");
+            var commandType =
+                Type.GetType($"Black_Wars_The_Command_Strike_Back.Core.Commands.{commandClassName}Command");
             if (commandType == null)
             {
                 throw new InvalidOperationException("Invalid command!");
