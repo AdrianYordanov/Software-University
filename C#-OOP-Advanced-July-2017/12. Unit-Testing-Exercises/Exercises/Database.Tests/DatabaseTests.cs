@@ -34,14 +34,14 @@
         [Test]
         public void TestFetchMethod()
         {
-            var expectedArray = new[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 };
+            var expectedArray = new[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16};
             Assert.IsTrue(expectedArray.SequenceEqual(this.database.Fetch()), "The database is not same as it was initialize.");
         }
 
         [Test]
         public void TestRemoveMethd()
         {
-            var expectedArray = new[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 };
+            var expectedArray = new[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
             this.database.Remove();
             Assert.IsTrue(expectedArray.SequenceEqual(this.database.Fetch()),
                           "The add method hasn't been added the two numbers correctly.");
@@ -62,7 +62,7 @@
         [Test]
         public void TestAddMethod()
         {
-            var expectedArray = new[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 18 };
+            var expectedArray = new[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 18};
             this.database.Remove();
             this.database.Add(18);
             Assert.IsTrue(expectedArray.SequenceEqual(this.database.Fetch()),
