@@ -64,7 +64,7 @@
             var person = new Person(1, "Peter");
             this.db.Add(person);
             var samePerson = this.db.Find(person.Username);
-            Assert.AreEqual(person, samePerson);
+            Assert.AreEqual(person, samePerson, "Finding person by username doesn't work correctly.");
         }
 
         [Test]
@@ -73,31 +73,36 @@
             var person = new Person(1, "Peter");
             this.db.Add(person);
             var samePerson = this.db.Find(person.Id);
-            Assert.AreEqual(person, samePerson);
+            Assert.AreEqual(person, samePerson, "Finding person by id doesn't work correctly.");
         }
 
         [Test]
         [TestCase("random name")]
         [TestCase("not existing name")]
-        public void FindPersonByNoneExistingName(string searchingName)
+        public void FindPersonByNonExistingName(string searchingName)
         {
-            var exceptionNotFoundPersonByName = Assert.Throws<InvalidOperationException>(() => this.db.Find(searchingName));
+            var exceptionNotFoundPersonByName =
+                Assert.Throws<InvalidOperationException>(() => this.db.Find(searchingName),
+                                                         "Finding non-existing name should throw exception.");
             Assert.That(exceptionNotFoundPersonByName.Message, Is.EqualTo($"There is no person with this username: {searchingName}"));
         }
 
         [Test]
         public void FindPersonByNameWithNull()
         {
-            var exFromNullSearching = Assert.Throws<ArgumentNullException>(() => this.db.Find(null));
+            var exFromNullSearching =
+                Assert.Throws<ArgumentNullException>(() => this.db.Find(null), "Finding person with null should throw exception.");
             Assert.That(exFromNullSearching.ParamName, Is.EqualTo("username"));
         }
 
         [Test]
         [TestCase(0)]
         [TestCase(352456)]
-        public void FindPersonByNoneExistingId(int searchingId)
+        public void FindPersonByNonExistingId(int searchingId)
         {
-            var exceptionNotFoundPersonByName = Assert.Throws<InvalidOperationException>(() => this.db.Find(searchingId));
+            var exceptionNotFoundPersonByName =
+                Assert.Throws<InvalidOperationException>(() => this.db.Find(searchingId),
+                                                         "Finding non-existing id should throw exception.");
             Assert.That(exceptionNotFoundPersonByName.Message, Is.EqualTo($"There is no person with this id: {searchingId}"));
         }
 
@@ -107,7 +112,9 @@
         [TestCase(-32435353425)]
         public void FindPersonByNameWithNegativeId(long id)
         {
-            var exFromNegativeSearching = Assert.Throws<ArgumentOutOfRangeException>(() => this.db.Find(id));
+            var exFromNegativeSearching =
+                Assert.Throws<ArgumentOutOfRangeException>(() => this.db.Find(id),
+                                                           "Finding person with negative id should throw exception.");
             Assert.That(exFromNegativeSearching.ParamName, Is.EqualTo("id"));
         }
 
@@ -117,15 +124,17 @@
             var person = new Person(1, "Peter");
             this.db.Add(person);
             this.db.Remove(person);
-            Assert.AreEqual(0, this.db.Persons.Length);
+            Assert.AreEqual(0, this.db.Persons.Length, "Database doesn't remove persons.");
         }
 
         [Test]
-        public void RemoveNoneExistingPerson()
+        public void RemoveNonExistingPerson()
         {
             var person = new Person(1, "Peter");
             this.db.Remove(person);
-            Assert.AreEqual(0, this.db.Persons.Length);
+            Assert.AreEqual(0,
+                            this.db.Persons.Length,
+                            "The length of the database is different after removing non-existing person. Should be the same.");
         }
     }
 }
