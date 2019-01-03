@@ -35,10 +35,7 @@
         {
             var person = new Person(1, "Peter");
             this.db.Add(person);
-            Assert.AreEqual(this.db.Persons[0]
-                                .Username,
-                            person.Username,
-                            "Add method adds method with different username.");
+            Assert.AreEqual(this.db.Persons[0].Username, person.Username, "Add method adds method with different username.");
         }
 
         [Test]

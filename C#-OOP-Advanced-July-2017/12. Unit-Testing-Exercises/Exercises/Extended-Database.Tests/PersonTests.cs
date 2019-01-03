@@ -23,9 +23,7 @@
         {
             var expectedProperties = new[] {"Username", "Id"};
             var personType = typeof(Person);
-            var properties = personType.GetProperties()
-                                       .Select(p => p.Name)
-                                       .ToArray();
+            var properties = personType.GetProperties().Select(p => p.Name).ToArray();
             Assert.AreEqual(expectedProperties.Length,
                             properties.Length,
                             $"{nameof(Person)} doesn't {expectedProperties.Length} properties.");
